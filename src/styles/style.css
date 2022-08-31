@@ -1,0 +1,190 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth; 
+    --myDarkGreen: #2E424E;
+    --myGreen-1: #46a094;
+    --myGreen-2: #6BBD99;
+    --myGreen-3: #AECFA4;
+    --myGreen-4: #C4E8C2;
+    --myWhite: #FFFFFF;
+    --myYellow: #FDD037;
+    --myRed: #E65C4F;
+    --myHeaderGreen: hsl(172, 39%, 45%, 0.8);
+}
+::-webkit-scrollbar {
+    background: var(--myHeaderGreen);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--myGreen-3);
+    border-radius: 5px;
+}
+
+.header {
+    background-color: var(--myHeaderGreen);
+    backdrop-filter: blur(6px);
+    border-radius: 0 0 10px 10px;
+    margin: 0.3em 0 0;
+    padding: 1.4em 1em 1em;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    position: sticky;
+    top: 0;
+    transition: 0.3s;
+}
+.header-shrink {
+    background-color:red
+}
+
+h1 a, h3 a {
+    text-decoration: none;
+    color: black;
+    transition: 0.25s;
+}
+h1 a:hover, h3 a:hover {
+    cursor: pointer;
+    color: var(--myGreen-4);
+}
+.navbar {
+    display: flex;
+    width: 78vw;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar h3 {
+    padding: 0 1.2em;
+}
+
+.main-article {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../components/images/master-bg.jpg");
+}
+.main-article a {
+    margin-top: 4em;
+    border: var(--myDarkGreen) solid 3px;
+    border-radius: 5px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    width: 11em;
+    height: 4em;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.main-article a:hover {
+    background-color: var(--myGreen-4);
+    cursor: pointer;
+}
+.main-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5em;
+    width: 100%;
+    height: 100vh;
+}
+.main-bg h1 {
+    font-size: 60px;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    height: 11em;
+}
+.counter div {
+    margin: 0 5em;
+    display: flex;
+    flex-direction: column;
+}
+.counter div span {
+    font-size: x-large;
+}
+.counter div span, .counter div h2 {
+    text-align: center;
+    width: 8em;
+    padding-top: 1em;
+    transition: .3s;
+}
+.counter button {
+    font-size: xx-large;
+    text-align: center;
+    transition: .25s;
+    margin-top: 1.4em;
+}
+.counter button:hover {
+    cursor: pointer;
+    background-color: var(--myGreen-1);
+    box-shadow: inset 0px 0px 10px 3px var(--myWhite);
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4em;
+    width: 100%;
+    height: 59vh;
+    background-color: var(--myDarkGreen);
+    color: var(--myWhite);
+}
+.footer-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer p {
+    width: 25vw;
+    height: 25vh;
+    background-color: var(--myWhite);
+    border-radius: 5px;
+}
+.footer h4 {
+    color: var(--myWhite);
+    width: 100%;
+    padding: 3em 0 1em 0;
+    text-align: center;
+    font-weight: lighter;
+}
+.footer-social {
+    padding-top: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-social a {
+    padding: 0 2em;
+}
+.footer-social img {
+    width: 3.5em;
+    height: 3,5em;
+    transition: 0.2s;
+}
+.footer-social img:hover {
+    background-color: var(--myGreen-4);
+    width: 3,5em;
+    height: 3,5em;
+    border-radius: 50%;
+    opacity: 70%;
+}
+.danger {
+    background-color: var(--myRed);
+}
+.default {
+    background-color: var(--myGreen-3);
+}
+.middle {
+    background-color: var(--myYellow);
+}
+.default, .danger, .middle {
+    transition: .3s;
+    border-radius: 10px;
+}
