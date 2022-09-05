@@ -10,19 +10,21 @@ export default function Proiecte (props) {
 
     return (<>
         <Header/>
-        <h2>Projects</h2>
-        <div className="main-projects">
-            {projects.map((card, index) => {
-                const {name, url, imagine, description} = card;
+        <div className="projects">
+            <h2>PROJECTS</h2>
+            <div className="main-projects">
+                {projects.map((card, index) => {
+                    const {name, url, imagine, description} = card;
 
-                return <ProjectCard
-                        key={index}
-                        title={name}
-                        url={url}
-                        imagine={imagine}
-                        description={description}
-                />
-            })}
+                    return <ProjectCard
+                            key={index}
+                            title={name}
+                            url={url}
+                            imagine={imagine}
+                            description={description}
+                    />
+                })}
+            </div>
         </div>
         <Footer/>
     </>)

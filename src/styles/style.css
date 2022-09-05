@@ -39,6 +39,7 @@ h2 {
     position: sticky;
     top: 0;
     transition: 0.3s;
+    z-index: 1;
 }
 .header-shrink {
     background-color:red
