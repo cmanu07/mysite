@@ -1,5 +1,8 @@
 import search_wall from './images/search_wall.jpg';
 import counter_wall from './images/counter_wall.jpg';
+import traffic_wall from './images/traffic_wall.jpg';
+import calculator_wall from './images/calculator_wall.jpg';
+
 
 
 export const dataSet = ['Aayla Secura', 'Adi Gallia', 'Admiral Dodd Rancit',
@@ -72,6 +75,24 @@ export const projects = [
         url: '/projects/searchBar',
         imagine: search_wall,
         description: 'My first search bar project in React. :)'
+    },
+    {
+        name: 'Counter',
+        url: '/projects/counter',
+        imagine: counter_wall,
+        description: 'A simple but very educational React project.'
+    },
+    {
+        name: 'Traffic light',
+        url: '/projects/traffic_light',
+        imagine: traffic_wall,
+        description: 'One of the first JavaScript beginner project. :)'
+    },
+    {
+        name: 'Calculator',
+        url: '/projects/calculator',
+        imagine: calculator_wall,
+        description: 'I think a "must have" project for a beginner.'
     },
     {
         name: 'Counter',

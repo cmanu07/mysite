@@ -21,6 +21,7 @@
     justify-content: center;
     padding: 2em;
     height: 16em;
+    margin: 3em 0;
 }
 .counter div {
     margin: 0 5em;

@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import Footer from '../Footer';
+import Header from '../Header/Header';
+
 
 export default function Counter () {
 
@@ -18,11 +21,14 @@ export default function Counter () {
     if (counter === 8 || counter === 2) background = "middle";
     counter === 10 || counter === 0 ? mesaj = "You've reach the limit!" : mesaj = "";
 
-    return (
-        <div className={`counter ${background}`}>
-            <button style={butStyle} onClick = {()=>counter < 10 ? setCounter(adder) : counter}>+</button>
-            <div><h2>{counter}</h2><span>{mesaj}</span></div>
-            <button style={butStyle} onClick = {()=>counter > 0 ? setCounter(minus) : counter}>-</button>
-        </div>
-    )
+    return (<>
+            <Header/>
+            <h2>Counter</h2>
+            <div className={`counter ${background}`}>
+                <button style={butStyle} onClick = {()=>counter < 10 ? setCounter(adder) : counter}>+</button>
+                <div><h2>{counter}</h2><span>{mesaj}</span></div>
+                <button style={butStyle} onClick = {()=>counter > 0 ? setCounter(minus) : counter}>-</button>
+            </div>
+            <Footer/>
+        </>)
 }

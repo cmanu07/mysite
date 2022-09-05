@@ -15,6 +15,9 @@ import CV from './components/Pages/CV';
 import Despre from './components/Pages/Despre';
 import SearchBar from './components/projects/SearchBar';
 import Counter from './components/projects/Counter';
+import TrafficL from './components/projects/TrafficL';
+import Calculator from './components/projects/Calculator';
+
 
 const App = () => {
 
@@ -27,6 +30,8 @@ const App = () => {
               <Route path={'/about'} element={<Despre/>}/>
               <Route path={'/projects/searchBar'} element={<SearchBar data={dataSet}/>}/>
               <Route path={'/projects/counter'} element={<Counter/>}/>
+              <Route path={'/projects/traffic_light'} element={<TrafficL/>}/>
+              <Route path={'/projects/calculator'} element={<Calculator/>}/>
             </Routes>
           </>
   );

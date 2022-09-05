@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import Footer from '../Footer';
+import Header from '../Header/Header';
 
 import searchIcon from '../images/icons8-search-50.png';
 
@@ -20,15 +22,19 @@ export default function SearchBar ({data}) {
         (cuvInput.length > 0) ? setIcon('search-icon-off') : setIcon('search-icon');
     }
 
-    return (<main className="main">
-                <label><input type="search" placeholder='Search here...' onChange={filtruCautare}/>
-                <img className={icon} src={searchIcon} alt="..."/></label>
-                {
-                    (cauta.length !== 0) ? 
-                        <div>{cauta.map((inreg, index) => {
-                            return <p key={index} className="inreg">{inreg}</p>
-                        })}</div>        :
-                        <div>no results found...</div>
-                }
-            </main>)
+    return (<>
+                <Header/>
+                <main className="main">
+                    <label><input type="search" placeholder='Search here...' onChange={filtruCautare}/>
+                    <img className={icon} src={searchIcon} alt="..."/></label>
+                    {
+                        (cauta.length !== 0) ? 
+                            <div>{cauta.map((inreg, index) => {
+                                return <p key={index} className="inreg">{inreg}</p>
+                            })}</div>        :
+                            <div>no results found...</div>
+                    }
+                </main>
+                <Footer/>
+            </>)
 }
