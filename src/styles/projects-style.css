@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    --myWhite: #FFFFFF;
+    --myDarkGreen: #2E424E;
+}
+.main-projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 3em;
+}
+.counter {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    height: 16em;
+}
+.counter div {
+    margin: 0 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.counter div span {
+    text-align: center;
+    font-size: x-large;
+}
+.counter div span, .counter div h2 {
+    width: 7em;
+    padding-top: 1em;
+    transition: .3s;
+}
+.counter button {
+    font-size: xx-large;
+    text-align: center;
+    transition: .25s;
+    margin-top: 1.4em;
+}
+.counter button:hover {
+    cursor: pointer;
+    background-color: var(--myGreen-1);
+    box-shadow: inset 0px 0px 10px 3px var(--myWhite);
+}
+a {
+    text-decoration: none;
+}
+.project-card {
+    background-color: var(--myDarkGreen);
+    width: 15em;
+    height: 19em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 5px;
+    transition: .3s;
+    margin: 2em 4em;
+}
+.project-card:hover {
+    background-color: hsl(203, 26%, 24%, 85%)
+}
+.project-card h6 {
+    color: var(--myWhite);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 0.8em;
+}
+.project-card img {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+}
+.project-card p {
+    color: var(--myWhite);
+    margin-top: 2.5em;
+}

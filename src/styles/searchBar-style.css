@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    --myWhite: #FFFFFF;
+    --myDarkGreen: #2E424E;
+}
+.main {
+    width: 100%;
+    background-image: url('../components/images/wallpaper.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+.search-icon {
+    position: absolute;
+    width: 1.8em;
+    height: 1.8em;
+    top: 0.35em;
+    right: 0.4em;
+    transition: .3s;
+}
+.search-icon-off {
+    display: none;
+    transition: .3s;
+}
+.main label {
+    position: relative;
+}
+.main input {
+    width: 15em;
+    height: 3em;
+    border-radius: 5px;
+    padding: 0 0.5em;
+    border: var(--myWhite);
+}
+.main div {
+    width: 92%;
+    padding: 0.5em;
+    height: 115em;
+    margin: 2em 0;
+    background-color: hsl(0, 0%, 100%, 65%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.inreg {
+    padding: 0.2em;
+    transition: .2s;
+    border-radius: 5px;
+    width: 12em;
+}
+.inreg:hover {
+    cursor: pointer;
+    background: var(--myDarkGreen);
+    color: var(--myWhite);
+}

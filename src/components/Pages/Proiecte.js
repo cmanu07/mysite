@@ -1,11 +1,29 @@
-import Header from "../Header/Header";
-import Counter from "../Main/Counter";
+import Header from "../Header/Header"
+import ProjectCard from "../Main/ProjectCard"
+import Footer from "../Footer"
 
-export default function Proiecte () {
+import { projects } from '../constants'
+
+
+export default function Proiecte (props) {
+
 
     return (<>
         <Header/>
-        <h2>Proiecte</h2>
-        <Counter/>
+        <h2>Projects</h2>
+        <div className="main-projects">
+            {projects.map((card, index) => {
+                const {name, url, imagine, description} = card;
+
+                return <ProjectCard
+                        key={index}
+                        title={name}
+                        url={url}
+                        imagine={imagine}
+                        description={description}
+                />
+            })}
+        </div>
+        <Footer/>
     </>)
 }
