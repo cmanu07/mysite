@@ -4,6 +4,7 @@ import { Routes, Route} from 'react-router-dom';
 import './styles/style.css';
 import './styles/projects-style.css';
 import './styles/searchBar-style.css';
+import './styles/more-style.css';
 
 import { dataSet } from './components/constants';
 
@@ -17,6 +18,7 @@ import SearchBar from './components/projects/SearchBar';
 import Counter from './components/projects/Counter';
 import TrafficL from './components/projects/TrafficL';
 import Calculator from './components/projects/Calculator';
+import Stopwatch from './components/projects/Stopwatch';
 
 
 const App = () => {
@@ -32,6 +34,7 @@ const App = () => {
               <Route path={'/projects/counter'} element={<Counter/>}/>
               <Route path={'/projects/traffic_light'} element={<TrafficL/>}/>
               <Route path={'/projects/calculator'} element={<Calculator/>}/>
+              <Route path={'/projects/stopwatch'} element={<Stopwatch/>}/>
             </Routes>
           </>
   );

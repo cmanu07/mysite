@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth; 
+    --myDarkGreen: #2E424E;
+    --myGreen-1: #46a094;
+    --myGreen-2: #6BBD99;
+    --myGreen-3: #AECFA4;
+    --myGreen-4: #C4E8C2;
+    --myWhite: #FFFFFF;
+}
+.cv {
+    background-image: url(../components/images/cv_wall.jpg);
+    background-color: var(--myGreen-3);
+    border-radius: 10px;
+    height: 73em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cv h2 {
+    color: var(--myDarkGreen);
+    letter-spacing: 4px;
+    font-size: 60px;
+}
+.cv p {
+    color: var(--myDarkGreen);
+    padding-top: 3.7em;
+    font-size: 20px;
+    font-weight: bolder;
+}

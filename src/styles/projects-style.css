@@ -5,6 +5,9 @@
     font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     --myWhite: #FFFFFF;
+    --myGreyWhite: rgba(255, 255, 255, 0.5);
+    --myGlassGrey: rgba(255, 255, 255, 0.1);
+    --myHoverDarkGreen: hsl(203, 26%, 24%, 85%);
     --myDarkGreen: #2E424E;
 }
 .projects {
@@ -68,17 +71,17 @@ a {
     flex-direction: column;
     padding: 1em;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--myGlassGrey);
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     transition: .3s;
     margin: 2em 4em;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid var(--myGreyWhite);
+    border-left: 1px solid var(--myGreyWhite);
     backdrop-filter: blur(7px);
 }
 .project-card:hover {
-    background-color: hsl(203, 26%, 24%, 85%)
+    background-color: var(--myHoverDarkGreen);
 }
 .project-card h6 {
     color: var(--myWhite);
@@ -94,4 +97,49 @@ a {
 .project-card p {
     color: var(--myWhite);
     margin-top: 3em;
+}
+
+/* STOPWATCH */
+.stopwatch {
+    background-color:lavender;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5em;
+    border-radius: 10px;
+}
+.stopwatch h1 {
+    margin: 3em auto 0.5em auto;
+    font-size: 40px;
+}
+.stopwatch h4 {
+    display: flex;
+    margin-top: 0.1em;
+    width: 35%;
+    justify-content: space-around;
+    align-items: center;
+}
+.stopwatch span {
+    font-size: 130px;
+    padding-bottom: 0.2em;
+}
+.minutes, .seconds, .tens {
+    font-size: 130px;
+    padding: 0 0.2em;
+}
+.start, .stop, .reset {
+    border: 2px solid goldenrod;
+    border-radius: 0.2em;
+    padding: 0.5em 2em;
+    margin: 3em 0.9em;
+    font-size: 16px;
+    transition: 0.4s;
+    width: 7em;
+}
+.start:hover, .stop:hover, .reset:hover {
+    cursor: pointer;
+    color: lavender;
+    background-color: goldenrod;
+    border-radius: 0.4em;
+    letter-spacing: 0.02em;
 }
