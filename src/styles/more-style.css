@@ -31,3 +31,14 @@
     font-size: 20px;
     font-weight: bolder;
 }
+@media (max-width: 768px) {
+    .cv {
+        height: 68em;
+    }
+    .cv img {
+        width: 75%;
+    }
+    .cv p {
+        text-align: center;
+    }
+}

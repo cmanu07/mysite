@@ -10,6 +10,9 @@
     --myHoverDarkGreen: hsl(203, 26%, 24%, 85%);
     --myDarkGreen: #2E424E;
 }
+@media (max-width: 768px) {
+    
+}
 .projects {
     background-image: url(../components/images/projects_wall.jpg);
     border-radius: 10px;
@@ -28,6 +31,8 @@
     height: 70%;
     padding-bottom: 3em;
 }
+
+/* COUNTER */
 .counter {
     display: flex;
     justify-content: center;
@@ -61,6 +66,21 @@
     background-color: var(--myGreen-1);
     box-shadow: inset 0px 0px 10px 3px var(--myWhite);
 }
+.danger {
+    background-color: var(--myRed);
+}
+.default {
+    background-color: var(--myGreen-3);
+}
+.middle {
+    background-color: var(--myYellow);
+}
+.default, .danger, .middle {
+    transition: .3s;
+    border-radius: 10px;
+}
+
+
 a {
     text-decoration: none;
 }

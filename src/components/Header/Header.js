@@ -1,5 +1,7 @@
 import NavBar from "./NavBar"
 
+import myLogo from "../images/my_logo.png"
+
 
 const Header = () => {
 
@@ -10,7 +12,7 @@ const Header = () => {
 
     return (
         <div className = {`${className}`}>
-            <h1 title="Emanuel Caradan - My Site"><a href="/">Emanuel Caradan</a></h1>
+            <h1 title="Emanuel Caradan - My Site"><a href="/"><img src={myLogo} alt="my site logo"/>MANU</a></h1>
             {navList.map((buton) => {
                 return <NavBar
                     key = {buton.buton1}

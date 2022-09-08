@@ -9,7 +9,7 @@
     --myGreen-1: #46a094;
     --myGreen-2: #6BBD99;
     --myGreen-3: #AECFA4;
-    --myGreen-4: #C4E8C2;
+    --myGreen-hover: #C4E8C2;
     --myWhite: #FFFFFF;
     --myYellow: #FDD037;
     --myRed: #E65C4F;
@@ -22,6 +22,18 @@
     background: var(--myGreen-3);
     border-radius: 5px;
 }
+@media (max-width: 768px) {
+    h1 a, h3 a {
+        font-size: small;
+    }
+    .main-bg h1 {
+        text-align: center;
+    }
+    .main-bg h2 {
+        font-size: 1.5rem;
+    }
+
+}
 h2 {
     font-size: 35px;
     text-align: center;
@@ -32,19 +44,20 @@ h2 {
     backdrop-filter: blur(6px);
     border-radius: 0 0 10px 10px;
     margin: 0.3em 0 0;
-    padding: 1.4em 1em 1em;
+    padding: 1.6em 1em;
     width: 100%;
-    height: 12vh;
+    height: fit-content;
     display: flex;
     position: sticky;
     top: 0;
     transition: 0.3s;
     z-index: 1;
 }
-.header-shrink {
-    background-color:red
+h1 a {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
 }
-
 h1 a, h3 a {
     text-decoration: none;
     color: black;
@@ -52,16 +65,19 @@ h1 a, h3 a {
 }
 h1 a:hover, h3 a:hover {
     cursor: pointer;
-    color: var(--myGreen-4);
+    color: var(--myGreen-hover);
+}
+h1 img {
+    width: 30%;
 }
 .navbar {
     display: flex;
-    width: 78vw;
+    width: 80vw;
     align-items: center;
     justify-content: flex-end;
 }
 .navbar h3 {
-    padding: 0 1.2em;
+    padding: 0 2.7%;
 }
 
 .main-article {
@@ -70,22 +86,24 @@ h1 a:hover, h3 a:hover {
     background-image: url("../components/images/master-bg.jpg");
     border-radius: 10px;
 }
-.main-article a {
+.main-bg a {
     margin-top: 4em;
     border: var(--myDarkGreen) solid 3px;
     border-radius: 5px;
     display: flex;
     text-decoration: none;
-    color: black;
+    background-image: linear-gradient(to bottom right, var(--myGreen-1), var(--myGreen-3));
+    color: var(--myWhite);
     width: 11em;
     height: 4em;
     justify-content: center;
     align-items: center;
     transition: .3s;
 }
-.main-article a:hover {
-    background-color: var(--myGreen-4);
+.main-bg a:hover {
+    background-image: linear-gradient(var(--myGreen-hover), var(--myGreen-hover));
     cursor: pointer;
+    color: var(--myDarkGreen);
 }
 .main-bg {
     display: flex;
@@ -97,7 +115,7 @@ h1 a:hover, h3 a:hover {
     height: 100vh;
 }
 .main-bg h1 {
-    font-size: 60px;
+    font-size: 3rem;
 }
 
 /* FOOTER */
@@ -107,7 +125,7 @@ h1 a:hover, h3 a:hover {
     justify-content: center;
     padding-top: 4em;
     width: 100%;
-    height: 59vh;
+    height: fit-content;
     background-color: var(--myDarkGreen);
     color: var(--myWhite);
     border-radius: 10px 10px 0 0;
@@ -117,6 +135,8 @@ h1 a:hover, h3 a:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 .footer-main p {
     color: var(--myDarkGreen);
@@ -124,6 +144,10 @@ h1 a:hover, h3 a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 23em;
+    height: 25vh;
+    background-color: var(--myWhite);
+    border-radius: 5px;
 }
 .footer-main h6 {
     font-weight: bolder;
@@ -143,12 +167,6 @@ h1 a:hover, h3 a:hover {
 .footer-main img {
     width: 2em;
     height: 2em;
-}
-.footer p {
-    width: 25vw;
-    height: 25vh;
-    background-color: var(--myWhite);
-    border-radius: 5px;
 }
 .footer h4 {
     color: var(--myWhite);
@@ -172,23 +190,9 @@ h1 a:hover, h3 a:hover {
     transition: 0.2s;
 }
 .footer-social img:hover {
-    background-color: var(--myGreen-4);
+    background-color: var(--myGreen-hover);
     width: 3,5em;
     height: 3,5em;
     border-radius: 50%;
     opacity: 70%;
-}
-
-.danger {
-    background-color: var(--myRed);
-}
-.default {
-    background-color: var(--myGreen-3);
-}
-.middle {
-    background-color: var(--myYellow);
-}
-.default, .danger, .middle {
-    transition: .3s;
-    border-radius: 10px;
 }
