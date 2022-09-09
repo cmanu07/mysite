@@ -41,8 +41,15 @@
 #dark {
     background-color: var(--myDarkGreen);
 }
-h2 {
+#light h2 {
     font-size: 35px;
+    color: var(--myDarkGreen);
+    text-align: center;
+    padding: 1em 0;
+}
+#dark h2 {
+    font-size: 35px;
+    color: var(--myWhite);
     text-align: center;
     padding: 1em 0;
 }

@@ -17,10 +17,10 @@
     background-image: url(../components/images/projects_wall.jpg);
     border-radius: 10px;
 }
-.projects h2 {
+#light .projects h2, #dark .projects h2 {
     color: var(--myWhite);
     letter-spacing: 4px;
-    font-size: 60px;
+    font-size: 50px;
 }
 .main-projects {
     display: flex;
@@ -162,4 +162,75 @@ a {
     background-color: goldenrod;
     border-radius: 0.4em;
     letter-spacing: 0.02em;
+}
+
+/* SEMAFOR */
+.semafor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 2em;
+    width: 13em;
+    height: 25em;
+    border: 4px solid black;
+    border-radius: 1em;
+    background-color: lightslategrey;
+}
+.semafor p {
+    width: 7em;
+    height: 7em;
+    border: 2px solid black;
+    border-radius: 3.5em;
+    margin: 0.6em 0;
+}
+.red-light {
+    background-color: red;
+    transition: 0.1s;
+    box-shadow: 4px 4px 30px rgb(223, 68, 68),
+    -4px -4px 30px rgb(223, 68, 68);
+}
+.yellow-light {
+    background-color: yellow;
+    transition: 0.1s;
+    box-shadow: 4px 4px 30px rgb(241, 241, 174),
+    -4px -4px 30px rgb(241, 241, 174);
+}
+.green-light {
+    background-color: green;
+    transition: 0.1s;
+    box-shadow: 4px 4px 30px rgb(29, 247, 112),
+    -4px -4px 30px rgb(29, 247, 112);
+}
+.off-light {
+    background-color: rgb(69, 76, 83);
+    transition: 0.2s;
+    box-shadow: none;
+}
+.modul {
+    display: flex;
+    justify-content: center;
+}
+.modul button {
+    width: 6em;
+    height: 2em;
+    margin: 1em 10em;
+    padding: 0;
+    border: solid 3px black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px rgba(57, 58, 58, 0.6),
+    -1px -1px 15px rgba(57, 58, 58, 0.6);
+    background-color: aliceblue;
+    font-size: 25px;
+    transition: 0.4s;
+}
+.modul button:hover {
+    cursor: pointer;
+    background-color: rgb(190, 190, 190);
+    box-shadow: none;
+}
+.stalp {
+    width: 0em;
+    height: 13em;
+    border: 8px solid black;
 }
