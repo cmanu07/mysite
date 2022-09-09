@@ -8,8 +8,10 @@
     --myGreen-1: #46a094;
     --myGreen-2: #6BBD99;
     --myGreen-3: #AECFA4;
-    --myGreen-4: #C4E8C2;
+    --myGreen-hover: #C4E8C2;
     --myWhite: #FFFFFF;
+    --myHeaderGreen: hsl(172, 39%, 45%, 0.8);
+    --myDarkHeader: hsl(203, 26%, 24%, 0.7);
 }
 .cv {
     background-image: url(../components/images/cv_wall.jpg);
@@ -41,4 +43,67 @@
     .cv p {
         text-align: center;
     }
+}
+
+/* TOGGLE BUTTON */
+#light .toggle-theme {
+    display: flex;
+    align-items: center;
+    padding: 0 0.2em;
+    margin-top: 2em;
+    position: relative;
+    width: 4em;
+    height: 2em;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #E1E1E1, var(--myWhite));
+    box-shadow: 3px 3px 3px var(--myDarkHeader);
+    cursor: pointer;
+}
+#dark .toggle-theme {
+    display: flex;
+    align-items: center;
+    padding: 0 0.2em;
+    margin-top: 2em;
+    position: relative;
+    width: 4em;
+    height: 2em;
+    border-radius: 50px;
+    background: linear-gradient(145deg, var(--myGreen-1), var(--myGreen-2));
+    box-shadow: 2px 2px 3px var(--myGreen-hover);
+    cursor: pointer;
+}
+.toggle-theme input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+#light .slider {
+    position: absolute;
+    background-color: var(--myDarkGreen);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+#dark .slider {
+    position: absolute;
+    background-color: var(--myGreen-hover);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transition: 0.4s;
+    transform: translateX(30px);
+}
+.toggle-sun-icon {
+    width: 1.7em;
+    height: 1.7em;
+    margin-left: 0.2em;
+    background: url(../components/images/sun_icon.png);
+    background-size: contain;
+}
+.toggle-moon-icon {
+    width: 1.7em;
+    height: 1.7em;
+    background: url(../components/images/moon_icon.png);
+    background-size: contain;
 }

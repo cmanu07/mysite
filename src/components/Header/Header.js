@@ -1,11 +1,12 @@
+import React, { useContext } from "react";
+
 import NavBar from "./NavBar"
-
+import { ThemeContext } from "../Contexts/ThemeContext";
 import myLogo from "../images/my_logo.png"
-
 
 const Header = () => {
 
-    
+    const {toggleTheme, theme} = useContext(ThemeContext);
 
     let className = "header";
     const navList = [{buton1: 'CAREER', buton2: 'PROJECTS', buton3: 'CV', buton4: 'ABOUT ME'}];
@@ -22,6 +23,12 @@ const Header = () => {
                     despre = {buton.buton4}
                 />
             })}
+            <label className="toggle-theme">
+                <input type='checkbox' onChange={toggleTheme} checked={theme === 'light'}/>
+                <span className="toggle-moon-icon"></span>
+                <span className="toggle-sun-icon"></span>
+                <span className="slider"></span>
+            </label>
         </div>
     )
 };

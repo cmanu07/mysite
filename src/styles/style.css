@@ -14,6 +14,7 @@
     --myYellow: #FDD037;
     --myRed: #E65C4F;
     --myHeaderGreen: hsl(172, 39%, 45%, 0.8);
+    --myDarkHeader: hsl(203, 26%, 24%, 0.7);
 }
 ::-webkit-scrollbar {
     background: var(--myHeaderGreen);
@@ -34,18 +35,39 @@
     }
 
 }
+#light {
+    background-color: var(--myWhite);
+}
+#dark {
+    background-color: var(--myDarkGreen);
+}
 h2 {
     font-size: 35px;
     text-align: center;
     padding: 1em 0;
 }
-.header {
+#light .header {
     background-color: var(--myHeaderGreen);
     backdrop-filter: blur(6px);
     border-radius: 0 0 10px 10px;
     margin: 0.3em 0 0;
-    padding: 1.6em 1em;
+    padding: 1.6em 1em 1em 1em;
     width: 100%;
+    height: fit-content;
+    display: flex;
+    position: sticky;
+    top: 0;
+    transition: 0.3s;
+    z-index: 1;
+}
+#dark .header {
+    background-color: var(--myDarkHeader);
+    backdrop-filter: blur(6px);
+    border-radius: 0 0 10px 10px;
+    margin: 0.3em 0 0;
+    padding: 1.6em 1em 1em 1em;
+    width: 100%;
+    border-bottom: 0.8px solid var(--myWhite);
     height: fit-content;
     display: flex;
     position: sticky;
@@ -58,12 +80,21 @@ h1 a {
     gap: 0.5em;
     align-items: center;
 }
-h1 a, h3 a {
+#light h1 a, #light h3 a {
     text-decoration: none;
     color: black;
     transition: 0.25s;
 }
-h1 a:hover, h3 a:hover {
+#dark h1 a, #dark h3 a {
+    text-decoration: none;
+    color: var(--myWhite);
+    transition: 0.25s;
+}
+#light h1 a:hover, #light h3 a:hover {
+    cursor: pointer;
+    color: var(--myGreen-hover);
+}
+#dark h1 a:hover, #dark h3 a:hover {
     cursor: pointer;
     color: var(--myGreen-hover);
 }
@@ -119,7 +150,7 @@ h1 img {
 }
 
 /* FOOTER */
-.footer {
+#light .footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,6 +161,18 @@ h1 img {
     color: var(--myWhite);
     border-radius: 10px 10px 0 0;
 }
+#dark .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4em;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--myDarkGreen);
+    color: var(--myWhite);
+    border-radius: 10px 10px 0 0;
+    border-top: 0.8px solid var(--myWhite);
+}
 .footer-main {
     width: 100%;
     display: flex;
@@ -138,7 +181,7 @@ h1 img {
     flex-wrap: wrap;
     gap: 1em;
 }
-.footer-main p {
+#light .footer-main-card {
     color: var(--myDarkGreen);
     display: flex;
     flex-direction: column;
@@ -149,7 +192,18 @@ h1 img {
     background-color: var(--myWhite);
     border-radius: 5px;
 }
-.footer-main h6 {
+#dark .footer-main-card {
+    color: var(--myWhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 23em;
+    height: 25vh;
+    background-color: var(--myGreen-1);
+    border-radius: 5px;
+}
+.footer-main-title {
     font-weight: bolder;
     padding-top: 1em;
     font-size: 17px;
@@ -157,16 +211,42 @@ h1 img {
 .footer-main span {
     padding-top: 1em;
 }
-.footer-main-br {
+#light .footer-main-br {
     margin-top: 1em;
     width: 4em;
     height: 0.15em;
     border-radius: 20px;
     background-color: var(--myDarkGreen);
 }
-.footer-main img {
+#dark .footer-main-br {
+    margin-top: 1em;
+    width: 4em;
+    height: 0.15em;
+    border-radius: 20px;
+    background-color: var(--myWhite);
+}
+.footer-main-card-logo-a, .footer-main-card-logo-e, .footer-main-card-logo-p {
     width: 2em;
     height: 2em;
+    background-size: contain;
+}
+#light .footer-main-card-logo-a {
+    background-image: url(../components/images/address_icon.png);
+}
+#dark .footer-main-card-logo-a {
+    background-image: url(../components/images/address_icon_white.png);
+}
+#light .footer-main-card-logo-e {
+    background-image: url(../components/images/email_icon.png);
+}
+#dark .footer-main-card-logo-e {
+    background-image: url(../components/images/email_icon_white.png);
+}
+#light .footer-main-card-logo-p {
+    background-image: url(../components/images/phone_icon.png);
+}
+#dark .footer-main-card-logo-p {
+    background-image: url(../components/images/phone_icon_white.png);
 }
 .footer h4 {
     color: var(--myWhite);
