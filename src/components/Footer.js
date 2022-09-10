@@ -21,7 +21,7 @@ const Footer = () => {
                             <figure className="footer-main-card-logo-e"></figure>
                             <p className="footer-main-title">EMAIL</p>
                             <div className="footer-main-br"></div>
-                            <span>cemanuel86@gmail.com</span>
+                            <span>emanuel.caradan@gmail.com</span>
                         </div>
                         <div className="footer-main-card">
                             <figure className="footer-main-card-logo-p"></figure>
