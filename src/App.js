@@ -23,7 +23,7 @@ import { ThemeContext } from './components/Contexts/ThemeContext';
 
 const App = () => {
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => 'light');
 
   const toggleTheme = () => {
     setTheme((curentT) => (curentT === 'light') ? curentT = 'dark' : curentT = 'light');

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const MainBG = () => {
 
-    const [mainAbout, setMainAbout] = useState('main-bg-about');
+    const [mainAbout, setMainAbout] = useState(() => 'main-bg-about');
     const mouseDownFunct = () => {
         setMainAbout('main-bg-about-click')
     }

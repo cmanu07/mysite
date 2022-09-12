@@ -1,9 +1,7 @@
 import whatsApp from "./images/whatsapp.png";
 import linkedIn from "./images/linkedin.png";
 import gitHub from "./images/github.png";
-// import homeIcon from "./images/address_icon.png";
-// import emailIcon from "./images/email_icon.png";
-// import phoneIcon from "./images/phone_icon.png";
+
 
 
 const Footer = () => {

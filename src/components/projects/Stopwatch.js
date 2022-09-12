@@ -10,9 +10,9 @@ const Stopwatch = () => {
     let minC = '00';
 
     const [interv, setInterv] = useState("");
-    const [minutes, setMinutes] = useState(minC);
-    const [seconds, setSeconds] = useState(secC);
-    const [tens, setTens] = useState(tensC);
+    const [minutes, setMinutes] = useState(() => minC);
+    const [seconds, setSeconds] = useState(() => secC);
+    const [tens, setTens] = useState(() => tensC);
 
 // START
     const start = () => {

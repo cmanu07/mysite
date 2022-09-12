@@ -8,8 +8,8 @@ import searchIcon from '../images/icons8-search-50.png';
 
 export default function SearchBar ({data}) {
 
-    const [cauta, setCauta] = useState(data);
-    const [icon, setIcon] = useState('search-icon');
+    const [cauta, setCauta] = useState(() => data);
+    const [icon, setIcon] = useState(() => 'search-icon');
 
     const filtruCautare = (event) => {
         const cuvInput = event.target.value;
