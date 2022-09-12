@@ -124,13 +124,12 @@ h1 img {
     background-image: url("../components/images/master-bg.jpg");
     border-radius: 10px;
 }
-.main-bg a {
+.main-bg-about, .main-bg-about-click {
     margin-top: 4em;
     border: var(--myDarkGreen) solid 3px;
     border-radius: 5px;
     display: flex;
     text-decoration: none;
-    background-image: linear-gradient(to bottom right, var(--myGreen-1), var(--myGreen-3));
     color: var(--myWhite);
     width: 11em;
     height: 4em;
@@ -138,7 +137,15 @@ h1 img {
     align-items: center;
     transition: .3s;
 }
-.main-bg a:hover {
+.main-bg-about {
+    background-image: linear-gradient(to bottom right, var(--myGreen-1), var(--myGreen-3));
+    box-shadow: 3px 3px 3px var(--myDarkHeader);
+}
+.main-bg-about-click {
+    color: var(--myDarkGreen);
+    background-image: linear-gradient(to bottom right, var(--myGreen-2), var(--myGreen-hover));
+}
+.main-bg-about:hover {
     background-image: linear-gradient(var(--myGreen-hover), var(--myGreen-hover));
     cursor: pointer;
     color: var(--myDarkGreen);
@@ -155,6 +162,7 @@ h1 img {
 .main-bg h1 {
     font-size: 3rem;
 }
+
 
 /* FOOTER */
 #light .footer {

@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 
 export default function Counter () {
 
-    const [counter, setCounter] = useState(5);
+    const [counter, setCounter] = useState(() => 5);
     const adder = counter + 1;
     const minus = counter - 1;
     const butStyle = {
