@@ -9,7 +9,7 @@ const Header = () => {
     const {toggleTheme, theme} = useContext(ThemeContext);
 
     let className = "header";
-    const navList = [{buton1: 'CAREER', buton2: 'PROJECTS', buton3: 'CV', buton4: 'ABOUT ME'}];
+    const navList = [{buton1: 'PROJECTS', buton2: 'CV', buton3: 'ABOUT ME'}];
 
     return (
         <div className = {`${className}`}>
@@ -17,10 +17,9 @@ const Header = () => {
             {navList.map((buton) => {
                 return <NavBar
                     key = {buton.buton1}
-                    cariera = {buton.buton1}
-                    proiecte = {buton.buton2}
-                    cv = {buton.buton3}
-                    despre = {buton.buton4}
+                    proiecte = {buton.buton1}
+                    cv = {buton.buton2}
+                    despre = {buton.buton3}
                 />
             })}
             <label className="toggle-theme">

@@ -13,9 +13,16 @@
     --myHeaderGreen: hsl(172, 39%, 45%, 0.8);
     --myDarkHeader: hsl(203, 26%, 24%, 0.7);
 }
-.cv {
+#light .cv {
     background-image: url(../components/images/cv_wall.jpg);
     background-color: var(--myGreen-3);
+    border-radius: 10px;
+    height: 73em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#dark .cv {
     border-radius: 10px;
     height: 73em;
     display: flex;
@@ -27,13 +34,29 @@
     letter-spacing: 4px;
     font-size: 60px;
 }
-.cv p {
+#light .cv p {
     color: var(--myDarkGreen);
     padding-top: 8em;
     margin-bottom: 2em;
     font-size: 20px;
     font-weight: bolder;
 }
+#dark .cv p {
+    color: var(--myWhite);
+    padding-top: 2em;
+    margin-bottom: 1em;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#light .cv a {
+    color: var(--myGreen-1);
+    text-decoration: underline;
+}
+#dark .cv a {
+    color: var(--myGreen-3);
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .cv {
         height: 68em;

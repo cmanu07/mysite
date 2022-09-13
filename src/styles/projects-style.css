@@ -8,6 +8,8 @@
     --myGreyWhite: rgba(255, 255, 255, 0.5);
     --myGlassGrey: rgba(255, 255, 255, 0.1);
     --myHoverDarkGreen: hsl(203, 26%, 24%, 85%);
+    --myGreen-hover: #C4E8C2;
+    --myGreen-2: #6BBD99;
     --myDarkGreen: #2E424E;
 }
 @media (max-width: 768px) {
@@ -233,4 +235,57 @@ a {
     width: 0em;
     height: 13em;
     border: 8px solid black;
+}
+
+
+/* CALCULATOR */
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 3em;
+    gap: 0.2em;
+    grid-template-columns: repeat(4, 4em);
+    grid-template-rows: minmax(5em, auto) repeat(5, 3em);
+}
+#light .calculator button {
+    border-radius: 4px;
+    font-size: 1.3em;
+    transition: .3s;
+    border: 1px solid var(--myGreyWhite);
+    background-color: var(--myGreen-2);
+}
+#dark .calculator button {
+    border-radius: 4px;
+    font-size: 1.3em;
+    transition: .3s;
+    border: 1px solid var(--myGreen-2);
+    background-color: var(--myGreen-2);
+}
+.calculator button:hover {
+    cursor: pointer;
+    background: var(--myGreen-hover);
+}
+.calculator-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.2em 0.4em;
+    grid-column: 1 / -1;
+    background: var(--myDarkGreen);
+    border-radius: 4px;
+    border: 1px solid var(--myWhite);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.calculator-span-two {
+    grid-column: span 2;
+}
+.calculator-prev-number {
+    color: var(--myGreyWhite);
+    font-size: 1.5em;
+}
+.calculator-curr-number {
+    color: var(--myWhite);
+    font-size: 2.5em;
 }

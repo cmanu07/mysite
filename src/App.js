@@ -9,7 +9,6 @@ import './styles/more-style.css';
 import { dataSet } from './components/constants';
 // pages
 import Home from './components/Pages/Home';
-import Cariera from './components/Pages/Cariera';
 import Proiecte from './components/Pages/Proiecte';
 import CV from './components/Pages/CV';
 import Despre from './components/Pages/Despre';
@@ -33,7 +32,6 @@ const App = () => {
             <div id={theme}>
               <Routes>
                 <Route path={'/'} element={<Home/>}/>
-                <Route path={'/career'} element={<Cariera/>}/>
                 <Route path={'/projects'} element={<Proiecte/>}/>
                 <Route path={'/myCV'} element={<CV/>}/>
                 <Route path={'/about'} element={<Despre/>}/>

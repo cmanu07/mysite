@@ -161,6 +161,10 @@ h1 img {
 }
 .main-bg h1 {
     font-size: 3rem;
+    color: var(--myDarkGreen);
+}
+#dark .main-bg h2 {
+    color: var(--myDarkGreen);
 }
 
 
