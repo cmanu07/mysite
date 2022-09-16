@@ -13,7 +13,15 @@
     --myDarkGreen: #2E424E;
 }
 @media (max-width: 768px) {
-    
+    .counter div h2 {
+        width: 1em;
+    }
+    .counter div {
+        width: 1em;
+    }
+    .counter button {
+        width: 3em;
+    }
 }
 .projects {
     background-image: url(../components/images/projects_wall.jpg);
@@ -62,6 +70,9 @@
     text-align: center;
     transition: .25s;
     margin-top: 1.4em;
+    width: 4em;
+    height: 1.5em;
+    border-radius: 10px;
 }
 .counter button:hover {
     cursor: pointer;

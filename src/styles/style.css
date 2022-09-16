@@ -57,7 +57,6 @@
     background-color: var(--myHeaderGreen);
     backdrop-filter: blur(6px);
     border-radius: 0 0 10px 10px;
-    margin: 0.3em 0 0;
     padding: 1.6em 1em 1em 1em;
     width: 100%;
     height: fit-content;
@@ -71,7 +70,6 @@
     background-color: var(--myDarkHeader);
     backdrop-filter: blur(6px);
     border-radius: 0 0 10px 10px;
-    margin: 0.3em 0 0;
     padding: 1.6em 1em 1em 1em;
     width: 100%;
     border-bottom: 0.8px solid var(--myWhite);

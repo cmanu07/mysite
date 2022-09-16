@@ -1,34 +1,36 @@
-import { useState } from 'react';
+import React from 'react';
 import Footer from '../Footer';
 import Header from '../Header/Header';
 
 
-export default function Counter () {
-
-    const [counter, setCounter] = useState(() => 5);
-    const adder = counter + 1;
-    const minus = counter - 1;
-    const butStyle = {
-        width: 100,
-        height: 40,
-        borderRadius: 10
+class Counter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            counter: 5,
+        }
     }
-    
-    let background = "default";
-    let mesaj = "";
+    render() {
+        const adder = {counter: this.state.counter + 1};
+        const minus = {counter: this.state.counter - 1};
+                
+        let background = "default";
+        let mesaj = "";
 
-    counter > 8 || counter < 2 ? background = "danger" : background = "default";
-    if (counter === 8 || counter === 2) background = "middle";
-    counter === 10 || counter === 0 ? mesaj = "You've reach the limit!" : mesaj = "";
-
-    return (<>
+        this.state.counter > 8 || this.state.counter < 2 ? background = "danger" : background = "default";
+        if (this.state.counter === 8 || this.state.counter === 2) background = "middle";
+        this.state.counter === 10 || this.state.counter === 0 ? mesaj = "You've reach the limit!" : mesaj = "";
+        return (<>
             <Header/>
             <h2>Counter</h2>
             <div className={`counter ${background}`}>
-                <button style={butStyle} onClick = {()=>counter < 10 ? setCounter(adder) : counter}>+</button>
-                <div><h2>{counter}</h2><span>{mesaj}</span></div>
-                <button style={butStyle} onClick = {()=>counter > 0 ? setCounter(minus) : counter}>-</button>
+                <button onClick = {()=>this.state.counter < 10 ? this.setState(adder) : this.state.counter}>+</button>
+                <div><h2>{this.state.counter}</h2><span>{mesaj}</span></div>
+                <button onClick = {()=>this.state.counter > 0 ? this.setState(minus) : this.state.counter}>-</button>
             </div>
             <Footer/>
         </>)
+    }    
 }
+
+export default Counter;
