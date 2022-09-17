@@ -27,6 +27,12 @@
     h1 a, h3 a {
         font-size: small;
     }
+    #light .header {
+        padding: 0.5em;
+    }
+    .navbar {
+        height: 1.3em;
+    }
     .main-bg h1 {
         text-align: center;
     }

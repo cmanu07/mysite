@@ -67,6 +67,10 @@
     .cv p {
         text-align: center;
     }
+
+    #light .toggle-theme {
+        
+    }
 }
 
 /* TOGGLE BUTTON */
