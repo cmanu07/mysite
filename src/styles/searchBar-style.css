@@ -60,3 +60,20 @@
     background: var(--myDarkGreen);
     color: var(--myWhite);
 }
+
+@media (min-width: 768px) and  (max-width: 992px) {
+    .main div {
+        width: 90%;
+        height: 250em;
+    }
+}
+@media (max-width: 768px) {
+    .main div {
+        width: 70%;
+        height: fit-content;
+        align-items: center;
+    }
+    .inreg {
+        text-align: center;
+    }
+}

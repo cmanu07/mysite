@@ -17,14 +17,14 @@
     background-image: url(../components/images/cv_wall.jpg);
     background-color: var(--myGreen-3);
     border-radius: 10px;
-    height: 73em;
+    height: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #dark .cv {
     border-radius: 10px;
-    height: 73em;
+    height: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,15 +36,15 @@
 }
 #light .cv p {
     color: var(--myDarkGreen);
-    padding-top: 8em;
+    padding-top: 4em;
     margin-bottom: 2em;
     font-size: 20px;
     font-weight: bolder;
 }
 #dark .cv p {
     color: var(--myWhite);
-    padding-top: 2em;
-    margin-bottom: 1em;
+    padding-top: 4em;
+    margin-bottom: 2em;
     font-size: 20px;
     font-weight: bolder;
 }
@@ -56,21 +56,23 @@
     color: var(--myGreen-3);
     text-decoration: underline;
 }
+.cv img {
+    height: 72%;
+}
 
 @media (max-width: 768px) {
     .cv {
-        height: 68em;
+        height: 100%;
     }
     .cv img {
-        width: 75%;
+        width: 90%;
+        height: 50%;
     }
     .cv p {
         text-align: center;
     }
 
-    #light .toggle-theme {
-        
-    }
+
 }
 
 /* TOGGLE BUTTON */
