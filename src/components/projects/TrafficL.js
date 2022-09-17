@@ -7,7 +7,6 @@ const TrafficL = () => {
   const [redLight, setRedLight] = useState('red-light');
   const [yellowLight, setYellowLight] = useState('yellow-light');
   const [greenLight, setGreenLight] = useState('green-light');
-  const [toggle, setToggle] = useState(() => false);
 
   const dayMode = () => {
     setRedLight('red-light')
