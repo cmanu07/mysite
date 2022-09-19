@@ -123,9 +123,28 @@ h1 img {
 }
 
 .main-article {
+    position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("../components/images/master-bg.jpg");
+}
+.main-article video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#light .main-article-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 66, 78, 0.7);
+    border-radius: 10px;
+}
+#dark .main-article-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
     border-radius: 10px;
 }
 .main-bg-about, .main-bg-about-click {
@@ -155,22 +174,60 @@ h1 img {
     color: var(--myDarkGreen);
 }
 .main-bg {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 5em;
+    top: 10em;
     width: 100%;
     height: 100vh;
 }
-.main-bg h1 {
-    font-size: 3rem;
+.main-bg-2 {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    background-color: red;
+}
+#light .main-bg h1 {
+    font-size: 3.5rem;
+    color: var(--myGreen-hover);
+}
+#dark .main-bg h1 {
+    font-size: 3.5rem;
+    color: var(--myGreen-3);
+}
+#light .main-bg-h2 {
+    color: var(--myGreen-hover);
+}
+#dark .main-bg-h2 {
+    color: var(--myGreen-3);
+}
+#light .about-main {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 4em 5em;
     color: var(--myDarkGreen);
 }
-#dark .main-bg h2 {
-    color: var(--myDarkGreen);
+#dark .about-main {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 4em;
+    color: var(--myWhite);
 }
-
+.about-main p {
+    font-size: 20px;
+    text-align: center;
+    padding: 0.5em 0;
+}
 
 /* FOOTER */
 #light .footer {
@@ -254,22 +311,22 @@ h1 img {
     background-size: contain;
 }
 #light .footer-main-card-logo-a {
-    background-image: url(../components/images/address_icon.png);
+    background-image: url(../components/Media/address_icon.png);
 }
 #dark .footer-main-card-logo-a {
-    background-image: url(../components/images/address_icon_white.png);
+    background-image: url(../components/Media/address_icon_white.png);
 }
 #light .footer-main-card-logo-e {
-    background-image: url(../components/images/email_icon.png);
+    background-image: url(../components/Media/email_icon.png);
 }
 #dark .footer-main-card-logo-e {
-    background-image: url(../components/images/email_icon_white.png);
+    background-image: url(../components/Media/email_icon_white.png);
 }
 #light .footer-main-card-logo-p {
-    background-image: url(../components/images/phone_icon.png);
+    background-image: url(../components/Media/phone_icon.png);
 }
 #dark .footer-main-card-logo-p {
-    background-image: url(../components/images/phone_icon_white.png);
+    background-image: url(../components/Media/phone_icon_white.png);
 }
 .footer h4 {
     color: var(--myWhite);

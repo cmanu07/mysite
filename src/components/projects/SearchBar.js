@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Footer from '../Footer';
 import Header from '../Header/Header';
 
-import searchIcon from '../images/icons8-search-50.png';
+import searchIcon from '../Media/icons8-search-50.png';
 
 
 export default function SearchBar ({data}) {

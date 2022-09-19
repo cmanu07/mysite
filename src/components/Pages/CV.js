@@ -1,7 +1,7 @@
 import Footer from "../Footer";
 import Header from "../Header/Header";
 
-import cvItem from "../images/cv_item.jpg";
+import cvItem from "../Media/cv_item.jpg";
 import cvFile from "../Main/Emanuel Caradan - CV.pdf";
 
 

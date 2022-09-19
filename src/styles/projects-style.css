@@ -26,7 +26,7 @@
     
 }
 .projects {
-    background-image: url(../components/images/projects_wall.jpg);
+    background-image: url(../components/Media/projects_wall.jpg);
     border-radius: 10px;
 }
 #light .projects h2, #dark .projects h2 {

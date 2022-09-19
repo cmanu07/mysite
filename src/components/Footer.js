@@ -1,6 +1,6 @@
-import whatsApp from "./images/whatsapp.png";
-import linkedIn from "./images/linkedin.png";
-import gitHub from "./images/github.png";
+import whatsApp from "./Media/whatsapp.png";
+import linkedIn from "./Media/linkedin.png";
+import gitHub from "./Media/github.png";
 
 
 

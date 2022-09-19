@@ -1,8 +1,8 @@
-import search_wall from './images/search_wall.jpg';
-import counter_wall from './images/counter_wall.jpg';
-import traffic_wall from './images/traffic_wall.jpg';
-import calculator_wall from './images/calculator_wall.jpg';
-import stopwatch_wall from './images/stopwatch_wall.jpg';
+import search_wall from './Media/search_wall.jpg';
+import counter_wall from './Media/counter_wall.jpg';
+import traffic_wall from './Media/traffic_wall.jpg';
+import calculator_wall from './Media/calculator_wall.jpg';
+import stopwatch_wall from './Media/stopwatch_wall.jpg';
 
 
 
@@ -75,7 +75,7 @@ export const projects = [
         name: 'Search Bar',
         url: '/projects/searchBar',
         imagine: search_wall,
-        description: 'My first search bar project in React. :)'
+        description: 'My first search bar project in React.'
     },
     {
         name: 'Counter',
@@ -87,7 +87,7 @@ export const projects = [
         name: 'Traffic light',
         url: '/projects/traffic_light',
         imagine: traffic_wall,
-        description: 'One of the first JavaScript beginner project. :)'
+        description: 'One of the first JavaScript beginner project.'
     },
     {
         name: 'Calculator',

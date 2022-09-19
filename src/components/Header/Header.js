@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import NavBar from "./NavBar"
 import { ThemeContext } from "../Contexts/ThemeContext";
-import myLogo from "../images/my_logo.png"
+import myLogo from "../Media/my_logo.png"
 
 const Header = () => {
 
