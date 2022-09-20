@@ -17,9 +17,9 @@ const TrafficL = () => {
       setYellowLight(true)
       setRedLight(false)
       setGreenLight(false)
-      return setInterval(() => {
-      yellowLight && setYellowLight(false)
-    }, 1000)
+      setInterval(() => {
+        setYellowLight(!yellowLight)
+      },1000)
   }
   
 
