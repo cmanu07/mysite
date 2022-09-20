@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from '../Footer'
 import Header from '../Header/Header'
 
 const TrafficL = () => {
 
-  const [redLight, setRedLight] = useState(true);
-  const [yellowLight, setYellowLight] = useState(true);
-  const [greenLight, setGreenLight] = useState(true);
+  const [redLight, setRedLight] = useState(() => true);
+  const [yellowLight, setYellowLight] = useState(() => true);
+  const [greenLight, setGreenLight] = useState(() => true);
 
   const dayMode = () => {
     setRedLight(true)
@@ -17,10 +17,13 @@ const TrafficL = () => {
       setYellowLight(true)
       setRedLight(false)
       setGreenLight(false)
-      setInterval(() => {
+  }
+    useEffect(() => {
+      const interval = setInterval(() => {
         setYellowLight(!yellowLight)
       },1000)
-  }
+      return () => clearInterval(interval);
+    }, [yellowLight])
   
 
   return (<>
