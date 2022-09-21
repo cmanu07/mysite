@@ -14,7 +14,6 @@ const TrafficL = () => {
     setGreenLight(false)
   }
   const nightMode = () => {
-      setYellowLight(true)
       setRedLight(false)
       setGreenLight(false)
   }
@@ -25,7 +24,6 @@ const TrafficL = () => {
       return () => clearInterval(interval);
     }, [yellowLight])
   
-
   return (<>
             <Header/>
             <h2>Traffic Light</h2>

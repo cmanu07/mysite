@@ -5,7 +5,7 @@ import Footer from "../Footer"
 import { projects } from '../constants'
 
 
-export default function Proiecte (props) {
+export default function Proiecte () {
 
 
     return (<>

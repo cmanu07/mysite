@@ -16,7 +16,7 @@ export default function Despre () {
             <p>I am trustworthy, ambitious, open to accepting feedback and new ideas.</p>
             <p>I am self-motivated, confident and hardworking.</p>
             <p>I am able to stay calm under pressure and I am an active listener.</p>
-            <p>I’m skilled in HTML, CSS, BootStrap, JavaScript, React and some basic knowledge in backend with PHP and MySQL.</p>
+            <p>I’m skilled in HTML, CSS, JavaScript, also BootStrap and React libraries. Some basic knowledge I also have in backend with PHP and MySQL.</p>
         </div>
         <Footer/>
     </>)

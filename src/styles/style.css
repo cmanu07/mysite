@@ -179,6 +179,7 @@ h1 img {
     box-shadow: 3px 3px 3px var(--myDarkHeader);
 }
 #light .main-bg-about-click, #dark .main-bg-about-click {
+    color: var(--myDarkGreen);
     box-shadow: none;
 }
 #dark .main-bg-about {
@@ -227,6 +228,7 @@ h1 img {
     box-shadow: 3px 3px 3px var(--myDarkHeader);
 }
 #light .main-bg-about2-click, #dark .main-bg-about2-click {
+    color: var(--myDarkGreen);
     box-shadow: none;
 }
 #light .main-bg-about:hover, #light .main-bg-about2:hover, #dark .main-bg-about:hover, #dark .main-bg-about2:hover {

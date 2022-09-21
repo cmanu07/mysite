@@ -31,7 +31,8 @@ export default function SearchBar ({data}) {
                         (cauta.length !== 0) ? 
                             <div>{cauta.map((inreg, index) => {
                                 return <p key={index} className="inreg">{inreg}</p>
-                            })}</div>        :
+                            })}
+                            </div>           :
                             <div>no results found...</div>
                     }
                 </main>
