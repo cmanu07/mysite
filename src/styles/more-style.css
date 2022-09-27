@@ -80,8 +80,9 @@
     display: flex;
     align-items: center;
     padding: 0 0.2em;
-    margin-top: 2em;
-    position: relative;
+    position: absolute;
+    top: 2.5rem;
+    right: 9.5rem;
     width: 4em;
     height: 2em;
     border-radius: 50px;
@@ -93,8 +94,9 @@
     display: flex;
     align-items: center;
     padding: 0 0.2em;
-    margin-top: 2em;
-    position: relative;
+    position: absolute;
+    top: 2.5rem;
+    right: 9.5rem;
     width: 4em;
     height: 2em;
     border-radius: 50px;
@@ -136,4 +138,26 @@
     height: 1.7em;
     background: url(../components/Media/moon_icon.png);
     background-size: contain;
+}
+#light .show-date {
+    width: 34%;
+    display: flex;
+    position: absolute;
+    top: 0.5em;
+    right: 7em;
+    justify-content: flex-end;
+}
+#dark .show-date {
+    color: var(--myWhite);
+    width: 34%;
+    display: flex;
+    position: absolute;
+    top: 0.5em;
+    right: 7em;
+    justify-content: flex-end;
+}
+.show-date p {
+    font-size: 90%;
+    text-align: center;
+    width: 6em;
 }
