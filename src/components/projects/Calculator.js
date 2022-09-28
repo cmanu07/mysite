@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react'
 import Footer from '../Footer'
 import Header from '../Header/Header'
+import BackButton from '../Main/BackButton'
 import CalculatorDigit from './CalculatorDigit'
 import CalculatorOperat from './CalculatorOperat'
 
@@ -125,7 +126,10 @@ const Calculator = () => {
   
   return (<>
             <Header/>
-            <h2>Calculator</h2>
+            <div>
+              <h2>Calculator</h2>
+              <BackButton/>
+            </div>
             <main className='calculator'>
               <div className='calculator-display'>
                 <div className='calculator-prev-number'>{formatNumber(prevNumber)} {operation}</div>

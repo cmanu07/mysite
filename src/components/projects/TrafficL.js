@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Footer from '../Footer'
 import Header from '../Header/Header'
+import BackButton from '../Main/BackButton';
 
 const TrafficL = () => {
 
@@ -26,7 +27,10 @@ const TrafficL = () => {
   
   return (<>
             <Header/>
-            <h2>Traffic Light</h2>
+            <div>
+              <h2>Traffic Light</h2>
+              <BackButton/>
+            </div>
             <main>
               <div className="semafor">
                   <p className={redLight ? 'red-light' : 'off-light'}></p>

@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import BackButton from '../Main/BackButton'
 
 import Header from '../Header/Header'
 import Footer from '../Footer'
@@ -52,7 +53,10 @@ const Stopwatch = () => {
   return (<>
             <Header/>
                 <main className='stopwatch'>
-                    <h1>STOPWATCH</h1>
+                    <div className='back-div'>
+                        <h1>STOPWATCH</h1>
+                        <BackButton/>
+                    </div>
                     <h4>
                         <p className="minutes">{minutes}</p>
                         <span>:</span>
@@ -60,7 +64,7 @@ const Stopwatch = () => {
                         <span>:</span>
                         <p className="tens">{tens}</p>
                     </h4>
-                    <div>
+                    <div className='stopwatch-butt'>
                         <button className="start" onClick={startT}>Start</button>    
                         <button className="stop" onClick={stopT}>Stop</button>    
                         <button className="reset" onClick={resetT}>Reset</button>

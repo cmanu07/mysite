@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Footer from '../Footer';
 import Header from '../Header/Header';
+import BackButton from '../Main/BackButton';
 
 import searchIcon from '../Media/icons8-search-50.png';
 
@@ -25,15 +26,20 @@ export default function SearchBar ({data}) {
     return (<>
                 <Header/>
                 <main className="main">
-                    <label><input type="search" placeholder='Search here...' onChange={filtruCautare}/>
-                    <img className={icon} src={searchIcon} alt="..."/></label>
+                    <div className='main-div'>
+                        <BackButton/>
+                        <label>
+                            <input type="search" placeholder='Search here...' onChange={filtruCautare}/>
+                            <img className={icon} src={searchIcon} alt="..."/>
+                        </label>
+                    </div>
                     {
                         (cauta.length !== 0) ? 
-                            <div>{cauta.map((inreg, index) => {
+                            <div className='main-div-2'>{cauta.map((inreg, index) => {
                                 return <p key={index} className="inreg">{inreg}</p>
                             })}
                             </div>           :
-                            <div>no results found...</div>
+                            <div className='main-div-3'>no results found...</div>
                     }
                 </main>
                 <Footer/>

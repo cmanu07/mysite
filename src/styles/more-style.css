@@ -161,3 +161,23 @@
     text-align: center;
     width: 6em;
 }
+.back-button {
+    position: absolute;
+    font-size: larger;
+    background-color: var(--myGreen-hover);
+    color: var(--myDarkGreen);
+    border: 1px var(--myDarkGreen) solid;
+    top: 18%;
+    left: 10%;
+    border-radius: 5px;
+    padding: 7px 10px;
+    transition: .3s;
+}
+.back-button:hover {
+    background-color: var(--myDarkGreen);
+    color: var(--myGreen-hover);
+    animation: shake 1s infinite;
+}
+@keyframes shake {
+    0% {transform: translate(-3px, 0);}
+}

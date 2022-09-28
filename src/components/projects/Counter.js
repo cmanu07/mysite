@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../Footer';
 import Header from '../Header/Header';
+import BackButton from '../Main/BackButton';
 
 
 class Counter extends React.Component {
@@ -22,7 +23,10 @@ class Counter extends React.Component {
         this.state.counter === 10 || this.state.counter === 0 ? mesaj = "You've reached the limit!" : mesaj = "";
         return (<>
             <Header/>
-            <h2>Counter</h2>
+            <div>
+                <h2>Counter</h2>
+                <BackButton/>
+            </div>
             <div className={`counter ${background}`}>
                 <button onClick = {()=>this.state.counter > 0 ? this.setState(minus) : this.state.counter}>-</button>
                 <div><h2>{this.state.counter}</h2><span>{mesaj}</span></div>

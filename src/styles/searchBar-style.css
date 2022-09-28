@@ -38,10 +38,28 @@
     padding: 0 0.5em;
     border: var(--myWhite);
 }
-.main div {
+.main-div {
+    display: flex;
+    width: 92%;
+    height: fit-content;
+    justify-content: flex-end;
+    position: relative;
+}
+.main-div-2 {
     width: 92%;
     padding: 0.5em;
     height: 115em;
+    margin: 2em 0;
+    background-color: hsl(0, 0%, 100%, 65%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.main-div-3 {
+    width: 92%;
+    padding: 0.5em;
+    height: 25em;
     margin: 2em 0;
     background-color: hsl(0, 0%, 100%, 65%);
     border-radius: 5px;
