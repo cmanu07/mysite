@@ -45,6 +45,9 @@
     justify-content: flex-end;
     position: relative;
 }
+.main-div-butt {
+    top: 0;
+}
 .main-div-2 {
     width: 92%;
     padding: 0.5em;

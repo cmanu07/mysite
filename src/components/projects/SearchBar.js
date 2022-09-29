@@ -27,7 +27,7 @@ export default function SearchBar ({data}) {
                 <Header/>
                 <main className="main">
                     <div className='main-div'>
-                        <BackButton/>
+                        <BackButton className='main-div-butt'/>
                         <label>
                             <input type="search" placeholder='Search here...' onChange={filtruCautare}/>
                             <img className={icon} src={searchIcon} alt="..."/>
