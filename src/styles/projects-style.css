@@ -34,7 +34,7 @@
 }
 #light .projects h2, #dark .projects h2 {
     color: var(--myGreen-hover);
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     font-size: 50px;
 }
 .projects h5 {
@@ -123,7 +123,7 @@ a {
     display: flex;
     flex-direction: column;
     padding: 1em;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: var(--myGlassGrey);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     overflow: hidden;

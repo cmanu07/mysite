@@ -20,9 +20,10 @@ const Stopwatch = () => {
         setTens(tensC++);
         (tensC <= 9) ? setTens(`${tensC}0`) : setTens(tensC);
         if (tensC > 9) {
+            
             setSeconds(secC++)
             setSeconds(`0${secC}`)
-            tensC = '00';
+            tensC = '0';
             setTens(tensC++)
         }
         if (secC > 9) {

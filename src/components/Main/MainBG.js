@@ -37,7 +37,7 @@ const MainBG = () => {
                     <a href="/about" className={mainAbout} onMouseDown={mouseDownFunct} onMouseUp={mouseUpFunct}>more ABOUT ME</a>
                 </div>
                 <div className="main-bg-3">
-                    <h5>I am now looking for a Junior Web Developer position to finally kick-start my career. For this to happen soner I started to bild my own projects.</h5>
+                    <h5>I am now looking for a Junior Web Developer position to finally kick-start my career, so I started building my own projects.</h5>
                     <a href="/projects" className={mainAbout2} onMouseDown={mouseDownFunct2} onMouseUp={mouseUpFunct2}>see my PROJECTS</a>
                 </div>
             </article>
