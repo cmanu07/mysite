@@ -36,9 +36,6 @@
     .main-bg h1 {
         text-align: center;
     }
-    .main-bg h2 {
-        font-size: 1.5rem;
-    }
     .main-bg figure {
         width: 50%;
         height: fit-content;
@@ -47,15 +44,6 @@
         align-items: center;
         justify-content: center;
     }
-    #light .main-bg-h2 {
-        color: var(--myGreen-hover);
-        font-size: 25px;
-    }
-    #dark .main-bg-h2 {
-        color: var(--myGreen-3);
-        font-size: 25px;
-    }
-
 }
 #light {
     background-color: var(--myGreen-hover);
@@ -211,14 +199,27 @@ h1 a {
     color: var(--myGreen-2);
     transition: 0.25s;
 }
-#light h1 a:hover, #light h3 a:hover {
+#light h1 a:hover {
     cursor: pointer;
     color: var(--myGreen-hover);
 }
-#dark h1 a:hover, #dark h3 a:hover {
+#light h3 a:hover {
+    cursor: pointer;
+    color: var(--myGreen-hover);
+    letter-spacing: 0.3px;
+    font-weight: bolder;
+}
+#dark h1 a:hover {
     cursor: pointer;
     color: var(--myGreen-hover);
 }
+#dark h3 a:hover{
+    cursor: pointer;
+    color: var(--myGreen-hover);
+    letter-spacing: 0.3px;
+    font-weight: bolder;
+}
+
 h1 img {
     width: 40%;
 }
@@ -289,7 +290,7 @@ h1 img {
     border-radius: 15px;
     display: flex;
     text-decoration: none;
-    color: var(--myWhite);
+    color: var(--myDarkGreen);
     width: 11em;
     height: 4em;
     justify-content: center;
@@ -307,13 +308,13 @@ h1 img {
     border-radius: 15px;
     display: flex;
     text-decoration: none;
-    color: var(--myWhite);
+    color: var(--myGreen-3);
     width: 11em;
     height: 4em;
     justify-content: center;
     align-items: center;
     transition: .3s;
-    background-image: linear-gradient(to bottom right, var(--myDarkGreen), var(--myGreen-3));
+    background-image: linear-gradient(to bottom right, var(--myDarkGreen), var(--myGreen-1));
     box-shadow: 3px 3px 3px var(--myDarkHeader);
 }
 #light .main-bg-about2, .main-bg-about2-click {
@@ -321,7 +322,7 @@ h1 img {
     border-radius: 15px;
     display: flex;
     text-decoration: none;
-    color: var(--myWhite);
+    color: var(--myDarkGreen);
     width: 11em;
     height: 4em;
     justify-content: center;
@@ -335,13 +336,13 @@ h1 img {
     border-radius: 15px;
     display: flex;
     text-decoration: none;
-    color: var(--myWhite);
+    color: var(--myGreen-3);
     width: 11em;
     height: 4em;
     justify-content: center;
     align-items: center;
     transition: .3s;
-    background-image: linear-gradient(to top left, var(--myDarkGreen), var(--myGreen-3));
+    background-image: linear-gradient(to top left, var(--myDarkGreen), var(--myGreen-1));
     box-shadow: 3px 3px 3px var(--myDarkHeader);
 }
 #light .main-bg-about2-click, #dark .main-bg-about2-click {
@@ -351,7 +352,8 @@ h1 img {
 #light .main-bg-about:hover, #light .main-bg-about2:hover, #dark .main-bg-about:hover, #dark .main-bg-about2:hover {
     background-image: linear-gradient(var(--myGreen-hover), var(--myGreen-hover));
     cursor: pointer;
-    letter-spacing: 0.4px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
     color: var(--myDarkGreen);
 }
 .main-bg {
@@ -360,9 +362,9 @@ h1 img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    top: 10em;
+    top: 5.5em;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
 }
 .main-bg figure {
     width: 60%;
@@ -420,14 +422,14 @@ h1 img {
     color: var(--myDarkGreen);
     font-size: 25px;
     font-weight: lighter;
-    margin: 0.5em 3em;
+    margin: 0.5em 4em;
     text-align: center;
 }
 #dark .main-bg-2 h5, #dark .main-bg-3 h5 {
-    color: var(--myWhite);
+    color: var(--myGreen-hover);
     font-size: 25px;
     font-weight: lighter;
-    margin: 0.5em 3em;
+    margin: 0.5em 4em;
     text-align: center;
 }
 #light .main-bg h1 {
@@ -438,12 +440,12 @@ h1 img {
     font-size: 3.5rem;
     color: var(--myGreen-3);
 }
-#light .main-bg-h2 {
-    color: var(--myGreen-hover);
-}
-#dark .main-bg-h2 {
+#light .main-bg-h2, #dark .main-bg-h2 {
     color: var(--myGreen-3);
+    font-size: 215%;
+    width: 95%;
 }
+
 #light .about-main {
     width: 100%;
     height: fit-content;
