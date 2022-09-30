@@ -353,7 +353,7 @@ h1 img {
     background-image: linear-gradient(var(--myGreen-hover), var(--myGreen-hover));
     cursor: pointer;
     font-weight: bold;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
     color: var(--myDarkGreen);
 }
 .main-bg {
