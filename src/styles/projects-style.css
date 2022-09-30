@@ -33,12 +33,12 @@
     border-radius: 10px;
 }
 #light .projects h2, #dark .projects h2 {
-    color: var(--myWhite);
+    color: var(--myGreen-hover);
     letter-spacing: 4px;
     font-size: 50px;
 }
 .projects h5 {
-    color: var(--myWhite);
+    color: var(--myGreen-hover);
     font-size: 25px;
     font-weight: lighter;
     margin: 0.5em 3em 3em 3em;
@@ -125,19 +125,17 @@ a {
     padding: 1em;
     border-radius: 10px;
     background-color: var(--myGlassGrey);
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     transition: .3s;
     margin: 2em 4em;
-    border-top: 1px solid var(--myGreyWhite);
-    border-left: 1px solid var(--myGreyWhite);
     backdrop-filter: blur(7px);
 }
 .project-card:hover {
     background-color: var(--myHoverDarkGreen);
 }
 .project-card h6 {
-    color: var(--myWhite);
+    color: var(--myGreen-hover);
     text-align: center;
     font-size: 30px;
     margin-bottom: 0.8em;
@@ -148,7 +146,7 @@ a {
     border-radius: 50%;
 }
 .project-card p {
-    color: var(--myWhite);
+    color: var(--myGreen-3);
     margin-top: 3em;
 }
 
@@ -200,11 +198,13 @@ a {
 }
 #light .minutes, #light .seconds, #light .tens {
     font-size: 5.1em;
+    width: 130px;
     padding: 0 0.2em;
 }
 #dark .minutes, #dark .seconds, #dark .tens {
     color: var(--myGreen-hover);
     font-size: 5.1em;
+    width: 130px;
     padding: 0 0.2em;
 }
 .start, .stop, .reset {

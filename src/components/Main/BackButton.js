@@ -2,7 +2,7 @@ import React from 'react'
 
 const BackButton = () => {
   return (
-    <a className='back-button' href='/projects'>BACK</a>
+    <a className='back-button' href='/projects'>Back</a>
   )
 }
 

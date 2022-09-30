@@ -29,7 +29,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="footer-social">
-                        <a href="https://web.whatsapp.com/" target="_blank" rel="noreferrer"><img src={whatsApp} alt="logo WhatsApp"/></a>
+                        <a href="https://wa.me/40744301841" target="_blank" rel="noreferrer"><img src={whatsApp} alt="logo WhatsApp"/></a>
                         <a href="https://www.github.com/cmanu07" target="_blank" rel="noreferrer"><img src={gitHub} alt="logo GitHub"/></a>
                         <a href="https://www.linkedin.com/in/emanuel-caradan-7b12a3228" target="_blank" rel="noreferrer"><img src={linkedIn} alt="logo LinkedIn"/></a>
                     </div>

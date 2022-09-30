@@ -12,11 +12,11 @@ import Home from './components/Pages/Home';
 import Proiecte from './components/Pages/Proiecte';
 import CV from './components/Pages/CV';
 import Despre from './components/Pages/Despre';
-import SearchBar from './components/projects/SearchBar';
-import Counter from './components/projects/Counter';
-import TrafficL from './components/projects/TrafficL';
-import Calculator from './components/projects/Calculator';
-import Stopwatch from './components/projects/Stopwatch';
+import SearchBar from './components/Projects/SearchBar';
+import Counter from './components/Projects/Counter';
+import TrafficL from './components/Projects/TrafficL';
+import Calculator from './components/Projects/Calculator';
+import Stopwatch from './components/Projects/Stopwatch';
 
 import { ThemeContext } from './components/Contexts/ThemeContext';
 
