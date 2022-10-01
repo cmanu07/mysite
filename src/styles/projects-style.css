@@ -67,7 +67,7 @@
     display: flex;
     justify-content: center;
     padding: 2em;
-    height: 16em;
+    height: fit-content;
     margin: 3em 0;
 }
 .counter div {
