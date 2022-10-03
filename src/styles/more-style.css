@@ -82,7 +82,7 @@
     padding: 0 0.2em;
     position: absolute;
     top: 2.5rem;
-    right: 9.5rem;
+    right: 10rem;
     width: 4em;
     height: 2em;
     border-radius: 50px;
@@ -96,7 +96,7 @@
     padding: 0 0.2em;
     position: absolute;
     top: 2.5rem;
-    right: 9.5rem;
+    right: 10rem;
     width: 4em;
     height: 2em;
     border-radius: 50px;
@@ -140,7 +140,7 @@
     background-size: contain;
 }
 #light .show-date {
-    width: 35%;
+    width: 40%;
     display: flex;
     position: absolute;
     top: 0.5em;
@@ -149,7 +149,7 @@
 }
 #dark .show-date {
     color: var(--myGreen-2);
-    width: 35%;
+    width: 40%;
     display: flex;
     position: absolute;
     top: 0.5em;
@@ -177,6 +177,7 @@
     background-color: var(--myDarkGreen);
     color: var(--myGreen-hover);
     animation: shake 1s infinite;
+    box-shadow: none;
 }
 @keyframes shake {
     0% {transform: translate(-3px, 0);}
