@@ -2,7 +2,7 @@ import Footer from "../Footer";
 import Header from "../Header/Header";
 
 import cvItem from "../Media/cv_item.jpg";
-import cvFile from "../Main/Emanuel Caradan - CV.pdf";
+import cvFile from "../Files/Emanuel Caradan - CV.pdf";
 
 
 export default function CV () {
