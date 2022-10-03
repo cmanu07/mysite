@@ -165,16 +165,16 @@ a {
     padding-bottom: 5em;
     border-radius: 10px;
 }
-#light .stopwatch h1 {
+#light .stopwatch h2 {
     text-align: center;
     margin: 3em auto 0.5em auto;
     font-size: 40px;
 }
-#dark .stopwatch h1 {
+#dark .stopwatch h2 {
     text-align: center;
     margin: 3em auto 0.5em auto;
     font-size: 40px;
-    color: var(--myWhite);
+    color: var(--myDarkGreen);
 }
 .stopwatch h4 {
     display: flex;
@@ -183,6 +183,7 @@ a {
     width: 35%;
     justify-content: space-around;
     align-items: center;
+    color: var(--myDarkGreen);
 }
 #light .stopwatch span {
     font-size: 5em;
@@ -209,19 +210,34 @@ a {
 }
 .start, .stop, .reset {
     border: 2px solid goldenrod;
-    border-radius: 0.2em;
-    padding: 0.5em 2em;
+    border-radius: 15px;
+    padding: 0.5em 0;
     margin: 3em 0.9em;
     font-size: 16px;
     transition: 0.3s;
     width: 7em;
+    text-align: center;
 }
-.start:hover, .stop:hover, .reset:hover {
+#light .start, #light .stop, #light .reset {
+    background-color: var(--myGreen-hover);
+}
+#dark .start, #dark .stop, #dark .reset {
+    background: var(--myDarkGreen);
+    color: var(--myGreen-hover);
+}
+#light .start:hover, #light .stop:hover, #light .reset:hover {
     cursor: pointer;
     color: lavender;
     background-color: goldenrod;
-    border-radius: 0.4em;
-    letter-spacing: 0.02em;
+    border-radius: 15px;
+    letter-spacing: 0.04em;
+    font-weight: bold;
+}
+#dark .start:hover, #dark .stop:hover, #dark .reset:hover {
+    background-color: var(--myGreen-2);
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    color: var(--myDarkGreen);
 }
 
 /* SEMAFOR */

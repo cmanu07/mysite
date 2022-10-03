@@ -6,69 +6,72 @@ import Footer from '../Footer'
 
 const Stopwatch = () => {
 
-    let tensC = '00';
-    let secC = '00';
-    let minC = '00';
+    const [interv, setInterv] = useState();
+    const [time, setTime] = useState({min:0, sec:0, tens:0});
+    const [stop, setStop] = useState(() => 'Stop/Pause');
 
-    const [interv, setInterv] = useState("");
-    const [minutes, setMinutes] = useState(() => minC);
-    const [seconds, setSeconds] = useState(() => secC);
-    const [tens, setTens] = useState(() => tensC);
+    let minCurent = time.min, secCurent = time.sec, tensCurent = time.sec;
 
 // START
     const start = () => {
-        setTens(tensC++);
-        (tensC <= 9) ? setTens(`${tensC}0`) : setTens(tensC);
-        if (tensC > 9) {
-            
-            setSeconds(secC++)
-            setSeconds(`0${secC}`)
-            tensC = '0';
-            setTens(tensC++)
+        if (secCurent === 60) {
+            minCurent++
+            secCurent = 0
         }
-        if (secC > 9) {
-            setSeconds(secC)
-        }
-        if (secC > 59) {
-            setMinutes(minC++)
-            setMinutes(`0${minC}`)
-            secC = `0${0}`
-            setSeconds(secC++)
+        if (tensCurent === 10) {
+            secCurent++
+            tensCurent = 0
+        }     
+        tensCurent++
+        return setTime({min:minCurent, sec:secCurent, tens:tensCurent});
+    }
+    const startF = () => {
+        if (stop === 'Stop/Pause') {
+            clearInterval(interv)
+            start();
+            setInterv(setInterval(start, 100));
+        } else {
+            setStop('Stop/Pause')
+            clearInterval(interv)
+            start();
+            setInterv(setInterval(start, 100));
         }
     }
-    const startT = () => {
-        clearInterval(interv);
-        return setInterv(setInterval(start, 100));
+// STOP/RESUME
+    const stopF = () => {
+            clearInterval(interv)
+            setStop('Resume')
     }
-// STOP
-    const stopT = () => clearInterval(interv);
+    const resumeF = () => {
+        startF();
+        setStop('Stop/Pause');
+    }
 
 // RESET 
-    const resetT = () => {
+    const resetF = () => {
         clearInterval(interv);
-        setTens('00');
-        setSeconds('00');
-        setMinutes('00');
+        setStop('Stop/Pause')
+        setTime({min:0, sec:0, tens:0});
     }
     
   return (<>
             <Header/>
                 <main className='stopwatch'>
                     <div className='back-div'>
-                        <h1>STOPWATCH</h1>
+                        <h2>STOPWATCH</h2>
                         <BackButton/>
                     </div>
                     <h4>
-                        <p className="minutes">{minutes}</p>
+                        <p className="minutes">{(time.min < 10) ? `0${time.min}` : time.min}</p>
                         <span>:</span>
-                        <p className="seconds">{seconds}</p>
+                        <p className="seconds">{(time.sec < 10) ? `0${time.sec}` : time.sec}</p>
                         <span>:</span>
-                        <p className="tens">{tens}</p>
+                        <p className="tens">{(time.tens < 10) ? `${time.tens}0` : time.tens}</p>
                     </h4>
                     <div className='stopwatch-butt'>
-                        <button className="start" onClick={startT}>Start</button>    
-                        <button className="stop" onClick={stopT}>Stop</button>    
-                        <button className="reset" onClick={resetT}>Reset</button>
+                        <button className="start" onClick={startF}>Start</button>    
+                        <button className="stop" onClick={(stop === 'Stop/Pause') ? stopF : resumeF}>{stop}</button>    
+                        <button className="reset" onClick={resetF}>Reset</button>
                     </div>
                 </main>
             <Footer/>
