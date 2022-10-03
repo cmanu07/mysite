@@ -30,7 +30,7 @@
 }
 .projects {
     background-image: url(../components/Media/projects_wall.jpg);
-    border-radius: 10px;
+    border-radius: 15px;
 }
 #light .projects h2, #dark .projects h2 {
     color: var(--myGreen-hover);

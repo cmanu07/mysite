@@ -16,14 +16,14 @@
 #light .cv {
     background-image: url(../components/Media/cv_wall.jpg);
     background-color: var(--myGreen-3);
-    border-radius: 10px;
+    border-radius: 15px;
     height: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #dark .cv {
-    border-radius: 10px;
+    border-radius: 15px;
     height: 75%;
     display: flex;
     flex-direction: column;
