@@ -7,11 +7,11 @@
     --myWhite: #FFFFFF;
     --myGreyWhite: rgba(255, 255, 255, 0.5);
     --myGlassGrey: rgba(255, 255, 255, 0.1);
-    --myHoverDarkGreen: hsl(203, 26%, 24%, 85%);
+    --myHoverBlackGreen: hsl(203, 26%, 24%, 85%);
     --myGreen-hover: #C4E8C2;
     --myGreen-2: #6BBD99;
     --myGreenTransparent-2: rgb(107, 189, 153, .7);
-    --myDarkGreen: #2E424E;
+    --myBlackGreen: #2E424E;
 }
 @media (max-width: 768px) {
     .counter div h2 {
@@ -32,7 +32,7 @@
     background-image: url(../components/Media/projects_wall.jpg);
     border-radius: 15px;
 }
-#light .projects h2, #dark .projects h2 {
+#false .projects h2, #true .projects h2 {
     color: var(--myGreen-hover);
     letter-spacing: 2px;
     font-size: 50px;
@@ -71,7 +71,7 @@
     margin: 3em 0;
 }
 .counter div {
-    margin: 0 5em;
+    margin: 0 5em 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +81,7 @@
     font-size: x-large;
 }
 .counter div span, .counter div h2 {
-    width: 7em;
+    width: 3em;
     padding-top: 1em;
     transition: .3s;
 }
@@ -97,7 +97,7 @@
 .counter button:hover {
     cursor: pointer;
     background-color: var(--myGreen-1);
-    box-shadow: inset 0px 0px 10px 3px var(--myWhite);
+    box-shadow: inset 0px 0px 10px 3px var(--myGreen-hover);
 }
 .danger {
     background-color: var(--myRed);
@@ -132,7 +132,7 @@ a {
     backdrop-filter: blur(7px);
 }
 .project-card:hover {
-    background-color: var(--myHoverDarkGreen);
+    background-color: var(--myHoverBlackGreen);
 }
 .project-card h6 {
     color: var(--myGreen-hover);
@@ -151,30 +151,30 @@ a {
 }
 
 /* STOPWATCH */
-#light .stopwatch {
+#false .stopwatch {
     background-color:lavender;
     display: flex;
     flex-direction: column;
     padding-bottom: 5em;
     border-radius: 10px;
 }
-#dark .stopwatch {
+#true .stopwatch {
     background-color: var(--myGreen-1);
     display: flex;
     flex-direction: column;
     padding-bottom: 5em;
     border-radius: 10px;
 }
-#light .stopwatch h2 {
+#false .stopwatch h2 {
     text-align: center;
     margin: 3em auto 0.5em auto;
     font-size: 40px;
 }
-#dark .stopwatch h2 {
+#true .stopwatch h2 {
     text-align: center;
     margin: 3em auto 0.5em auto;
     font-size: 40px;
-    color: var(--myDarkGreen);
+    color: var(--myBlackGreen);
 }
 .stopwatch h4 {
     display: flex;
@@ -183,13 +183,13 @@ a {
     width: 35%;
     justify-content: space-around;
     align-items: center;
-    color: var(--myDarkGreen);
+    color: var(--myBlackGreen);
 }
-#light .stopwatch span {
+#false .stopwatch span {
     font-size: 5em;
     padding-bottom: 0.2em;
 }
-#dark .stopwatch span {
+#true .stopwatch span {
     color: var(--myGreen-hover);
     font-size: 5em;
     padding-bottom: 0.2em;
@@ -197,12 +197,12 @@ a {
 .stopwatch-butt {
     text-align: center;
 }
-#light .minutes, #light .seconds, #light .tens {
+#false .minutes, #false .seconds, #false .tens {
     font-size: 5.1em;
     width: 130px;
     padding: 0 0.2em;
 }
-#dark .minutes, #dark .seconds, #dark .tens {
+#true .minutes, #true .seconds, #true .tens {
     color: var(--myGreen-hover);
     font-size: 5.1em;
     width: 130px;
@@ -218,14 +218,14 @@ a {
     width: 7em;
     text-align: center;
 }
-#light .start, #light .stop, #light .reset {
+#false .start, #false .stop, #false .reset {
     background-color: var(--myGreen-hover);
 }
-#dark .start, #dark .stop, #dark .reset {
-    background: var(--myDarkGreen);
+#true .start, #true .stop, #true .reset {
+    background: var(--myBlackGreen);
     color: var(--myGreen-hover);
 }
-#light .start:hover, #light .stop:hover, #light .reset:hover {
+#false .start:hover, #false .stop:hover, #false .reset:hover {
     cursor: pointer;
     color: lavender;
     background-color: goldenrod;
@@ -233,11 +233,12 @@ a {
     letter-spacing: 0.04em;
     font-weight: bold;
 }
-#dark .start:hover, #dark .stop:hover, #dark .reset:hover {
+#true .start:hover, #true .stop:hover, #true .reset:hover {
+    cursor: pointer;
     background-color: var(--myGreen-2);
     font-weight: bold;
     letter-spacing: 0.04em;
-    color: var(--myDarkGreen);
+    color: var(--myBlackGreen);
 }
 
 /* SEMAFOR */
@@ -259,25 +260,25 @@ a {
     border-radius: 3.5em;
     margin: 0.6em 0;
 }
-.red-light {
+.red-false {
     background-color: red;
     transition: 0.1s;
     box-shadow: 4px 4px 30px rgb(223, 68, 68),
     -4px -4px 30px rgb(223, 68, 68);
 }
-.yellow-light {
+.yellow-false {
     background-color: yellow;
     transition: 0.1s;
     box-shadow: 4px 4px 30px rgb(241, 241, 174),
     -4px -4px 30px rgb(241, 241, 174);
 }
-.green-light {
+.green-false {
     background-color: green;
     transition: 0.1s;
     box-shadow: 4px 4px 30px rgb(29, 247, 112),
     -4px -4px 30px rgb(29, 247, 112);
 }
-.off-light {
+.off-false {
     background-color: rgb(69, 76, 83);
     transition: 0.2s;
     box-shadow: none;
@@ -324,21 +325,21 @@ a {
     grid-template-columns: repeat(4, 4em);
     grid-template-rows: minmax(5em, auto) repeat(5, 3em);
 }
-#light .calculator button {
+#false .calculator button {
     border-radius: 4px;
     font-size: 1.3em;
     transition: .3s;
     border: 1px solid var(--myGreyWhite);
     background-color: var(--myGreenTransparent-2);
 }
-#dark .calculator button {
+#true .calculator button {
     border-radius: 4px;
     font-size: 1.3em;
     transition: .2s;
     border: 1px solid var(--myGreen-2);
     background-color: var(--myGreenTransparent-2);
 }
-#light .calculator button:hover, #dark .calculator button:hover {
+#false .calculator button:hover, #true .calculator button:hover {
     cursor: pointer;
     background: var(--myGreen-2);
 }
@@ -348,7 +349,7 @@ a {
     align-items: flex-end;
     padding: 0.2em 0.4em;
     grid-column: 1 / -1;
-    background: var(--myDarkGreen);
+    background: var(--myBlackGreen);
     border-radius: 4px;
     border: 1px solid var(--myWhite);
     word-wrap: break-word;

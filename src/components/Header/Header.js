@@ -7,20 +7,26 @@ import ShowDate from "../Main/ShowDate";
 
 const Header = () => {
 
-    const {toggleTheme, theme} = useContext(ThemeContext);
+    const {themeMode, setThemeMode} = useContext(ThemeContext);
+
+    const toggleTheme = () => {
+        setThemeMode(!themeMode);
+        localStorage.setItem('theme', !themeMode)
+      }
 
     const [navbar, setNavbar] = useState(() => true)
     const [toggleMenu, setToggleMenu] = useState(() => true)
     const [toggleMenuP, setToggleMenuP] = useState(() => true)
-
-    let className = "header";
-    const navList = [{buton1: 'PROJECTS', buton2: 'CV', buton3: 'ABOUT ME'}];
 
     const toggleMenuFunct = () => {
         setToggleMenu(!toggleMenu);
         setToggleMenuP(!toggleMenuP);
         setNavbar(!navbar);
     }
+
+    let className = "header";
+    const navList = [{buton1: 'PROJECTS', buton2: 'CV', buton3: 'ABOUT ME'}];
+
 
     return (
         <div className = {`${className}`}>
@@ -37,7 +43,7 @@ const Header = () => {
             </nav>
             <ShowDate/>
             <label className="toggle-theme">
-                <input type='checkbox' onChange={toggleTheme} checked={theme === 'light'}/>
+                <input type='checkbox' onChange={toggleTheme}/>
                 <span className="toggle-moon-icon"></span>
                 <span className="toggle-sun-icon"></span>
                 <span className="slider"></span>

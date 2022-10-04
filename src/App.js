@@ -22,14 +22,10 @@ import { ThemeContext } from './components/Contexts/ThemeContext';
 
 const App = () => {
 
-  const [theme, setTheme] = useState(() => 'light');
+  const [themeMode, setThemeMode] = useState(() => JSON.parse(localStorage.getItem('theme')));
 
-  const toggleTheme = () => {
-    setTheme((curentT) => (curentT === 'light') ? curentT = 'dark' : curentT = 'light');
-  }
-
-  return (<ThemeContext.Provider value={{theme, toggleTheme}}>
-            <div id={theme}>
+  return (<ThemeContext.Provider value={{themeMode, setThemeMode}}>
+            <div id={themeMode.toString()}>
               <Routes>
                 <Route path={'/'} element={<Home/>}/>
                 <Route path={'/projects'} element={<Proiecte/>}/>

@@ -4,55 +4,55 @@
     padding: 0;
     font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth; 
-    --myDarkGreen: #2E424E;
+    --myBlackGreen: #2E424E;
     --myGreen-1: #46a094;
     --myGreen-2: #6BBD99;
     --myGreen-3: #AECFA4;
     --myGreen-hover: #C4E8C2;
     --myWhite: #FFFFFF;
     --myHeaderGreen: hsl(172, 39%, 45%, 0.8);
-    --myDarkHeader: hsl(203, 26%, 24%, 0.7);
+    --myBlackHeader: hsl(203, 26%, 24%, 0.7);
 }
-#light .cv {
+#false .cv {
     background-image: url(../components/Media/cv_wall.jpg);
     background-color: var(--myGreen-3);
     border-radius: 15px;
-    height: 75%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#dark .cv {
+#true .cv {
     border-radius: 15px;
-    height: 75%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .cv h2 {
-    color: var(--myDarkGreen);
+    color: var(--myBlackGreen);
     letter-spacing: 4px;
     font-size: 60px;
 }
-#light .cv p {
-    color: var(--myDarkGreen);
+#false .cv p {
+    color: var(--myBlackGreen);
     padding-top: 4em;
     margin-bottom: 2em;
     font-size: 20px;
     font-weight: bolder;
 }
-#dark .cv p {
+#true .cv p {
     color: var(--myGreen-hover);
     padding-top: 4em;
     margin-bottom: 2em;
     font-size: 20px;
     font-weight: bolder;
 }
-#light .cv a {
+#false .cv a {
     color: var(--myGreen-1);
     text-decoration: underline;
 }
-#dark .cv a {
+#true .cv a {
     color: var(--myGreen-2);
     text-decoration: underline;
 }
@@ -76,7 +76,7 @@
 }
 
 /* TOGGLE BUTTON */
-#light .toggle-theme {
+#false .toggle-theme {
     display: flex;
     align-items: center;
     padding: 0 0.2em;
@@ -87,10 +87,10 @@
     height: 2em;
     border-radius: 50px;
     background: var(--myGreen-hover);
-    box-shadow: 3px 3px 3px var(--myDarkHeader);
+    box-shadow: 3px 3px 3px var(--myBlackHeader);
     cursor: pointer;
 }
-#dark .toggle-theme {
+#true .toggle-theme {
     display: flex;
     align-items: center;
     padding: 0 0.2em;
@@ -109,15 +109,15 @@
     width: 0;
     height: 0;
 }
-#light .slider {
+#false .slider {
     position: absolute;
-    background-color: var(--myDarkGreen);
+    background-color: var(--myBlackGreen);
     width: 28px;
     height: 28px;
     border-radius: 50%;
     transition: 0.4s;
 }
-#dark .slider {
+#true .slider {
     position: absolute;
     background-color: var(--myGreen-hover);
     width: 28px;
@@ -139,7 +139,7 @@
     background: url(../components/Media/moon_icon.png);
     background-size: contain;
 }
-#light .show-date {
+#false .show-date {
     width: 40%;
     display: flex;
     position: absolute;
@@ -147,7 +147,7 @@
     right: 7em;
     justify-content: flex-end;
 }
-#dark .show-date {
+#true .show-date {
     color: var(--myGreen-2);
     width: 40%;
     display: flex;
@@ -165,8 +165,8 @@
     position: absolute;
     font-size: larger;
     background-color: var(--myGreen-hover);
-    box-shadow: 3px 3px 3px var(--myDarkHeader);
-    color: var(--myDarkGreen);
+    box-shadow: 3px 3px 3px var(--myBlackHeader);
+    color: var(--myBlackGreen);
     top: 18%;
     left: 10%;
     border-radius: 10px;
@@ -174,7 +174,7 @@
     transition: .3s;
 }
 .back-button:hover {
-    background-color: var(--myDarkGreen);
+    background-color: var(--myGreen-2);
     color: var(--myGreen-hover);
     animation: shake 1s infinite;
     box-shadow: none;

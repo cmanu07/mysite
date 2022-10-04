@@ -5,7 +5,8 @@
     font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     --myWhite: #FFFFFF;
-    --myDarkGreen: #2E424E;
+    --myGreen-hover: #C4E8C2;
+    --myBlackGreen: #2E424E;
 }
 .main {
     width: 100%;
@@ -78,8 +79,8 @@
 }
 .inreg:hover {
     cursor: pointer;
-    background: var(--myDarkGreen);
-    color: var(--myWhite);
+    background: var(--myBlackGreen);
+    color: var(--myGreen-hover);
 }
 
 @media (min-width: 768px) and  (max-width: 992px) {
