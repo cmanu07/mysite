@@ -85,6 +85,9 @@
     padding-top: 1em;
     transition: .3s;
 }
+#false .counter-number, #true .counter-number {
+    color: var(--myBlackGreen);
+}
 .counter button {
     font-size: xx-large;
     text-align: center;

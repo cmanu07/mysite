@@ -51,10 +51,15 @@
 #false .cv a {
     color: var(--myGreen-1);
     text-decoration: underline;
+    transition: .3s;
 }
 #true .cv a {
     color: var(--myGreen-2);
     text-decoration: underline;
+    transition: .3s;
+}
+#false .cv a:hover, #true .cv a:hover {
+    color: var(--myGreen-hover);
 }
 .cv img {
     height: 72%;

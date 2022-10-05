@@ -29,7 +29,7 @@ class Counter extends React.Component {
             </div>
             <div className={`counter ${background}`}>
                 <button onClick = {()=>this.state.counter > 0 ? this.setState(minus) : this.state.counter}>-</button>
-                <div><h2>{this.state.counter}</h2><span>{mesaj}</span></div>
+                <div><h2 className='counter-number'>{this.state.counter}</h2><span>{mesaj}</span></div>
                 <button onClick = {()=>this.state.counter < 10 ? this.setState(adder) : this.state.counter}>+</button>
             </div>
             <Footer/>
