@@ -43,7 +43,7 @@ const Header = () => {
             </nav>
             <ShowDate/>
             <label className="toggle-theme">
-                <input type='checkbox' onChange={toggleTheme}/>
+                <input type='checkbox' onChange={toggleTheme} checked={themeMode === 'false'}/>
                 <span className="toggle-moon-icon"></span>
                 <span className="toggle-sun-icon"></span>
                 <span className="slider"></span>
