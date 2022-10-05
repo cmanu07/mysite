@@ -63,6 +63,7 @@
 }
 .cv img {
     height: 72%;
+    aspect-ratio: 1 / 1.4;
 }
 
 @media (max-width: 768px) {

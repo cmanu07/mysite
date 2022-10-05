@@ -233,7 +233,7 @@ h1 img {
     right: -1em;
     top: 5.1em;
     width: 55%;
-    height: 25vh;
+    height: 18em;
     align-items: center;
     justify-content: center;
     transition: .4s;
@@ -247,7 +247,7 @@ h1 img {
     right: -1em;
     top: 5.1em;
     width: 55%;
-    height: 25vh;
+    height: 18em;
     align-items: center;
     justify-content: center;
     transition: .4s;
@@ -258,7 +258,8 @@ h1 img {
 }
 .navbar h3 {
     text-align: center;
-    padding: 15% 0;
+    height: 3em;
+    padding: 1.8em 0;
 }
 
 .main-article {

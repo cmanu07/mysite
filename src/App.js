@@ -22,7 +22,7 @@ import { ThemeContext } from './components/Contexts/ThemeContext';
 
 const App = () => {
 
-  const [themeMode, setThemeMode] = useState(() => JSON.parse(localStorage.getItem('theme')));
+  const [themeMode, setThemeMode] = useState(() => JSON.parse(localStorage.getItem('theme')) || false);
 
   return (<ThemeContext.Provider value={{themeMode, setThemeMode}}>
             <div id={themeMode.toString()}>
