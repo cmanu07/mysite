@@ -23,14 +23,14 @@ class Counter extends React.Component {
         this.state.counter === 10 || this.state.counter === 0 ? mesaj = "You've reached the limit!" : mesaj = "";
         return (<>
             <Header/>
-            <div>
-                <h2>Counter</h2>
+            <div className={`${background}`}>
+                <h2 className='counter-title'>Counter</h2>
                 <BackButton/>
-            </div>
-            <div className={`counter ${background}`}>
-                <button onClick = {()=>this.state.counter > 0 ? this.setState(minus) : this.state.counter}>-</button>
-                <div><h2 className='counter-number'>{this.state.counter}</h2><span>{mesaj}</span></div>
-                <button onClick = {()=>this.state.counter < 10 ? this.setState(adder) : this.state.counter}>+</button>
+                <div className={`counter`}>
+                    <button onClick = {()=>this.state.counter > 0 ? this.setState(minus) : this.state.counter}>-</button>
+                    <div><h2 className='counter-number'>{this.state.counter}</h2><span>{mesaj}</span></div>
+                    <button onClick = {()=>this.state.counter < 10 ? this.setState(adder) : this.state.counter}>+</button>
+                </div>
             </div>
             <Footer/>
         </>)

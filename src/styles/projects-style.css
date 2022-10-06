@@ -67,8 +67,7 @@
     display: flex;
     justify-content: center;
     padding: 2em;
-    height: fit-content;
-    margin: 3em 0;
+    height: 25em;
 }
 .counter div {
     margin: 0 5em 2em;
@@ -76,14 +75,19 @@
     flex-direction: column;
     align-items: center;
 }
+.counter div span, .counter div h2 {
+    width: 4em;
+    padding-top: 1em;
+    transition: .3s;
+}
+#true .counter div h2 {
+    color: var(--myGreen-1);
+}
 .counter div span {
     text-align: center;
     font-size: x-large;
-}
-.counter div span, .counter div h2 {
-    width: 3em;
-    padding-top: 1em;
-    transition: .3s;
+    width: 13em;
+    color: var(--myBlackGreen);
 }
 #false .counter-number, #true .counter-number {
     color: var(--myBlackGreen);
@@ -93,8 +97,11 @@
     text-align: center;
     transition: .25s;
     margin-top: 1.4em;
+    border: none;
     width: 4em;
     height: 1.5em;
+    color: var(--myBlackGreen);
+    background-color: var(--myGreen-hover);
     border-radius: 10px;
 }
 .counter button:hover {
@@ -105,15 +112,24 @@
 .danger {
     background-color: var(--myRed);
 }
-.default {
+#false .default {
     background-color: var(--myGreen-3);
+}
+#true .default {
+    background-color: var(--myBlackGreen);
 }
 .middle {
     background-color: var(--myYellow);
 }
 .default, .danger, .middle {
     transition: .3s;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+#false .counter-title {
+    color: var(--myBlackGreen);
+}
+#true .counter-title {
+    color: var(--myGreen-1);
 }
 
 
@@ -250,16 +266,17 @@ a {
     flex-direction: column;
     align-items: center;
     margin: auto;
+    padding-top: 0.2em;
     width: 13em;
     height: 25em;
-    border: 4px solid black;
+    border: none;
     border-radius: 1em;
-    background-color: lightslategrey;
+    background-color: var(--myBlackGreen);
 }
 .semafor p {
     width: 7em;
     height: 7em;
-    border: 2px solid black;
+    border: 2px solid var(--myGreen-2);
     border-radius: 3.5em;
     margin: 0.6em 0;
 }
@@ -296,24 +313,34 @@ a {
     width: 6em;
     height: 2em;
     margin-top: 4%;
-    border: solid 3px black;
     border-radius: 5px;
-    box-shadow: 1px 1px 15px rgba(57, 58, 58, 0.6),
-    -1px -1px 15px rgba(57, 58, 58, 0.6);
-    background-color: aliceblue;
     font-size: 25px;
-    transition: 0.4s;
+    border: none;
+    color: var(--myBlackGreen);
+}
+#false .modul button{
+    box-shadow: 0 0 15px var(--myBlackGreen);
+    background-color: var(--myGreen-1);
+    transition: .3s;
+}
+#true .modul button {
+    box-shadow: 0 0 15px var(--myGreen-2);
+    background-color: var(--myGreen-2);
+    transition: .3s;
 }
 .modul button:hover {
     cursor: pointer;
-    background-color: rgb(190, 190, 190);
+}
+#false .modul button:hover, #true .modul button:hover {
+    background-color: var(--myGreen-3);
+    font-weight: bold;
     box-shadow: none;
 }
 .stalp {
     position: relative;
     width: 0em;
     height: 10em;
-    border: 8px solid black;
+    border: 8px solid var(--myBlackGreen);
     margin: 0 15%;
 }
 
