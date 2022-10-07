@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Footer from '../Footer'
-import Header from '../Header/Header'
 import BackButton from '../Main/BackButton';
 
 const TrafficL = () => {
@@ -26,7 +24,6 @@ const TrafficL = () => {
     }, [yellowLight])
   
   return (<>
-            <Header/>
             <div>
               <h2>Traffic Light</h2>
               <BackButton/>
@@ -43,7 +40,6 @@ const TrafficL = () => {
                   <button className="but-night" onClick={nightMode}>NIGHT</button>
               </div>
             </main>
-            <Footer/>
         </>)
 }
 

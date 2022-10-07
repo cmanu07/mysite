@@ -1,0 +1,100 @@
+/* COUNTER */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    --myBlackGreen: #2E424E;
+    --myGreen-1: #46a094;
+    --myGreen-2: #6BBD99;
+    --myGreen-3: #AECFA4;
+    --myGreen-hover: #C4E8C2;
+    --myWhite: #FFFFFF;
+    --myYellow: #FDD037;
+    --myRed: #E65C4F;
+    --myHeaderGreen: hsl(172, 39%, 45%, 0.8);
+    --myBlackHeader: hsl(203, 26%, 24%, 0.7);
+}
+
+@media (max-width: 768px) {
+    .counter div h2 {
+        width: 1em;
+    }
+    .counter div {
+        width: 1em;
+    }
+    .counter button {
+        width: 3em;
+    }
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    height: 25em;
+}
+.counter div {
+    margin: 0 5em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.counter div span, .counter div h2 {
+    width: 4em;
+    padding-top: 1em;
+    transition: .3s;
+}
+#true .counter div h2 {
+    color: var(--myGreen-1);
+}
+.counter div span {
+    text-align: center;
+    font-size: x-large;
+    width: 13em;
+    color: var(--myBlackGreen);
+}
+#false .counter-number, #true .counter-number {
+    color: var(--myBlackGreen);
+}
+.counter button {
+    font-size: xx-large;
+    text-align: center;
+    transition: .25s;
+    margin-top: 1.4em;
+    border: none;
+    width: 4em;
+    height: 1.5em;
+    color: var(--myBlackGreen);
+    background-color: var(--myGreen-hover);
+    border-radius: 10px;
+}
+.counter button:hover {
+    cursor: pointer;
+    background-color: var(--myGreen-1);
+    box-shadow: inset 0px 0px 10px 3px var(--myGreen-hover);
+}
+.danger {
+    background-color: var(--myRed);
+}
+#false .default {
+    background-color: var(--myGreen-3);
+}
+#true .default {
+    background-color: var(--myBlackGreen);
+}
+.middle {
+    background-color: var(--myYellow);
+}
+.default, .danger, .middle {
+    transition: .3s;
+    border-radius: 15px;
+}
+#false .counter-title {
+    color: var(--myBlackGreen);
+}
+#true .counter-title {
+    color: var(--myGreen-1);
+}

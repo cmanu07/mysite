@@ -5,7 +5,6 @@
     font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     --myWhite: #FFFFFF;
-    --myGreyWhite: rgba(255, 255, 255, 0.5);
     --myGlassGrey: rgba(255, 255, 255, 0.1);
     --myHoverBlackGreen: hsl(203, 26%, 24%, 85%);
     --myGreen-hover: #C4E8C2;
@@ -13,16 +12,9 @@
     --myGreenTransparent-2: rgb(107, 189, 153, .7);
     --myBlackGreen: #2E424E;
 }
+
 @media (max-width: 768px) {
-    .counter div h2 {
-        width: 1em;
-    }
-    .counter div {
-        width: 1em;
-    }
-    .counter button {
-        width: 3em;
-    }
+    
     .minutes, .seconds, .tens {
         font-size: xx-small;
     }
@@ -62,75 +54,7 @@
     padding-bottom: 3em;
 }
 
-/* COUNTER */
-.counter {
-    display: flex;
-    justify-content: center;
-    padding: 2em;
-    height: 25em;
-}
-.counter div {
-    margin: 0 5em 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.counter div span, .counter div h2 {
-    width: 4em;
-    padding-top: 1em;
-    transition: .3s;
-}
-#true .counter div h2 {
-    color: var(--myGreen-1);
-}
-.counter div span {
-    text-align: center;
-    font-size: x-large;
-    width: 13em;
-    color: var(--myBlackGreen);
-}
-#false .counter-number, #true .counter-number {
-    color: var(--myBlackGreen);
-}
-.counter button {
-    font-size: xx-large;
-    text-align: center;
-    transition: .25s;
-    margin-top: 1.4em;
-    border: none;
-    width: 4em;
-    height: 1.5em;
-    color: var(--myBlackGreen);
-    background-color: var(--myGreen-hover);
-    border-radius: 10px;
-}
-.counter button:hover {
-    cursor: pointer;
-    background-color: var(--myGreen-1);
-    box-shadow: inset 0px 0px 10px 3px var(--myGreen-hover);
-}
-.danger {
-    background-color: var(--myRed);
-}
-#false .default {
-    background-color: var(--myGreen-3);
-}
-#true .default {
-    background-color: var(--myBlackGreen);
-}
-.middle {
-    background-color: var(--myYellow);
-}
-.default, .danger, .middle {
-    transition: .3s;
-    border-radius: 15px;
-}
-#false .counter-title {
-    color: var(--myBlackGreen);
-}
-#true .counter-title {
-    color: var(--myGreen-1);
-}
+
 
 
 a {
@@ -271,7 +195,7 @@ a {
     height: 25em;
     border: none;
     border-radius: 1em;
-    background-color: var(--myBlackGreen);
+    background-color: var(--myGreen-1);
 }
 .semafor p {
     width: 7em;
@@ -280,19 +204,19 @@ a {
     border-radius: 3.5em;
     margin: 0.6em 0;
 }
-.red-false {
-    background-color: red;
+.red-light {
+    background-color: rgb(223, 68, 68);
     transition: 0.1s;
     box-shadow: 4px 4px 30px rgb(223, 68, 68),
     -4px -4px 30px rgb(223, 68, 68);
 }
-.yellow-false {
+.yellow-light {
     background-color: yellow;
     transition: 0.1s;
     box-shadow: 4px 4px 30px rgb(241, 241, 174),
     -4px -4px 30px rgb(241, 241, 174);
 }
-.green-false {
+.green-light {
     background-color: green;
     transition: 0.1s;
     box-shadow: 4px 4px 30px rgb(29, 247, 112),
@@ -340,59 +264,8 @@ a {
     position: relative;
     width: 0em;
     height: 10em;
-    border: 8px solid var(--myBlackGreen);
+    border: 8px solid var(--myGreen-1);
     margin: 0 15%;
 }
 
 
-/* CALCULATOR */
-
-.calculator {
-    display: grid;
-    justify-content: center;
-    margin-bottom: 3em;
-    gap: 0.2em;
-    grid-template-columns: repeat(4, 4em);
-    grid-template-rows: minmax(5em, auto) repeat(5, 3em);
-}
-#false .calculator button {
-    border-radius: 4px;
-    font-size: 1.3em;
-    transition: .3s;
-    border: 1px solid var(--myGreyWhite);
-    background-color: var(--myGreenTransparent-2);
-}
-#true .calculator button {
-    border-radius: 4px;
-    font-size: 1.3em;
-    transition: .2s;
-    border: 1px solid var(--myGreen-2);
-    background-color: var(--myGreenTransparent-2);
-}
-#false .calculator button:hover, #true .calculator button:hover {
-    cursor: pointer;
-    background: var(--myGreen-2);
-}
-.calculator-display {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 0.2em 0.4em;
-    grid-column: 1 / -1;
-    background: var(--myBlackGreen);
-    border-radius: 4px;
-    border: 1px solid var(--myWhite);
-    word-wrap: break-word;
-    word-break: break-all;
-}
-.calculator-span-two {
-    grid-column: span 2;
-}
-.calculator-prev-number {
-    color: var(--myGreyWhite);
-    font-size: 1.4em;
-}
-.calculator-curr-number {
-    color: var(--myWhite);
-    font-size: 2.4em;
-}

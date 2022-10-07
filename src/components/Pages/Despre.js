@@ -1,11 +1,8 @@
-import Footer from "../Footer";
-import Header from "../Header/Header";
 
 
 export default function Despre () {
 
     return (<>
-        <Header/>
         <h2>ABOUT ME</h2>
         <div className="about-main">
             <p>I'm Emanuel and I graduated from Babes-Balyai University in 2008 with a degree in Finances. After 13+ years 
@@ -18,6 +15,5 @@ export default function Despre () {
             <p>I am able to stay calm under pressure and I am an active listener.</p>
             <p>I’m skilled in HTML, CSS, JavaScript, also BootStrap and React libraries. Some basic knowledge I also have in backend with PHP and MySQL.</p>
         </div>
-        <Footer/>
     </>)
 }

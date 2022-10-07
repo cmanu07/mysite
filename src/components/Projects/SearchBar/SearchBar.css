@@ -10,7 +10,7 @@
 }
 .main {
     width: 100%;
-    background-image: url('../components/Media/wallpaper.jpg');
+    background-image: url('../../Media/wallpaper.jpg');
     display: flex;
     flex-direction: column;
     align-items: center;

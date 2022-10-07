@@ -1,10 +1,9 @@
-import React from 'react';
-import { useState } from 'react';
-import Footer from '../Footer';
-import Header from '../Header/Header';
-import BackButton from '../Main/BackButton';
+import React, { useState } from 'react';
+import BackButton from '../../Main/BackButton';
 
-import searchIcon from '../Media/icons8-search-50.png';
+import './SearchBar.css';
+
+import searchIcon from '../../Media/icons8-search-50.png';
 
 
 export default function SearchBar ({data}) {
@@ -24,7 +23,6 @@ export default function SearchBar ({data}) {
     }
 
     return (<>
-                <Header/>
                 <main className="main">
                     <div className='main-div'>
                         <BackButton className='main-div-butt'/>
@@ -42,6 +40,5 @@ export default function SearchBar ({data}) {
                             <div className='main-div-3'>no results found...</div>
                     }
                 </main>
-                <Footer/>
             </>)
 }

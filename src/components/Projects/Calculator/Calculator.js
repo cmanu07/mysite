@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react'
-import Footer from '../Footer'
-import Header from '../Header/Header'
-import BackButton from '../Main/BackButton'
+import BackButton from '../../Main/BackButton'
 import CalculatorDigit from './CalculatorDigit'
 import CalculatorOperat from './CalculatorOperat'
+
+import './Calculator.css'
 
 
 export const actions = {
@@ -125,7 +125,6 @@ const Calculator = () => {
   const [{currNumber="0", prevNumber, operation}, dispach] = useReducer(reducer, {})
   
   return (<>
-            <Header/>
             <div>
               <h2>Calculator</h2>
               <BackButton/>
@@ -154,7 +153,6 @@ const Calculator = () => {
               <CalculatorDigit digit="0" dispach={dispach}/>
               <button className='calculator-span-two' onClick={()=> dispach({type: actions.calculate})}>=</button>
             </main>
-            <Footer/>
         </>)
 }
 
