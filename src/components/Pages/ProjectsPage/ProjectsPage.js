@@ -1,9 +1,11 @@
-import ProjectCard from "../Main/ProjectCard"
+import ProjectsCard from "./ProjectsCard"
 
-import { projects } from '../constants'
+import { projects } from "../../constants"
+
+import "./ProjectsPage.css"
 
 
-export default function Proiecte () {
+export default function ProjectsPage () {
 
 
     return (<>
@@ -14,7 +16,7 @@ export default function Proiecte () {
                 {projects.map((card, index) => {
                     const {name, url, imagine, description} = card;
 
-                    return <ProjectCard
+                    return <ProjectsCard
                             key={index}
                             title={name}
                             url={url}

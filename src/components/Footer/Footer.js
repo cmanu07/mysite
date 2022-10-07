@@ -1,8 +1,8 @@
-import whatsApp from "./Media/whatsapp.png";
-import linkedIn from "./Media/linkedin.png";
-import gitHub from "./Media/github.png";
+import whatsApp from "../Media/whatsapp.png";
+import linkedIn from "../Media/linkedin.png";
+import gitHub from "../Media/github.png";
 
-
+import '../Footer/Footer.css';
 
 const Footer = () => {
 

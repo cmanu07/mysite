@@ -1,9 +1,11 @@
+import React from "react";
 
-import cvItem from "../Media/cv_item.jpg";
-import cvFile from "../Files/Emanuel Caradan - CV.pdf";
+import "./CVPage.css";
 
+import cvItem from "../../Media/cv_item.jpg";
+import cvFile from "../../Files/Emanuel Caradan - CV.pdf";
 
-export default function CV () {
+export default function CVPage () {
 
     return (<>
         <div className="cv">

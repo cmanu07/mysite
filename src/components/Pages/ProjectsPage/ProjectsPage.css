@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    --myWhite: #FFFFFF;
+    --myGlassGrey: rgba(255, 255, 255, 0.1);
+    --myHoverBlackGreen: hsl(203, 26%, 24%, 85%);
+    --myGreen-hover: #C4E8C2;
+    --myGreen-2: #6BBD99;
+    --myGreenTransparent-2: rgb(107, 189, 153, .7);
+    --myBlackGreen: #2E424E;
+}
+
+.projects {
+    background-image: url(../../Media/projects_wall.jpg);
+    border-radius: 15px;
+}
+#false .projects h2, #true .projects h2 {
+    color: var(--myGreen-hover);
+    letter-spacing: 2px;
+    font-size: 50px;
+}
+.projects h5 {
+    color: var(--myGreen-hover);
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 0.5em 3em 3em 3em;
+    text-align: center;
+}
+.projects h5 a {
+    color: var(--myGreen-2);
+    transition: .3s;
+}
+.projects h5 a:hover {
+    cursor: pointer;
+    color: var(--myGreen-hover);
+}
+.main-projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    padding-bottom: 3em;
+}
+a {
+    text-decoration: none;
+}
+.project-card {
+    width: 15em;
+    height: 19em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 15px;
+    background-color: var(--myGlassGrey);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: .3s;
+    margin: 2em 4em;
+    backdrop-filter: blur(7px);
+}
+.project-card:hover {
+    background-color: var(--myHoverBlackGreen);
+}
+.project-card h6 {
+    color: var(--myGreen-hover);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 0.8em;
+}
+.project-card img {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+}
+.project-card p {
+    color: var(--myGreen-3);
+    margin-top: 3em;
+}
+

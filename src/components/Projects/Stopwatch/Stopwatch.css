@@ -1,0 +1,100 @@
+
+/* STOPWATCH */
+
+@media (max-width: 768px) {
+    
+    .minutes, .seconds, .tens {
+        font-size: xx-small;
+    }
+
+}
+
+#false .stopwatch {
+    background-color:lavender;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5em;
+    border-radius: 10px;
+}
+#true .stopwatch {
+    background-color: var(--myGreen-1);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5em;
+    border-radius: 10px;
+}
+#false .stopwatch h2 {
+    text-align: center;
+    margin: 3em auto 0.5em auto;
+    font-size: 40px;
+}
+#true .stopwatch h2 {
+    text-align: center;
+    margin: 3em auto 0.5em auto;
+    font-size: 40px;
+    color: var(--myBlackGreen);
+}
+.stopwatch h4 {
+    display: flex;
+    margin: auto;
+    margin-top: 0.1em;
+    width: 35%;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--myBlackGreen);
+}
+#false .stopwatch span {
+    font-size: 5em;
+    padding-bottom: 0.2em;
+}
+#true .stopwatch span {
+    color: var(--myGreen-hover);
+    font-size: 5em;
+    padding-bottom: 0.2em;
+}
+.stopwatch-butt {
+    text-align: center;
+}
+#false .minutes, #false .seconds, #false .tens {
+    font-size: 5.1em;
+    width: 130px;
+    padding: 0 0.2em;
+}
+#true .minutes, #true .seconds, #true .tens {
+    color: var(--myGreen-hover);
+    font-size: 5.1em;
+    width: 130px;
+    padding: 0 0.2em;
+}
+.start, .stop, .reset {
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+    padding: 0.5em 0;
+    margin: 3em 0.9em;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 7em;
+    text-align: center;
+}
+#false .start, #false .stop, #false .reset {
+    background-color: var(--myGreen-hover);
+}
+#true .start, #true .stop, #true .reset {
+    background: var(--myBlackGreen);
+    color: var(--myGreen-hover);
+}
+#false .start:hover, #false .stop:hover, #false .reset:hover {
+    cursor: pointer;
+    color: lavender;
+    background-color: goldenrod;
+    border-radius: 15px;
+    letter-spacing: 0.04em;
+    font-weight: bold;
+}
+#true .start:hover, #true .stop:hover, #true .reset:hover {
+    cursor: pointer;
+    background-color: var(--myGreen-2);
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    color: var(--myBlackGreen);
+}

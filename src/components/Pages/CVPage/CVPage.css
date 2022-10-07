@@ -1,0 +1,66 @@
+
+@media (max-width: 768px) {
+    .cv {
+        height: 100%;
+    }
+    .cv img {
+        width: 90%;
+        height: 50%;
+    }
+    .cv p {
+        text-align: center;
+    }
+}
+
+#false .cv {
+    background-image: url(../../Media/cv_wall.jpg);
+    background-color: var(--myGreen-3);
+    border-radius: 15px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#true .cv {
+    border-radius: 15px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cv h2 {
+    color: var(--myBlackGreen);
+    letter-spacing: 4px;
+    font-size: 60px;
+}
+#false .cv p {
+    color: var(--myBlackGreen);
+    padding-top: 4em;
+    margin-bottom: 2em;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#true .cv p {
+    color: var(--myGreen-hover);
+    padding-top: 4em;
+    margin-bottom: 2em;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#false .cv a {
+    color: var(--myGreen-1);
+    text-decoration: underline;
+    transition: .3s;
+}
+#true .cv a {
+    color: var(--myGreen-2);
+    text-decoration: underline;
+    transition: .3s;
+}
+#false .cv a:hover, #true .cv a:hover {
+    color: var(--myGreen-hover);
+}
+.cv img {
+    height: 72%;
+    aspect-ratio: 1 / 1.4;
+}

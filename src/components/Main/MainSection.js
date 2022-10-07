@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import video_BG from '../Media/videos/Forest_BG.mp4';
 import myCvPhoto from '../Media/my_photo.jpeg';
 
-const MainBG = () => {
+const MainSection = () => {
 
     const [mainAbout, setMainAbout] = useState(() => 'main-bg-about');
     const [mainAbout2, setMainAbout2] = useState(() => 'main-bg-about2');
@@ -43,4 +43,4 @@ const MainBG = () => {
             </article>
 }
 
-export default MainBG;
+export default MainSection;

@@ -1,6 +1,8 @@
+import React from "react"
 
+import "./About.css"
 
-export default function Despre () {
+export default function About () {
 
     return (<>
         <h2>ABOUT ME</h2>
@@ -13,7 +15,7 @@ export default function Despre () {
             <p>I am trustworthy, ambitious, open to accepting feedback and new ideas.</p>
             <p>I am self-motivated, confident and hardworking.</p>
             <p>I am able to stay calm under pressure and I am an active listener.</p>
-            <p>I’m skilled in HTML, CSS, JavaScript, also BootStrap and React libraries. Some basic knowledge I also have in backend with PHP and MySQL.</p>
+            <p>I'm skilled in HTML, CSS, JavaScript, also BootStrap and React libraries. Some basic knowledge I also have in backend with PHP and MySQL.</p>
         </div>
     </>)
 }

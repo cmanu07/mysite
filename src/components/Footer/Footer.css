@@ -1,0 +1,129 @@
+
+/* FOOTER */
+
+#false .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4em;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--myBlackGreen);
+    color: var(--myBlackGreen);
+    border-radius: 20px 20px 0 0;
+}
+#true .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4em;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--myBlackGreen);
+    color: var(--myGreen-hover);
+    border-radius: 20px 20px 0 0;
+    border-top: 0.7px solid var(--myGreen-1);
+}
+.footer-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+#false .footer-main-card {
+    color: var(--myBlackGreen);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 23em;
+    height: 25vh;
+    background-color: var(--myGreen-hover);
+    border-radius: 15px;
+}
+#true .footer-main-card {
+    color: var(--myGreen-hover);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 23em;
+    height: 25vh;
+    background-color: var(--myGreen-1);
+    border-radius: 15px;
+}
+.footer-main-title {
+    font-weight: bolder;
+    padding-top: 0.5em;
+    font-size: 17px;
+}
+.footer-main span {
+    padding-top: 1em;
+}
+#false .footer-main-br {
+    margin-top: 1em;
+    width: 4em;
+    height: 0.15em;
+    border-radius: 20px;
+    background-color: var(--myBlackGreen);
+}
+#true .footer-main-br {
+    margin-top: 1em;
+    width: 4em;
+    height: 0.15em;
+    border-radius: 20px;
+    background-color: var(--myGreen-hover);
+}
+.footer-main-card-logo-a, .footer-main-card-logo-e, .footer-main-card-logo-p {
+    width: 3em;
+    height: 3em;
+    background-size: contain;
+}
+#false .footer-main-card-logo-a {
+    background-image: url(../../components/Media/address_icon.png);
+}
+#true .footer-main-card-logo-a {
+    background-image: url(../../components/Media/address_icon_white.png);
+}
+#false .footer-main-card-logo-e {
+    background-image: url(../../components/Media/email_icon.png);
+}
+#true .footer-main-card-logo-e {
+    background-image: url(../../components/Media/email_icon_white.png);
+}
+#false .footer-main-card-logo-p {
+    background-image: url(../../components/Media/phone_icon.png);
+}
+#true .footer-main-card-logo-p {
+    background-image: url(../../components/Media/phone_icon_white.png);
+}
+.footer h4 {
+    color: var(--myGreen-hover);
+    width: 100%;
+    padding: 3em 0 1em 0;
+    text-align: center;
+    font-weight: lighter;
+}
+.footer-social {
+    padding-top: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-social a {
+    padding: 0 2em;
+}
+.footer-social img {
+    width: 3.5em;
+    height: 3,5em;
+    transition: 0.2s;
+}
+.footer-social img:hover {
+    background-color: var(--myGreen-1);
+    width: 3,5em;
+    height: 3,5em;
+    border-radius: 50%;
+    opacity: 80%;
+}

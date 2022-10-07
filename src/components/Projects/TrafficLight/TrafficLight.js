@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import BackButton from '../Main/BackButton';
+import React, { useState, useEffect } from 'react';
+import BackButton from '../../Main/BackButton';
 
-const TrafficL = () => {
+import './TrafficLight.css';
+
+const TrafficLight = () => {
 
   const [redLight, setRedLight] = useState(() => true);
   const [yellowLight, setYellowLight] = useState(() => true);
@@ -43,4 +45,4 @@ const TrafficL = () => {
         </>)
 }
 
-export default TrafficL
+export default TrafficLight

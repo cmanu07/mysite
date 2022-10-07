@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectCard = ({title, url, imagine, description}) => {
+const ProjectsCard = ({title, url, imagine, description}) => {
   return (
     <a className='project-card' href={url}>
         <h6>{title}</h6>
@@ -10,4 +10,4 @@ const ProjectCard = ({title, url, imagine, description}) => {
   )
 }
 
-export default ProjectCard
+export default ProjectsCard

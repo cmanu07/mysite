@@ -1,13 +1,23 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
-    --myWhite: #FFFFFF;
-    --myGreen-hover: #C4E8C2;
-    --myBlackGreen: #2E424E;
+
+/* SEARCH BAR */
+
+@media (min-width: 768px) and  (max-width: 992px) {
+    .main div {
+        width: 90%;
+        height: 250em;
+    }
 }
+@media (max-width: 768px) {
+    .main div {
+        width: 70%;
+        height: fit-content;
+        align-items: center;
+    }
+    .inreg {
+        text-align: center;
+    }
+}
+
 .main {
     width: 100%;
     background-image: url('../../Media/wallpaper.jpg');
@@ -81,21 +91,4 @@
     cursor: pointer;
     background: var(--myBlackGreen);
     color: var(--myGreen-hover);
-}
-
-@media (min-width: 768px) and  (max-width: 992px) {
-    .main div {
-        width: 90%;
-        height: 250em;
-    }
-}
-@media (max-width: 768px) {
-    .main div {
-        width: 70%;
-        height: fit-content;
-        align-items: center;
-    }
-    .inreg {
-        text-align: center;
-    }
 }

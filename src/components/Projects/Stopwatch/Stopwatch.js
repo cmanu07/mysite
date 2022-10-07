@@ -1,8 +1,7 @@
 import { React, useState } from 'react'
-import BackButton from '../Main/BackButton'
+import BackButton from '../../Main/BackButton'
 
-import Header from '../Header/Header'
-import Footer from '../Footer'
+import './Stopwatch.css'
 
 const Stopwatch = () => {
 
@@ -43,6 +42,7 @@ const Stopwatch = () => {
             setStop('Resume')
     }
     const resumeF = () => {
+        clearInterval(interv)
         startF();
         setStop('Stop/Pause');
     }
@@ -55,7 +55,6 @@ const Stopwatch = () => {
     }
     
   return (<>
-            <Header/>
                 <main className='stopwatch'>
                     <div className='back-div'>
                         <h2>STOPWATCH</h2>
@@ -74,7 +73,6 @@ const Stopwatch = () => {
                         <button className="reset" onClick={resetF}>Reset</button>
                     </div>
                 </main>
-            <Footer/>
         </>)
 }
 

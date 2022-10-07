@@ -1,0 +1,28 @@
+
+/* ABOUT PAGE */
+
+#false .about-main {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 4em 5em;
+    color: var(--myBlackGreen);
+}
+#true .about-main {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 4em 5em;
+    color: var(--myGreen-hover);
+}
+.about-main p {
+    font-size: 20px;
+    text-align: center;
+    padding: 0.5em 0;
+}

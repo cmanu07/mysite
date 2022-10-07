@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 
+import "./Header.css";
+
 import NavBar from "./NavBar"
 import { ThemeContext } from "../Contexts/ThemeContext";
 import myLogo from "../Media/my_logo.png"
