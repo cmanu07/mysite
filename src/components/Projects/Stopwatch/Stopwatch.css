@@ -38,7 +38,6 @@
     display: flex;
     margin: auto;
     margin-top: 0.1em;
-    width: 35%;
     justify-content: space-around;
     align-items: center;
     color: var(--myBlackGreen);
@@ -57,13 +56,13 @@
 }
 #false .minutes, #false .seconds, #false .tens {
     font-size: 5.1em;
-    width: 130px;
+    width: 140px;
     padding: 0 0.2em;
 }
 #true .minutes, #true .seconds, #true .tens {
     color: var(--myGreen-hover);
     font-size: 5.1em;
-    width: 130px;
+    width: 140px;
     padding: 0 0.2em;
 }
 .start, .stop, .reset {

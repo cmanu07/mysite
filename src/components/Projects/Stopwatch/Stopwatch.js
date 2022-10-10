@@ -1,58 +1,42 @@
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import BackButton from '../../Main/BackButton'
 
 import './Stopwatch.css'
 
 const Stopwatch = () => {
 
-    const [interv, setInterv] = useState();
-    const [time, setTime] = useState({min:0, sec:0, tens:0});
-    const [stop, setStop] = useState(() => 'Stop/Pause');
-
-    let minCurent = time.min, secCurent = time.sec, tensCurent = time.sec;
+    const [time, setTime] = useState(() => 0);
+    const [timerOn, setTimerOn] = useState(() => false);
 
 // START
-    const start = () => {
-        if (secCurent === 60) {
-            minCurent++
-            secCurent = 0
-        }
-        if (tensCurent === 10) {
-            secCurent++
-            tensCurent = 0
-        }     
-        tensCurent++
-        return setTime({min:minCurent, sec:secCurent, tens:tensCurent});
-    }
     const startF = () => {
-        if (stop === 'Stop/Pause') {
-            clearInterval(interv)
-            start();
-            setInterv(setInterval(start, 100));
-        } else {
-            setStop('Stop/Pause')
-            clearInterval(interv)
-            start();
-            setInterv(setInterval(start, 100));
-        }
+        setTimerOn(true)
     }
+
 // STOP/RESUME
     const stopF = () => {
-            clearInterval(interv)
-            setStop('Resume')
+        setTimerOn(false)
     }
     const resumeF = () => {
-        clearInterval(interv)
-        startF();
-        setStop('Stop/Pause');
+        setTimerOn(true)
     }
 
 // RESET 
     const resetF = () => {
-        clearInterval(interv);
-        setStop('Stop/Pause')
-        setTime({min:0, sec:0, tens:0});
+        setTime(0)
     }
+
+    useEffect (() => {
+        let interval = null;
+        if (timerOn) {
+            interval = setInterval(() => {
+                setTime(prevTime => prevTime + 10)
+            }, 10)
+        } else {
+            clearInterval(interval)
+        }
+        return () => clearInterval(interval);
+    }, [timerOn])
     
   return (<>
                 <main className='stopwatch'>
@@ -61,16 +45,25 @@ const Stopwatch = () => {
                         <BackButton/>
                     </div>
                     <h4>
-                        <p className="minutes">{(time.min < 10) ? `0${time.min}` : time.min}</p>
+                        <p className="minutes">{`0${Math.floor(time / 60000) % 60}`.slice(-2)}</p>
                         <span>:</span>
-                        <p className="seconds">{(time.sec < 10) ? `0${time.sec}` : time.sec}</p>
+                        <p className="seconds">{`0${Math.floor(time / 1000) % 60}`.slice(-2)}</p>
                         <span>:</span>
-                        <p className="tens">{(time.tens < 10) ? `${time.tens}0` : time.tens}</p>
+                        <p className="tens">{`0${(time / 10) % 100}`.slice(-2)}</p>
                     </h4>
                     <div className='stopwatch-butt'>
-                        <button className="start" onClick={startF}>Start</button>    
-                        <button className="stop" onClick={(stop === 'Stop/Pause') ? stopF : resumeF}>{stop}</button>    
-                        <button className="reset" onClick={resetF}>Reset</button>
+                        {!timerOn && time === 0 && (
+                            <button className="start" onClick={startF}>Start</button>    
+                        )}
+                        {timerOn && (
+                            <button className="stop" onClick={stopF}>Stop</button>
+                        )}
+                        {!timerOn && time !== 0 && (
+                            <button className="stop" onClick={resumeF}>Resume</button>    
+                        )}
+                        {!timerOn && time !== 0 && (
+                            <button className="reset" onClick={resetF}>Reset</button>
+                        )}                        
                     </div>
                 </main>
         </>)

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import BackButton from '../../Main/BackButton';
 
 import './TrafficLight.css';
@@ -17,14 +17,16 @@ const TrafficLight = () => {
   const nightMode = () => {
       setRedLight(false)
       setGreenLight(false)
+      // setYellowLight(true)
   }
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setYellowLight(!yellowLight)
-      },1000)
-      return () => clearInterval(interval);
-    }, [yellowLight])
-  
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setYellowLight(!yellowLight)
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [yellowLight])
+
   return (<>
             <div>
               <h2>Traffic Light</h2>

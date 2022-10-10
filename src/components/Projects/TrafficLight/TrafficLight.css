@@ -38,8 +38,8 @@
     box-shadow: 4px 4px 30px rgb(29, 247, 112),
     -4px -4px 30px rgb(29, 247, 112);
 }
-.off-false {
-    background-color: rgb(69, 76, 83);
+.off-light {
+    background-color: var(--myHoverBlackGreen);
     transition: 0.2s;
     box-shadow: none;
 }
