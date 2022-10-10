@@ -4,7 +4,7 @@
 @media (max-width: 768px) {
     
     .minutes, .seconds, .tens {
-        font-size: xx-small;
+       width: 180em;
     }
 
 }
@@ -37,33 +37,35 @@
 .stopwatch h4 {
     display: flex;
     margin: auto;
+    width: 25em;
     margin-top: 0.1em;
     justify-content: space-around;
     align-items: center;
     color: var(--myBlackGreen);
 }
 #false .stopwatch span {
-    font-size: 5em;
+    font-size: 4em;
     padding-bottom: 0.2em;
 }
 #true .stopwatch span {
     color: var(--myGreen-hover);
-    font-size: 5em;
+    font-size: 4em;
     padding-bottom: 0.2em;
 }
 .stopwatch-butt {
     text-align: center;
 }
 #false .minutes, #false .seconds, #false .tens {
-    font-size: 5.1em;
-    width: 140px;
-    padding: 0 0.2em;
+    font-size: 73px;
+    text-align: center;
+    width: 170em;
+    padding: 0 0.15em;
 }
 #true .minutes, #true .seconds, #true .tens {
     color: var(--myGreen-hover);
-    font-size: 5.1em;
-    width: 140px;
-    padding: 0 0.2em;
+    font-size: 73px;
+    width: 170em;
+    padding: 0 0.15em;
 }
 .start, .stop, .reset {
     border: 2px solid goldenrod;
