@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BackButton from '../../Main/BackButton';
+import BackButton from '../../Main/BackButton/BackButton';
 
 import './SearchBar.css';
 
@@ -24,8 +24,8 @@ export default function SearchBar ({data}) {
 
     return (<>
                 <main className="main">
+                    <BackButton/>
                     <div className='main-div'>
-                        <BackButton className='main-div-butt'/>
                         <label>
                             <input type="search" placeholder='Search here...' onChange={filtruCautare}/>
                             <img className={icon} src={searchIcon} alt="..."/>

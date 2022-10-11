@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react'
-import BackButton from '../../Main/BackButton'
+import BackButton from '../../Main/BackButton/BackButton'
 import CalculatorDigit from './CalculatorDigit'
 import CalculatorOperat from './CalculatorOperat'
 

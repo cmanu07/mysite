@@ -13,6 +13,9 @@
         height: fit-content;
         align-items: center;
     }
+    .main-div {
+        width: 90%;
+    }
     .inreg {
         text-align: center;
     }
@@ -51,13 +54,10 @@
 }
 .main-div {
     display: flex;
-    width: 92%;
+    width: 20%;
     height: fit-content;
     justify-content: flex-end;
     position: relative;
-}
-.main-div-butt {
-    top: 0;
 }
 .main-div-2 {
     width: 92%;
