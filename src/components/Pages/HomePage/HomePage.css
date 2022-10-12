@@ -40,77 +40,6 @@
     background-color: rgb(0, 0, 0, 0.6);
     border-radius: 20px;
 }
-#false .main-bg-about, .main-bg-about-click {
-    margin: 3em 0 2em 0;
-    border-radius: 15px;
-    display: flex;
-    text-decoration: none;
-    color: var(--myBlackGreen);
-    width: 11em;
-    height: 4em;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-    background-image: linear-gradient(to bottom right, var(--myGreen-1), var(--myGreen-3));
-    box-shadow: 3px 3px 3px var(--myBlackHeader);
-}
-#false .main-bg-about-click, #true .main-bg-about-click {
-    color: var(--myBlackGreen);
-    box-shadow: none;
-}
-#true .main-bg-about {
-    margin: 3em 0 2em 0;
-    border-radius: 15px;
-    display: flex;
-    text-decoration: none;
-    color: var(--myGreen-3);
-    width: 11em;
-    height: 4em;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-    background-image: linear-gradient(to bottom right, var(--myBlackGreen), var(--myGreen-1));
-    box-shadow: 3px 3px 3px var(--myBlackHeader);
-}
-#false .main-bg-about2, .main-bg-about2-click {
-    margin: 3em 0 2em 0;
-    border-radius: 15px;
-    display: flex;
-    text-decoration: none;
-    color: var(--myBlackGreen);
-    width: 11em;
-    height: 4em;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-    background-image: linear-gradient(to top left, var(--myGreen-1), var(--myGreen-3));
-    box-shadow: 3px 3px 3px var(--myBlackHeader);
-}
-#true .main-bg-about2 {
-    margin: 3em 0 2em 0;
-    border-radius: 15px;
-    display: flex;
-    text-decoration: none;
-    color: var(--myGreen-3);
-    width: 11em;
-    height: 4em;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-    background-image: linear-gradient(to top left, var(--myBlackGreen), var(--myGreen-1));
-    box-shadow: 3px 3px 3px var(--myBlackHeader);
-}
-#false .main-bg-about2-click, #true .main-bg-about2-click {
-    color: var(--myBlackGreen);
-    box-shadow: none;
-}
-#false .main-bg-about:hover, #false .main-bg-about2:hover, #true .main-bg-about:hover, #true .main-bg-about2:hover {
-    background-image: linear-gradient(var(--myGreen-hover), var(--myGreen-hover));
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 0.4px;
-    color: var(--myBlackGreen);
-}
 .main-bg {
     position: absolute;
     display: flex;
@@ -132,60 +61,6 @@
     height: 200px;
     padding-right: 4em;
     border-radius: 50%;
-}
-#false .main-bg-2 {
-    width: 100%;
-    height: 67vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--myGreen-3);
-    border-radius: 20px;
-}
-#true .main-bg-2 {
-    width: 100%;
-    height: 67vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to bottom right, var(--myGreen-1), var(--myBlackGreen));
-    border-radius: 20px;
-}
-#false .main-bg-3 {
-    width: 100%;
-    height: 53vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--myGreen-2);
-    border-radius: 20px;
-}
-#true .main-bg-3 {
-    width: 100%;
-    height: 53vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--myBlackGreen);
-    border-radius: 20px;
-}
-#false .main-bg-2 h5, #false .main-bg-3 h5 {
-    color: var(--myBlackGreen);
-    font-size: 25px;
-    font-weight: lighter;
-    margin: 0.5em 4em;
-    text-align: center;
-}
-#true .main-bg-2 h5, #true .main-bg-3 h5 {
-    color: var(--myGreen-hover);
-    font-size: 25px;
-    font-weight: lighter;
-    margin: 0.5em 4em;
-    text-align: center;
 }
 #false .main-bg h1 {
     font-size: 3.5rem;

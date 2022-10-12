@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 import "./Header.css";
 
 import NavBar from "./NavBar"
 import { ThemeContext } from "../Contexts/ThemeContext";
 import myLogo from "../Media/my_logo.png"
-import ShowDate from "../Main/ShowDate";
+import ShowDate from "../Main/ShowDate/ShowDate";
 
 const Header = () => {
 
@@ -25,6 +25,16 @@ const Header = () => {
         setToggleMenuP(!toggleMenuP);
         setNavbar(!navbar);
     }
+    const toggleMenuButton = useRef();
+
+    useEffect(() => {
+        const closeMenu = (e) => {
+            if(e.path[0] !== toggleMenuButton.current)
+            setToggleMenu(toggleMenu);
+        }
+        document.body.addEventListener('click', closeMenu)
+        return () => document.body.removeEventListener('click', closeMenu)
+    })
 
     let className = "header";
     const navList = [{buton1: 'PROJECTS', buton2: 'CV', buton3: 'ABOUT ME'}];
@@ -51,7 +61,7 @@ const Header = () => {
                 <span className="slider"></span>
             </label>
             
-            <div className={toggleMenu ? "toggle" : "toggle-active"} onClick={toggleMenuFunct}>
+            <div className={toggleMenu ? "toggle" : "toggle-active"} onClick={toggleMenuFunct} ref={toggleMenuButton}>
                 <p className={toggleMenuP ? "toggle-p" : "toggle-p-off"}></p>
             </div>
         </div>

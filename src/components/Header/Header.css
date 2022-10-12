@@ -233,25 +233,4 @@
     background: url(../Media/moon_icon.png);
     background-size: contain;
 }
-#false .show-date {
-    width: 41%;
-    display: flex;
-    position: absolute;
-    top: 0.5em;
-    right: 7em;
-    justify-content: flex-end;
-}
-#true .show-date {
-    color: var(--myGreen-2);
-    width: 41%;
-    display: flex;
-    position: absolute;
-    top: 0.5em;
-    right: 7em;
-    justify-content: flex-end;
-}
-.show-date p {
-    font-size: 95%;
-    text-align: center;
-    width: 6.5em;
-}
+
