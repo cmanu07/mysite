@@ -16,6 +16,7 @@ import Counter from './components/Projects/Counter/Counter';
 import TrafficLight from './components/Projects/TrafficLight/TrafficLight';
 import Calculator from './components/Projects/Calculator/Calculator';
 import Stopwatch from './components/Projects/Stopwatch/Stopwatch';
+import GitHubAPI from './components/Projects/GitHub API/GitHubAPI';
 
 import { ThemeContext } from './components/Contexts/ThemeContext';
 
@@ -36,6 +37,7 @@ const App = () => {
                   <Route path={'/projects/traffic_light'} element={<TrafficLight/>}/>
                   <Route path={'/projects/calculator'} element={<Calculator/>}/>
                   <Route path={'/projects/stopwatch'} element={<Stopwatch/>}/>
+                  <Route path={'/projects/github_api'} element={<GitHubAPI/>}/>
                 </Routes>
               <Footer/>
             </div>

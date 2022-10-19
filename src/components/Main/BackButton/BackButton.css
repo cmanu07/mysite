@@ -1,5 +1,6 @@
 .back-button {
     position: absolute;
+    z-index: 1;
     font-size: larger;
     background-color: var(--myGreen-hover);
     box-shadow: 3px 3px 3px var(--myBlackHeader);

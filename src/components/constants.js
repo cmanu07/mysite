@@ -3,6 +3,7 @@ import counter_wall from './Media/counter_wall.jpg';
 import traffic_wall from './Media/traffic_wall.jpg';
 import calculator_wall from './Media/calculator_wall.jpg';
 import stopwatch_wall from './Media/stopwatch_wall.jpg';
+import github_wall from './Media/github_wall.jpg';
 
 
 
@@ -100,5 +101,11 @@ export const projects = [
         url: '/projects/stopwatch',
         imagine: stopwatch_wall,
         description: 'Another good and "must have" JavaScript project.'
+    },
+    {
+        name: 'GitHub API',
+        url: '/projects/github_api',
+        imagine: github_wall,
+        description: 'A Rest API good learning project.'
     }
 ]
