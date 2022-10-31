@@ -77,9 +77,10 @@
     background-color: var(--myGreen-hover);
 }
 .footer-main-card-logo-a, .footer-main-card-logo-e, .footer-main-card-logo-p {
-    width: 3em;
-    height: 3em;
+    width: 35px;
+    height: 35px;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 #false .footer-main-card-logo-a {
     background-image: url(../../components/Media/address_icon.png);
@@ -118,7 +119,7 @@
 .footer-social img {
     width: 3.5em;
     height: 3,5em;
-    transition: 0.2s;
+    transition: .25s;
 }
 .footer-social img:hover {
     background-color: var(--myGreen-1);

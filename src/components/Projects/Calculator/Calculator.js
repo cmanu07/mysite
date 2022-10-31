@@ -1,7 +1,8 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useState } from 'react'
 import BackButton from '../../Main/BackButton/BackButton'
 import CalculatorDigit from './CalculatorDigit'
 import CalculatorOperat from './CalculatorOperat'
+import CalculatorRandomBackground from './CalculatorRandomBackground'
 
 import './Calculator.css'
 
@@ -121,10 +122,16 @@ const formatNumber = (nr) => {
 }
 
 const Calculator = () => {
-  
+
   const [{currNumber="0", prevNumber, operation}, dispach] = useReducer(reducer, {})
+  const [color, setColor] = useState(() => '')
   
-  return (<>
+  const randomBG = () => {
+    return setColor(`#${Math.floor(Math.random() * 0xffffff).toString(16)}`);
+  }
+
+  return (<section className='calculator-main' style={{backgroundColor: `${color}`}}>
+            <CalculatorRandomBackground generateBackground={randomBG}/>
             <div>
               <h2>Calculator</h2>
               <BackButton/>
@@ -135,7 +142,7 @@ const Calculator = () => {
                 <div className='calculator-curr-number'>{formatNumber(currNumber)}</div>
               </div>
               <button className='calculator-span-two' onClick={()=> dispach({type: actions.clear})}>C</button>
-              <button onClick={()=> dispach({type: actions.deleteInput})}>DEL</button>
+              <button onClick={()=> dispach({type: actions.deleteInput})} className='calculator-button'>DEL</button>
               <CalculatorOperat operation="/" dispach={dispach}/>
               <CalculatorDigit digit="7" dispach={dispach}/>
               <CalculatorDigit digit="8" dispach={dispach}/>
@@ -153,7 +160,7 @@ const Calculator = () => {
               <CalculatorDigit digit="0" dispach={dispach}/>
               <button className='calculator-span-two' onClick={()=> dispach({type: actions.calculate})}>=</button>
             </main>
-        </>)
+        </section>)
 }
 
 export default Calculator
