@@ -59,8 +59,9 @@
     padding-top: 0.5em;
     font-size: 17px;
 }
-.footer-main span {
+.footer-main-card span {
     padding-top: 1em;
+    text-align: center;
 }
 #false .footer-main-br {
     margin-top: 1em;

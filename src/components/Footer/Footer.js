@@ -10,16 +10,16 @@ const Footer = () => {
         return <article className="footer">
                     <div className="footer-main">
                         <div className="footer-main-card">
-                            <figure className="footer-main-card-logo-a"></figure>
-                            <p className="footer-main-title">ADDRESS</p>
-                            <div className="footer-main-br"></div>
-                            <span>407280 Florești, Cluj-Napoca  CJ</span>
-                        </div>
-                        <div className="footer-main-card">
                             <figure className="footer-main-card-logo-e"></figure>
                             <p className="footer-main-title">EMAIL</p>
                             <div className="footer-main-br"></div>
                             <span>emanuel.caradan@gmail.com</span>
+                        </div>
+                        <div className="footer-main-card">
+                            <figure className="footer-main-card-logo-a"></figure>
+                            <p className="footer-main-title">ADDRESS</p>
+                            <div className="footer-main-br"></div>
+                            <span>407280 Florești, Cluj-Napoca  CJ<br/> Romania</span>
                         </div>
                         <div className="footer-main-card">
                             <figure className="footer-main-card-logo-p"></figure>

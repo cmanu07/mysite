@@ -59,6 +59,11 @@ form {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    margin-bottom: 1em;
+}
+.results-topic {
+    font-weight: bolder;
+    margin-right: 0.5em;
 }
 .github-button {
     width: 130px;
