@@ -1,9 +1,9 @@
-.back-button {
+#false .back-button {
     position: absolute;
     z-index: auto;
     font-size: larger;
     background-color: var(--myGreen-hover);
-    box-shadow: 3px 3px 3px var(--myBlackHeader);
+    box-shadow: 3px 3px 5px var(--myBlackHeader);
     color: var(--myBlackGreen);
     top: 15.4%;
     left: 8%;
@@ -11,7 +11,20 @@
     padding: 7px 10px;
     transition: .3s;
 }
-.back-button:hover {
+#true .back-button {
+    position: absolute;
+    z-index: auto;
+    font-size: larger;
+    background-color: var(--myGreen-hover);
+    box-shadow: 2px 2px 5px var(--myGreen-1);
+    color: var(--myBlackGreen);
+    top: 15.4%;
+    left: 8%;
+    border-radius: 10px;
+    padding: 7px 10px;
+    transition: .3s;
+}
+#true .back-button:hover, #false .back-button:hover {
     background-color: var(--myGreen-2);
     color: var(--myGreen-hover);
     animation: shake 1s infinite;

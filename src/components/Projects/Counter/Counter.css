@@ -41,6 +41,9 @@
 #false .counter-number, #true .counter-number {
     color: var(--myBlackGreen);
 }
+#false .counter-number-off, #true .counter-number-off {
+    color: var(--myGreen-3);
+}
 .counter button {
     font-size: xx-large;
     text-align: center;
@@ -79,4 +82,7 @@
 }
 #true .counter-title {
     color: var(--myGreen-1);
+}
+#false .counter-title-off, #true .counter-title-off {
+    color: var(--myGreen-3);
 }
