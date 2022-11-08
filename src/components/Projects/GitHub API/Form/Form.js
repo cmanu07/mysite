@@ -42,13 +42,11 @@ const Form = () => {
 
   return (<>
         <form>
-            <label>
-                <input className='github-input'
-                placeholder="GitHub username"
+            <input className='github-input'
                 type="text" value={userName} id="username" name="username"
                 onChange={e => setUserName(e.target.value)}
                 required/>
-            </label>
+            <label className='github-input-label'>GitHub Username</label>
             <button className='github-button' type="button" onClick={showInfo}>Show Info</button>
         </form>
         <div className="results">

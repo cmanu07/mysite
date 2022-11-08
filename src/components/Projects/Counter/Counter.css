@@ -29,17 +29,17 @@
     padding-top: 1em;
     transition: .3s;
 }
-#true .counter div h2 {
-    color: var(--myGreen-1);
-}
 .counter div span {
     text-align: center;
     font-size: x-large;
     width: 13em;
+    color: var(--myGreen-3);
+}
+#false .counter-number {
     color: var(--myBlackGreen);
 }
-#false .counter-number, #true .counter-number {
-    color: var(--myBlackGreen);
+#true .counter-number {
+    color: var(--myGreen-1);
 }
 #false .counter-number-off, #true .counter-number-off {
     color: var(--myGreen-3);
@@ -79,9 +79,11 @@
 }
 #false .counter-title {
     color: var(--myBlackGreen);
+    transition: .3s;
 }
 #true .counter-title {
     color: var(--myGreen-1);
+    transition: .3s;
 }
 #false .counter-title-off, #true .counter-title-off {
     color: var(--myGreen-3);
