@@ -10,6 +10,17 @@
     --myGlassBlue: hsl(200, 46%, 26%, 0.6);
     --myWhite2: #EAEBED;
 }
+@media (max-width: 768px) {
+    .results {
+        width: 98%;
+    }
+    .results p {
+        font-size: 13px;
+    }
+    .gist-link {
+        font-size: 13px;
+    }
+}
 form {
     position: relative;
     width: 15em;
@@ -27,16 +38,14 @@ form {
     backdrop-filter: blur(7px);
 }
 .results {
-    width: 80%;
+    width: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    word-wrap: break-word;
+    justify-content: center;
     color: var(--myWhite);
-    padding: 0.5em 3em;
-    margin: auto;
+    padding: 0.5em 10em;
     margin-bottom: 5em;
     border-radius: 10px;
     background-color: var(--myGlassBlue);
@@ -54,7 +63,7 @@ form {
     height: 10em;
 }
 .results p {
-    font-size: 17px;
+    font-size: relative;
 }
 .results img {
     width: 80px;
@@ -124,4 +133,5 @@ form {
 }
 .gist-link {
     color: var(--myLightBlue);
+    font-size: relative;
 }
