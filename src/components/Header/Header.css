@@ -8,6 +8,51 @@
     .navbar {
         height: 1.3em;
     }
+    h1 a {
+        font-size: medium;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.6em;
+    }
+}
+
+h1 a {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+#false h1 a {
+    text-decoration: none;
+    color: var(--myBlackGreen);
+    transition: 0.25s;
+}
+#true h1 a {
+    text-decoration: none;
+    color: var(--myGreen-2);
+    transition: 0.25s;
+}
+#false h1 a:hover {
+    cursor: pointer;
+    color: var(--myGreen-hover);
+}
+#false h3 a:hover {
+    cursor: pointer;
+    color: var(--myGreen-hover);
+    letter-spacing: 0.3px;
+    font-weight: bolder;
+}
+#true h1 a:hover {
+    cursor: pointer;
+    color: var(--myGreen-hover);
+}
+#true h3 a:hover{
+    cursor: pointer;
+    color: var(--myGreen-hover);
+    letter-spacing: 0.3px;
+    font-weight: bolder;
+}
+h1 img {
+    width: 40%;
 }
 
 #false .header {
@@ -176,7 +221,7 @@
     padding: 0 0.2em;
     position: absolute;
     top: 2.5rem;
-    right: 11rem;
+    right: 10.7rem;
     width: 4em;
     height: 2em;
     border-radius: 50px;
@@ -190,7 +235,7 @@
     padding: 0 0.2em;
     position: absolute;
     top: 2.5rem;
-    right: 11rem;
+    right: 10.7rem;
     width: 4em;
     height: 2em;
     border-radius: 50px;

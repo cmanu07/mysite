@@ -63,19 +63,20 @@ const Form = () => {
                           for (let f of files) {
                             file = f.language;
                           }
-                        return <li key={id} className="gist-list-item">
-                                      <a href={url} target="_blank" rel="noreferrer" className='gist-link'> 
-                                          {url}
-                                      </a>
-                                      <p><em className='results-topic'>Description :</em> {description ? description : '~~~'} </p>
-                                      <p><em className='results-topic'>Date of creation :</em> {(created_at).slice(0,10)} </p>
-                                      <p>
-                                          <em className='results-topic'>Programming language :</em> 
-                                          <span style={{color: '#FF9677'}}> {file ? file : '~~~'}</span>
-                                      </p>
-                                      <p><em className='results-topic'>Forks :</em> {forks}</p>
-                                      <p><em className='results-topic'>Users who fork :</em> {}</p>
-                              </li>
+                        return (  <li key={id} className="gist-list-item">
+                                    <a href={url} target="_blank" rel="noreferrer" className='gist-link'> 
+                                        {url}
+                                    </a>
+                                    <p><em className='results-topic'>Description :</em> {description ? description : '~~~'} </p>
+                                    <p><em className='results-topic'>Date of creation :</em> {(created_at).slice(0,10)} </p>
+                                    <p>
+                                      <em className='results-topic'>Programming language :</em> 
+                                      <span style={{color: '#FF9677'}}> {file ? file : '~~~'}</span>
+                                    </p>
+                                    <p><em className='results-topic'>Forks :</em> {forks}</p>
+                                    <p><em className='results-topic'>Users who fork :</em> {}</p>
+                                  </li>
+                                )
             })
           }
           </ol>

@@ -111,6 +111,7 @@
 }
 #false .main-bg-2 h5, #false .main-bg-3 h5 {
     color: var(--myBlackGreen);
+    width: 90%;
     font-size: 25px;
     font-weight: lighter;
     margin: 0.5em 4em;
@@ -118,6 +119,7 @@
 }
 #true .main-bg-2 h5, #true .main-bg-3 h5 {
     color: var(--myGreen-hover);
+    width: 90%;
     font-size: 25px;
     font-weight: lighter;
     margin: 0.5em 4em;
