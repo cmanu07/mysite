@@ -42,7 +42,7 @@ const Header = () => {
 
     return (
         <div className = {`${className}`}>
-            <h1 title="Emanuel Caradan - My Site"><a href="/"><img src={myLogo} alt="my site logo"/>MANU</a></h1>
+            <h1 title="Emanuel Caradan - My Portfolio Site"><a href="/"><img src={myLogo} alt="my site logo"/>MANU</a></h1>
             <nav className={navbar ? "navbar-off" : "navbar"}>
                 {navList.map((buton) => {
                     return <NavBar
