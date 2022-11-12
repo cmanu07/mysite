@@ -31,7 +31,7 @@ const MainSection = () => {
                     </a>
                 </div>
                 <div className="main-bg-3">
-                    <h5>I am now looking for a Junior Web Developer position to finally kick-start my career, so I started building my own projects.</h5>
+                    <h5>I am now looking for a Junior Web Developer position to finally kick&nbsp;-&nbsp;start my career, so I started building my own projects.</h5>
                     <a href="/projects" className={mainAbout2} 
                             onMouseDown={mouseDownFunct2} 
                             onMouseUp={mouseUpFunct2}
