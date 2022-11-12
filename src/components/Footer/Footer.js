@@ -19,7 +19,7 @@ const Footer = () => {
                             <figure className="footer-main-card-logo-a"></figure>
                             <p className="footer-main-title">ADDRESS</p>
                             <div className="footer-main-br"></div>
-                            <span>407280 Florești, Cluj-Napoca  CJ<br/> Romania</span>
+                            <span>407280 Florești, Cluj<br/> Romania</span>
                         </div>
                         <div className="footer-main-card">
                             <figure className="footer-main-card-logo-p"></figure>
@@ -35,7 +35,7 @@ const Footer = () => {
                         <a href="https://www.github.com/cmanu07" target="_blank" rel="noreferrer">
                             <img src={gitHub} alt="logo GitHub"/>
                         </a>
-                        <a href="https://www.linkedin.com/in/emanuel-caradan-7b12a3228" target="_blank" rel="noreferrer">
+                        <a href="https://www.linkedin.com/in/emanuel-caradan" target="_blank" rel="noreferrer">
                             <img src={linkedIn} alt="logo LinkedIn"/>
                         </a>
                     </div>
