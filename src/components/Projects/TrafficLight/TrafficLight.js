@@ -35,6 +35,11 @@ const TrafficLight = () => {
   return (<>
             <div>
               <h2>Traffic Light</h2>
+              <p className='semaf-temp-msg'>This project is still under contruction in React version. On my <a 
+                href="https://www.github.com/cmanu07?tab=repositories" target="_blank" rel="noreferrer">
+                Github page
+                </a> you can find it done in JavaScript Vanilla.
+              </p>
               <BackButton/>
             </div>
             <main>

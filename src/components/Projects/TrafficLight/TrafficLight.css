@@ -20,6 +20,23 @@
     border-radius: 3.5em;
     margin: 0.6em 0;
 }
+#true .semaf-temp-msg {
+    text-align: center;
+    padding-bottom: 1em;
+    color: var(--myGreen-hover);
+}
+#false .semaf-temp-msg {
+    text-align: center;
+    padding-bottom: 1em;
+}
+.semaf-temp-msg a {
+    color: var(--myGreen-2);
+    transition: .3s;
+}
+.semaf-temp-msg a:hover {
+    cursor: pointer;
+    color: var(--myGreen-1);
+}
 .red-light {
     background-color: rgb(223, 68, 68);
     transition: 0.1s;
@@ -52,7 +69,7 @@
 .modul button {
     width: 6em;
     height: 2em;
-    margin-top: 4%;
+    margin-top: 2em;
     border-radius: 5px;
     font-size: 25px;
     border: none;

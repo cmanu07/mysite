@@ -14,11 +14,18 @@
     .results {
         width: 98%;
     }
+    .results ol li::marker {
+        font-size: 10.5px;
+    }
     .results p {
-        font-size: 13px;
+        font-size: 12px;
+    }
+    .results-topic {
+        font-size: 12px;
+        width: 10em;
     }
     .gist-link {
-        font-size: 13px;
+        font-size: 10.5px;
     }
 }
 form {
@@ -71,7 +78,7 @@ form {
     border-radius: 50%;
     margin-bottom: 1em;
 }
-.results-topic {
+.results-topic em, .results-topic-em {
     font-weight: bolder;
     margin-right: 0.5em;
 }

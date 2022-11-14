@@ -12,7 +12,7 @@ const Form = () => {
   const [avatarToShow, setAvatarToShow] = useState(() => "")
 
   const [gists, setGists] = useState(() => null)
-  const [forks, setForks] = useState(() => '')
+  // const [forks, setForks] = useState(() => '')
 
   const showInfo = async () => {
 
@@ -34,7 +34,7 @@ const Form = () => {
     // setForks(responsePerGist.data.length)
     // console.log(gistId)
     // console.log(responsePerGist)
-    setForks(77)
+    // setForks(77)
     setUserToShow(userName)
     setAvatarToShow(response.data.at(0).owner.avatar_url)
     setGists(response.data)
@@ -52,7 +52,7 @@ const Form = () => {
         <div className="results">
                       <section>
                         {avatarToShow ? <img src={avatarToShow} alt="missing avatar..."/> : ""}
-                        {userToShow ? <p><em className='results-topic'>UserName :</em> {userToShow} </p> : ""}
+                        {userToShow ? <p className='results-topic'><em>UserName :</em> {userToShow} </p> : ""}
                       </section>
           <ol>{userToShow ? <span className='ol-list'>List of public gists :</span> : ""}
           {
@@ -67,14 +67,14 @@ const Form = () => {
                                     <a href={url} target="_blank" rel="noreferrer" className='gist-link'> 
                                         {url}
                                     </a>
-                                    <p><em className='results-topic'>Description :</em> {description ? description : '~~~'} </p>
-                                    <p><em className='results-topic'>Date of creation :</em> {(created_at).slice(0,10)} </p>
+                                    <p><em className='results-topic-em'>Description :</em> {description ? description : '~~~'} </p>
+                                    <p><em className='results-topic-em'>Date of creation :</em> {(created_at).slice(0,10)} </p>
                                     <p>
-                                      <em className='results-topic'>Programming language :</em> 
+                                      <em className='results-topic-em'>Programming language :</em> 
                                       <span style={{color: '#FF9677'}}> {file ? file : '~~~'}</span>
                                     </p>
-                                    <p><em className='results-topic'>Forks :</em> {forks}</p>
-                                    <p><em className='results-topic'>Users who fork :</em> {}</p>
+                                    {/* <p><em className='results-topic-em'>Forks :</em> {forks}</p> */}
+                                    {/* <p><em className='results-topic-em'>Users who fork :</em> {}</p> */}
                                   </li>
                                 )
             })
