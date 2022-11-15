@@ -4,6 +4,7 @@ import traffic_wall from './Media/traffic_wall.jpg';
 import calculator_wall from './Media/calculator_wall.jpg';
 import stopwatch_wall from './Media/stopwatch_wall.jpg';
 import github_wall from './Media/github_wall.jpg';
+import tictactoe_wall from './Media/tictactoe_wall.jpg';
 
 
 
@@ -107,5 +108,11 @@ export const projects = [
         url: '/projects/github_api',
         imagine: github_wall,
         description: 'A Rest API good learning project.'
+    },
+    {
+        name: 'TicTacToe',
+        url: '/projects/tictactoe',
+        imagine: tictactoe_wall,
+        description: 'A good learning project and also a small and fun game.'
     }
 ]

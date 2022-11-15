@@ -17,6 +17,7 @@ import TrafficLight from './components/Projects/TrafficLight/TrafficLight';
 import Calculator from './components/Projects/Calculator/Calculator';
 import Stopwatch from './components/Projects/Stopwatch/Stopwatch';
 import GitHubAPI from './components/Projects/GitHub API/GitHubAPI';
+import TicTacToe from './components/Projects/TicTacToe/TicTacToe';
 
 import { ThemeContext } from './components/Contexts/ThemeContext';
 
@@ -38,6 +39,7 @@ const App = () => {
                   <Route path={'/projects/calculator'} element={<Calculator/>}/>
                   <Route path={'/projects/stopwatch'} element={<Stopwatch/>}/>
                   <Route path={'/projects/github_api'} element={<GitHubAPI/>}/>
+                  <Route path={'/projects/tictactoe'} element={<TicTacToe/>}/>
                 </Routes>
               <Footer/>
             </div>

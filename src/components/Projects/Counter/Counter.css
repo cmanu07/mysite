@@ -75,7 +75,7 @@
 }
 .default, .danger, .middle {
     transition: .3s;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 #false .counter-title {
     color: var(--myBlackGreen);
