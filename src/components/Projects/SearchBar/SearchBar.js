@@ -22,15 +22,18 @@ export default function SearchBar ({data}) {
         (cuvInput.length > 0) ? setIcon('search-icon-off') : setIcon('search-icon');
     }
 
-    return (<>
-                <main className="main">
+    return (<main className="main">
+                <div>
+                    <h4 className='main-h4'>Search Bar</h4>
                     <BackButton/>
-                    <div className='main-div'>
+                    <div className='main-search-bar'>
                         <label>
                             <input type="search" placeholder='Search here...' onChange={filtruCautare}/>
                             <img className={icon} src={searchIcon} alt="..."/>
                         </label>
                     </div>
+                </div>
+                    
                     {
                         (cauta.length !== 0) ? 
                             <div className='main-div-2'>{cauta.map((inreg, index) => {
@@ -39,6 +42,5 @@ export default function SearchBar ({data}) {
                             </div>           :
                             <div className='main-div-3'>no results found...</div>
                     }
-                </main>
-            </>)
+            </main>)
 }

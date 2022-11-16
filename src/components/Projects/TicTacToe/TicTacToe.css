@@ -92,40 +92,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 2em;
-    height: 5em;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+    height: auto;
 }
 #false .tictactoe-win-section p {
     color: var(--tictacColor-4);
-    margin: auto;
     font-size: x-large;
     width: 10em;
     padding-bottom: 1em;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 #true .tictactoe-win-section p {
     color: var(--tictacColor-3);
-    margin: auto;
     font-size: x-large;
     width: 10em;
     padding-bottom: 1em;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .tictactoe-win-section p span {
     font-size: 25px;
     font-weight: bolder;
+    padding-right: 0.5em;
 }
 #false .tictactoe-play-button {
     z-index: auto;
     font-size: larger;
-    width: 10em;
+    width: 11em;
     background-color: var(--myGreen-hover);
     box-shadow: 3px 3px 5px var(--myBlackHeader);
     color: var(--myBlackGreen);
-    margin-right: 1.5em;
     border: none;
     border-radius: 10px;
     padding: 7px 10px;
@@ -134,11 +134,10 @@
 #true .tictactoe-play-button {
     z-index: auto;
     font-size: larger;
-    width: 10em;
+    width: 11em;
     background-color: var(--myGreen-hover);
     box-shadow: 2px 2px 5px var(--myGreen-1);
     color: var(--myBlackGreen);
-    margin-right: 1.5em;
     border: none;
     border-radius: 10px;
     padding: 7px 10px;

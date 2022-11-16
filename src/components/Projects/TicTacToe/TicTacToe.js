@@ -91,12 +91,12 @@ const TicTacToe = () => {
                 <Cell celNum = {7} />
                 <Cell celNum = {8} />
             </section>
-            {winner && (
-                <div className='tictactoe-win-section'>
-                    <p><span>{winner}</span> is the winner!!</p>
-                    <button className='tictactoe-play-button' onClick={handleRestart}>Play again!</button>
-                </div>
-            )}
+                {winner && (
+                    <div className='tictactoe-win-section'>
+                        <p><span>{winner}</span> is the winner!!</p>
+                        <button className='tictactoe-play-button' onClick={handleRestart}>Play again!</button>
+                    </div>
+                )}
 
         </main>
   )

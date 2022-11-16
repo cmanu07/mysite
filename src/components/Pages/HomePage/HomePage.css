@@ -22,21 +22,21 @@
 }
 .main-article video {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     object-fit: cover;
     border-radius: 20px;
 }
 #false .main-article-overlay{
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-color: rgb(46, 66, 78, 0.7);
     border-radius: 20px;
 }
 #true .main-article-overlay{
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-color: rgb(0, 0, 0, 0.6);
     border-radius: 20px;
 }
@@ -48,7 +48,7 @@
     align-items: center;
     top: 5.5em;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
 }
 .main-bg figure {
     width: 70%;

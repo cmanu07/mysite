@@ -1,22 +1,14 @@
 
 /* SEARCH BAR */
 
-@media (min-width: 768px) and  (max-width: 992px) {
-    .main div {
-        width: 90%;
-        height: 250em;
-    }
-}
-@media (max-width: 768px) {
-    .main div {
-        width: 70%;
-        height: fit-content;
+@media (width < 768px) {
+    .main-div-2 {
         align-items: center;
     }
-    .main-div {
-        width: 90%;
-    }
     .inreg {
+        text-align: center;
+    }
+    .main-div-3 {
         text-align: center;
     }
 }
@@ -30,6 +22,26 @@
     padding-top: 2em;
     border-radius: 20px;
 }
+#true .main-h4 {
+    background: hsl(0, 0%, 100%, 75%);
+    font-size: 50px;
+    color: var(--myBlackGreen);
+    text-align: center;
+    width: 7em;
+    margin: 1.5em 0 0.7em 0;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+}
+#false .main-h4 {
+    background: hsl(0, 0%, 100%, 75%);
+    font-size: 50px;
+    color: var(--myGreen-1);
+    text-align: center;
+    width: 7em;
+    margin: 1.5em 0 0.7em 0;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+}
 .search-icon {
     position: absolute;
     width: 1.8em;
@@ -42,44 +54,43 @@
     display: none;
     transition: .3s;
 }
-.main label {
+.main-search-bar {
+    display: flex;
+    height: fit-content;
+    width: 13em;
+    justify-content: flex-end;
     position: relative;
+    margin: auto;
 }
-.main input {
+.main-search-bar input {
     width: 15em;
     height: 3em;
     border-radius: 5px;
     padding: 0 0.5em;
     border: var(--myWhite);
 }
-.main-div {
-    display: flex;
-    width: 20%;
-    height: fit-content;
-    justify-content: flex-end;
-    position: relative;
-}
 .main-div-2 {
     width: 92%;
     padding: 0.5em;
-    height: 115em;
+    height: 40em;
     margin: 2em 0;
     background-color: hsl(0, 0%, 100%, 65%);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    overflow-x: scroll;
 }
 .main-div-3 {
     width: 92%;
     padding: 0.5em;
-    height: 25em;
+    height: 20em;
     margin: 2em 0;
     background-color: hsl(0, 0%, 100%, 65%);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    text-align: center;
 }
 .inreg {
     padding: 0.2em;
@@ -88,7 +99,6 @@
     width: 12em;
 }
 .inreg:hover {
-    cursor: pointer;
     background: var(--myBlackGreen);
     color: var(--myGreen-hover);
 }
