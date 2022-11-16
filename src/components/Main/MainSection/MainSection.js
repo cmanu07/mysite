@@ -23,7 +23,9 @@ const MainSection = () => {
 
     return <article className="main-article">               
                 <div className="main-bg-2">
-                    <h5>IT has always been one of my passions, so in 2022 I have completed a certified course with Fasttrack IT Cluj-Napoca in Web Development and I'm eager to put my knowledge into practice.</h5>
+                    <h5>IT has always been one of my passions, so in 2022 I have completed a certified course with Fasttrack IT
+                        Cluj&nbsp;-&nbsp;Napoca in Web Development and I'm eager to put my knowledge into practice.
+                    </h5>
                     <a href="/about" className={mainAbout} 
                             onMouseDown={mouseDownFunct} 
                             onMouseUp={mouseUpFunct}

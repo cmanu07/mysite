@@ -1,20 +1,6 @@
 
 /* ABOUT PAGE */
 
-#false h2 {
-    font-size: 50px;
-    color: var(--myBlackGreen);
-    text-align: center;
-    padding: 2em 0 1em;
-    letter-spacing: 1.5px;
-}
-#true h2 {
-    font-size: 50px;
-    color: var(--myGreen-hover);
-    text-align: center;
-    padding: 2em 0 1em;
-    letter-spacing: 1.5px;
-}
 #false .about-main {
     width: 100%;
     height: fit-content;

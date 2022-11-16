@@ -18,7 +18,7 @@ export default function Home () {
                     <figure>
                         <img src={myCvPhoto} alt="my portrait..."/>
                         <figcaption>
-                            <h2 className="main-bg-h2">My name is Emanuel&nbsp;Caradan and&nbsp;I am a Junior&nbsp;Web&nbsp;Developer</h2>
+                            <h2 className="main-bg-h2">My name is Emanuel&nbsp;Caradan and&nbsp;I am a Web&nbsp;Developer</h2>
                         </figcaption>
                     </figure>
                 </div>

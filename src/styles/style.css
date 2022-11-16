@@ -37,6 +37,22 @@
 #true {
     background-color: var(--myBlackGreen);
 }
+
+#false h2 {
+    font-size: 50px;
+    color: var(--myBlackGreen);
+    text-align: center;
+    padding: 1.8em 0 0.5em 0;
+    letter-spacing: 1.5px;
+}
+#true h2 {
+    font-size: 50px;
+    color: var(--myGreen-hover);
+    text-align: center;
+    padding: 1.8em 0 0.5em 0;
+    letter-spacing: 1.5px;
+}
+
 #false h3 a {
     text-decoration: none;
     color: var(--myBlackGreen);
