@@ -74,36 +74,6 @@ export const dataSet = ['Aayla Secura', 'Adi Gallia', 'Admiral Dodd Rancit',
 
 export const projects = [
     {
-        name: 'Search Bar',
-        url: '/projects/searchBar',
-        imagine: search_wall,
-        description: 'My first search bar project in React.'
-    },
-    {
-        name: 'Counter',
-        url: '/projects/counter',
-        imagine: counter_wall,
-        description: 'A simple but very educational React project.'
-    },
-    {
-        name: 'Traffic light',
-        url: '/projects/traffic_light',
-        imagine: traffic_wall,
-        description: 'One of the first JavaScript beginner project.'
-    },
-    {
-        name: 'Calculator',
-        url: '/projects/calculator',
-        imagine: calculator_wall,
-        description: 'I think a "must have" project for a beginner.'
-    },
-    {
-        name: 'Stopwatch',
-        url: '/projects/stopwatch',
-        imagine: stopwatch_wall,
-        description: 'Another good and "must have" JavaScript project.'
-    },
-    {
         name: 'GitHub API',
         url: '/projects/github_api',
         imagine: github_wall,
@@ -114,5 +84,36 @@ export const projects = [
         url: '/projects/tictactoe',
         imagine: tictactoe_wall,
         description: 'A good learning project and also a small and fun game.'
+    },
+    
+    {
+        name: 'Search Bar',
+        url: '/projects/searchBar',
+        imagine: search_wall,
+        description: 'My first search bar project in React.'
+    },
+    {
+        name: 'Calculator',
+        url: '/projects/calculator',
+        imagine: calculator_wall,
+        description: 'I think a "must have" project for a beginner.'
+    },
+    {
+        name: 'Traffic light',
+        url: '/projects/traffic_light',
+        imagine: traffic_wall,
+        description: 'One of the first JavaScript beginner project.'
+    },
+    {
+        name: 'Stopwatch',
+        url: '/projects/stopwatch',
+        imagine: stopwatch_wall,
+        description: 'Another good and "must have" JavaScript project.'
+    },
+    {
+        name: 'Counter',
+        url: '/projects/counter',
+        imagine: counter_wall,
+        description: 'A simple but very educational React project.'
     }
 ]
