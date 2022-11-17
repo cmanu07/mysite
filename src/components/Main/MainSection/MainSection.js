@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import avatar from '../../Media/my_avatar.png'
+import projects_avatar from '../../Media/my_projects_avatar.png'
+
 import "./MainSection.css";
 
 
@@ -21,24 +24,30 @@ const MainSection = () => {
         setMainAbout2('main-bg-about2')
     }
 
-    return <article className="main-article">               
+    return <article>
                 <div className="main-bg-2">
-                    <h5>IT has always been one of my passions, so in 2022 I have completed a certified course with Fasttrack IT
-                        Cluj&nbsp;-&nbsp;Napoca in Web Development and I'm eager to put my knowledge into practice.
-                    </h5>
-                    <a href="/about" className={mainAbout} 
-                            onMouseDown={mouseDownFunct} 
-                            onMouseUp={mouseUpFunct}
-                        >more ABOUT ME
-                    </a>
+                    <img src={avatar} alt='my avatar...'/>              
+                    <div>
+                        <h5>IT has always been one of my passions, so in 2022 I have completed a certified course with Fasttrack IT
+                            Cluj&nbsp;-&nbsp;Napoca in Web Development and I'm eager to put my knowledge into practice.
+                        </h5>
+                        <a href="/about" className={mainAbout} 
+                                onMouseDown={mouseDownFunct} 
+                                onMouseUp={mouseUpFunct}
+                            >more ABOUT ME
+                        </a>
+                    </div>
                 </div>
                 <div className="main-bg-3">
-                    <h5>I am now looking for a Junior Web Developer position to finally kick&nbsp;-&nbsp;start my career, so I started building my own projects.</h5>
-                    <a href="/projects" className={mainAbout2} 
-                            onMouseDown={mouseDownFunct2} 
-                            onMouseUp={mouseUpFunct2}
-                        >see my PROJECTS
-                    </a>
+                    <div>
+                        <h5>I am now looking for a Junior Web Developer position to finally kick&nbsp;-&nbsp;start my career, so I started building my own projects.</h5>
+                        <a href="/projects" className={mainAbout2} 
+                                onMouseDown={mouseDownFunct2} 
+                                onMouseUp={mouseUpFunct2}
+                            >see my PROJECTS
+                        </a>
+                    </div>
+                    <img src={projects_avatar} alt='my projects avatar...'/>              
                 </div>
             </article>
 }

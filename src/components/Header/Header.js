@@ -19,6 +19,7 @@ const Header = () => {
     const [navbar, setNavbar] = useState(() => true)
     const [toggleMenu, setToggleMenu] = useState(() => true)
     const [toggleMenuP, setToggleMenuP] = useState(() => true)
+    const [scroller, setScroller] = useState(() => false)
 
     const toggleMenuFunct = () => {
         setToggleMenu(!toggleMenu);
@@ -27,21 +28,32 @@ const Header = () => {
     }
     const toggleMenuButton = useRef();
 
+    
     useEffect(() => {
         const closeMenu = (e) => {
             if(e.path[0] !== toggleMenuButton.current)
             setToggleMenu(toggleMenu);
         }
         document.body.addEventListener('click', closeMenu)
-        return () => document.body.removeEventListener('click', closeMenu)
+        
+        const onScroll = () => {
+            if (window.scrollY >= 10) {
+                setScroller(true)
+            } else setScroller(false)
+        }
+        window.addEventListener('scroll', onScroll)
+
+        return (
+            () => document.body.removeEventListener('click', closeMenu),
+            () => window.removeEventListener('scroll', onScroll)
+        )
     })
 
-    let className = "header";
     const navList = [{buton1: 'PROJECTS', buton2: 'CV', buton3: 'ABOUT ME'}];
 
 
     return (
-        <div className = {`${className}`}>
+        <div className = {scroller ? 'header-on' : 'header'}>
             <h1 title="Emanuel Caradan - My Portfolio Site"><a href="/"><img src={myLogo} alt="my site logo"/>MANU</a></h1>
             <nav className={navbar ? "navbar-off" : "navbar"}>
                 {navList.map((buton) => {

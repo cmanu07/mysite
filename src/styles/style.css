@@ -13,8 +13,9 @@
     --myWhite: #FFFFFF;
     --myYellow: #FDD037;
     --myRed: #E65C4F;
-    --myHeaderGreen: hsl(172, 39%, 45%, 0.8);
+    --myHeaderGreen: hsl(172, 39%, 45%, 0.7);
     --myBlackHeader: hsl(203, 26%, 24%, 0.7);
+    --myBlackHeader2: hsl(203, 26%, 24%, 0.9);
     --myHoverBlackGreen: hsl(203, 26%, 24%, 85%);
     --myGreenTransparent-2: rgb(107, 189, 153, .7);
 }

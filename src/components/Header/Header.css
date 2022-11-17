@@ -56,7 +56,7 @@ h1 img {
 }
 
 #false .header {
-    background-color: var(--myHeaderGreen);
+    background-color: var(--myGreen-1);
     backdrop-filter: blur(6px);
     border-radius: 0 0 20px 20px;
     padding: 0.4em 1em 1em 1em;
@@ -69,13 +69,41 @@ h1 img {
     transition: 0.3s;
     z-index: 1;
 }
-#true .header {
-    background-color: var(--myBlackHeader);
+#false .header-on {
+    background-color: var(--myHeaderGreen);
     backdrop-filter: blur(6px);
+    border-radius: 0 0 20px 20px;
+    padding: 0.2em 1em 0.2em 1em;
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    transition: 0.3s;
+    z-index: 1;
+}
+#true .header {
+    background-color: var(--myBlackGreen);
     border-radius: 0 0 20px 20px;
     padding: 0.4em 1em 1em 1em;
     width: 100%;
     height: 5.5rem;
+    border-bottom: 0.7px solid var(--myGreen-1);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    transition: 0.3s;
+    z-index: 1;
+}
+#true .header-on {
+    background-color: var(--myBlackHeader);
+    backdrop-filter: blur(6px);
+    border-radius: 0 0 20px 20px;
+    padding: 0.2em 1em 0.2em 1em;
+    width: 100%;
+    height: 4.5rem;
     border-bottom: 0.7px solid var(--myGreen-1);
     display: flex;
     justify-content: space-between;
@@ -92,7 +120,7 @@ h1 img {
     background-color: var(--myHeaderGreen);
     border-radius: 0 0 20px 20px;
     right: -1em;
-    top: 5.1em;
+    top: 4.3em;
     width: 55%;
     height: 18em;
     align-items: center;
@@ -103,15 +131,18 @@ h1 img {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--myBlackHeader);
+    background-color: var(--myBlackHeader2);
     border-radius: 0 0 20px 20px;
     right: -1em;
-    top: 5.1em;
+    top: 4.3em;
     width: 55%;
     height: 18em;
     align-items: center;
     justify-content: center;
     transition: .4s;
+}
+.navbar-up {
+    top: 4.15em
 }
 .navbar-off {
     display: none;
@@ -155,7 +186,7 @@ h1 img {
 }
 .toggle-p {
     display: flex;
-    top: 44.4%;
+    top: 44.2%;
     position: absolute;
     width: 65%;
     height: 5px;
@@ -220,8 +251,8 @@ h1 img {
     align-items: center;
     padding: 0 0.2em;
     position: absolute;
-    top: 2.5rem;
-    right: 10.6rem;
+    top: 2.1rem;
+    right: 7.7rem;
     width: 4em;
     height: 2em;
     border-radius: 50px;
@@ -234,8 +265,8 @@ h1 img {
     align-items: center;
     padding: 0 0.2em;
     position: absolute;
-    top: 2.5rem;
-    right: 10.6rem;
+    top: 2.1rem;
+    right: 7.7rem;
     width: 4em;
     height: 2em;
     border-radius: 50px;

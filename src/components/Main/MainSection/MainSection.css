@@ -1,5 +1,11 @@
-#false .main-bg-about, .main-bg-about-click {
-    margin: 3em 0 2em 0;
+@media (width < 768px) {
+    .main-bg-2, .main-bg-3 {
+        flex-direction: column;
+    }
+}
+
+#false .main-bg-about, #false .main-bg-about-click {
+    margin: 5% 0 2% 0;
     border-radius: 15px;
     display: flex;
     text-decoration: none;
@@ -15,9 +21,10 @@
 #false .main-bg-about-click, #true .main-bg-about-click {
     color: var(--myBlackGreen);
     box-shadow: none;
+    transition: .3s;
 }
-#true .main-bg-about {
-    margin: 3em 0 2em 0;
+#true .main-bg-about, #true .main-bg-about-click {
+    margin: 5% 0 2% 0;
     border-radius: 15px;
     display: flex;
     text-decoration: none;
@@ -30,8 +37,8 @@
     background-image: linear-gradient(to bottom right, var(--myBlackGreen), var(--myGreen-1));
     box-shadow: 3px 3px 3px var(--myBlackHeader);
 }
-#false .main-bg-about2, .main-bg-about2-click {
-    margin: 3em 0 2em 0;
+#false .main-bg-about2 {
+    margin: 5% 0 10% 0;
     border-radius: 15px;
     display: flex;
     text-decoration: none;
@@ -45,7 +52,7 @@
     box-shadow: 3px 3px 3px var(--myBlackHeader);
 }
 #true .main-bg-about2 {
-    margin: 3em 0 2em 0;
+    margin: 5% 0 10% 0;
     border-radius: 15px;
     display: flex;
     text-decoration: none;
@@ -66,14 +73,13 @@
     background-image: linear-gradient(var(--myGreen-hover), var(--myGreen-hover));
     cursor: pointer;
     font-weight: bold;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.2px;
     color: var(--myBlackGreen);
 }
 #false .main-bg-2 {
     width: 100%;
-    height: 65vh;
+    height: 70vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--myGreen-3);
@@ -81,19 +87,30 @@
 }
 #true .main-bg-2 {
     width: 100%;
-    height: 65vh;
+    height: 70vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(to bottom right, var(--myGreen-1), var(--myBlackGreen));
     border-radius: 20px;
 }
-#false .main-bg-3 {
-    width: 100%;
-    height: 51vh;
+.main-bg-2 div, .main-bg-3 div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.main-bg-2 img {
+    width: 40%;
+    padding-left: 6%;
+}
+.main-bg-3 img {
+    width: 40%;
+    padding-right: 6%;
+}
+#false .main-bg-3 {
+    width: 100%;
+    height: 65vh;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--myGreen-2);
@@ -101,9 +118,8 @@
 }
 #true .main-bg-3 {
     width: 100%;
-    height: 51vh;
+    height: 65vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--myBlackGreen);
@@ -111,17 +127,15 @@
 }
 #false .main-bg-2 h5, #false .main-bg-3 h5 {
     color: var(--myBlackGreen);
-    width: 90%;
-    font-size: 25px;
+    width: 85%;
+    font-size: 1.47em;
     font-weight: lighter;
-    margin: 0.5em 4em;
-    text-align: center;
+    margin: 0.5em 2em;
 }
 #true .main-bg-2 h5, #true .main-bg-3 h5 {
     color: var(--myGreen-hover);
-    width: 90%;
-    font-size: 25px;
+    width: 85%;
+    font-size: 1.47em;
     font-weight: lighter;
-    margin: 0.5em 4em;
-    text-align: center;
+    margin: 0.5em 2em;
 }
