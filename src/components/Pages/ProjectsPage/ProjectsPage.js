@@ -8,8 +8,8 @@ import "./ProjectsPage.css"
 export default function ProjectsPage () {
 
 
-    return (<>
-        <div className="projects">
+    return (
+        <section className="projects">
             <h2>PROJECTS</h2>
             <h5>Here are some of my own projects and you can find more on my <a 
                 href="https://www.github.com/cmanu07?tab=repositories"
@@ -28,6 +28,6 @@ export default function ProjectsPage () {
                     />
                 })}
             </div>
-        </div>
-    </>)
+        </section>
+    )
 }

@@ -13,10 +13,17 @@
     --myBlackGreen: #2E424E;
 }
 
-.projects {
-    background-image: url(../../Media/projects_wall.jpg);
+#false .projects {
+    background-image: linear-gradient(108.08deg, #00B4DB 0.53%, #0083B0 100%);
     border-radius: 15px;
+    scroll-behavior: smooth;
 }
+#true .projects {
+    background-image: linear-gradient(108.08deg, #1488CC 0.73%, #2B32B2 100%);
+    border-radius: 15px;
+    scroll-behavior: smooth;
+}
+
 #false .projects h2, #true .projects h2 {
     color: var(--myGreen-hover);
     letter-spacing: 2px;
@@ -59,7 +66,7 @@ a {
     padding: 1em;
     border-radius: 15px;
     background-color: var(--myGlassGrey);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
     overflow: hidden;
     transition: .3s;
     margin: 2em 4em;

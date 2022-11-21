@@ -37,7 +37,7 @@ const Header = () => {
         document.body.addEventListener('click', closeMenu)
         
         const onScroll = () => {
-            if (window.scrollY >= 10) {
+            if (window.scrollY >= 15) {
                 setScroller(true)
             } else setScroller(false)
         }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import avatar from '../../Media/my_avatar.png'
-import projects_avatar from '../../Media/my_projects_avatar.png'
+import projects_avatar from '../../Media/my_avatar_2.png'
 
 import "./MainSection.css";
 
@@ -40,7 +40,7 @@ const MainSection = () => {
                 </div>
                 <div className="main-bg-3">
                     <div>
-                        <h5>I am now looking for a Junior Web Developer position to finally kick&nbsp;-&nbsp;start my career, so I started building my own projects.</h5>
+                        <h5>I am now looking for a Web Developer position to kick&nbsp;-&nbsp;start my career, so I started building my own projects.</h5>
                         <a href="/projects" className={mainAbout2} 
                                 onMouseDown={mouseDownFunct2} 
                                 onMouseUp={mouseUpFunct2}
