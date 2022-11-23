@@ -7,72 +7,52 @@ import './TicTacToe.css'
 
 const TicTacToe = () => {
 
-    const [turn, setTurn] = useState(() => 'X')
+    const [isX, setIsX] = useState(() => true)
     const [cellSign, setCellSign] = useState(() => Array(9).fill(''))
-    const [winner, setWinner] = useState(() => '')
-
-    const checkWinner = (squares) => {
-        let winCombos = {
-            oriz: [
-                [0, 1, 2],
-                [3, 4, 5],
-                [6, 7, 8]
-            ],
-            vert: [
-                [0, 3, 6],
-                [1, 4, 7],
-                [2, 5, 8]
-            ],
-            diag: [
-                [0, 4, 8],
-                [2, 4, 6]
-            ]
+    
+    const checkWinner = (cellSign) => {
+        let winCombos = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ]
+        for (let i = 0; i < winCombos.length; i += 1) {
+            const [a, b, c] = winCombos[i];
+            
+            if (cellSign[a] && cellSign[a] === cellSign[b] && cellSign[a] === cellSign[c]) {
+                return cellSign[a]
+            }
         }
-
-        for (let combo in winCombos) {
-            winCombos[combo].forEach(pattern => {
-                if (
-                    squares[pattern[0]] === '' ||
-                    squares[pattern[1]] === '' ||
-                    squares[pattern[2]] === ''
-                ) {
-                    // do nothing
-                } else if (
-                    squares[pattern[0]] === squares[pattern[1]] &&
-                    squares[pattern[1]] === squares[pattern[2]]
-                ) {
-                    setWinner(squares[pattern[0]])
-                }
-            })
-        }
+        return null
     }
 
-    const handleClick = (cellNum) => {
-        if (cellSign[cellNum] !== '') {
+    let winner = checkWinner(cellSign);
+
+    const handleClick = (i) => {
+        if (checkWinner(cellSign) || cellSign[i]) {
             return
         } 
-        let areas = [...cellSign]
-        if (turn === 'X') {
-            setTurn('O')
-            areas[cellNum] = 'X'
-        } else {
-            setTurn('X')
-            areas[cellNum] = 'O'
-        }
-        checkWinner(areas)
-        setCellSign(areas)
+        cellSign[i] = isX ? 'X' : 'O';
+        setCellSign(cellSign)
+        setIsX(!isX)
     }
+    
     const handleRestart = () => {
-        setWinner('')
         setCellSign(Array(9).fill(''))
-        setTurn('X')
+        setIsX(true)
     }
 
-    const Cell = ( {celNum} ) => {
-        return <p className='tictactoe-cell' onClick={() => handleClick(celNum)}>
-                    <span>{cellSign[celNum]}</span>
+
+const Cell = ( {celNum} ) => {
+    return <p className='tictactoe-cell' onClick={() => handleClick(celNum)}>
+                <span>{cellSign[celNum]}</span>
             </p>
-    }
+}
 
   return ( <section className='tictactoe'>
         <Spline className='tictactoe-spline' scene="https://prod.spline.design/ea49VypT7Jy2Sjrk/scene.splinecode" />
@@ -81,7 +61,7 @@ const TicTacToe = () => {
             <BackButton/>
         </div>
         <main>
-            <h3 className='tictactoe-game-turn'>Turn: <span>{turn}</span></h3>
+            <h3 className='tictactoe-game-turn'>Turn: <span>{isX ? 'X' : 'O'}</span></h3>
             <div className='tictactoe-game'>
                 <Cell celNum = {0} />
                 <Cell celNum = {1} />
@@ -93,12 +73,18 @@ const TicTacToe = () => {
                 <Cell celNum = {7} />
                 <Cell celNum = {8} />
             </div>
-                {winner && (
+                {(winner === 'X' || winner === 'O') ? (
                     <div className='tictactoe-win-section'>
-                        <p><span>{winner}</span> is the winner!!</p>
+                        {<p><span>{winner}</span> is the winner!!</p>}
                         <button className='tictactoe-play-button' onClick={handleRestart}>Play again!</button>
                     </div>
-                )}
+                ) : (winner === '-') ? (
+                    <div className='tictactoe-win-section'>
+                        <p>Egalitate!</p>
+                        <button className='tictactoe-play-button' onClick={handleRestart}>Play again!</button>
+                    </div>
+                ) : ''
+                }
         </main>
     </section>
   )
