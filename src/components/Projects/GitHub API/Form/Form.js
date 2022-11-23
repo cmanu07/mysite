@@ -40,48 +40,48 @@ const Form = () => {
     setGists(response.data)
   }
 
-  return (<>
-        <form>
-            <input className='github-input'
-                type="text" value={userName} id="username" name="username"
-                onChange={e => setUserName(e.target.value)}
-                required/>
-            <label className='github-input-label'>GitHub Username</label>
-            <button className='github-button' type="button" onClick={showInfo}>Show Info</button>
-        </form>
-        <div className="results">
-                      <section>
-                        {avatarToShow ? <img src={avatarToShow} alt="missing avatar..."/> : ""}
-                        {userToShow ? <p className='results-topic'><em>UserName :</em> {userToShow} </p> : ""}
-                      </section>
-          <ol>{userToShow ? <span className='ol-list'>List of public gists :</span> : ""}
-          {
-            gists && gists.map(gist => {
-                          const {id, created_at, url, description, files: {...others}} = gist;
-                          const files = Object.values(others);
-                          let file;
-                          for (let f of files) {
-                            file = f.language;
-                          }
-                        return (  <li key={id} className="gist-list-item">
-                                    <a href={url} target="_blank" rel="noreferrer" className='gist-link'> 
-                                        {url}
-                                    </a>
-                                    <p><em className='results-topic-em'>Description :</em> {description ? description : '~~~'} </p>
-                                    <p><em className='results-topic-em'>Date of creation :</em> {(created_at).slice(0,10)} </p>
-                                    <p>
-                                      <em className='results-topic-em'>Programming language :</em> 
-                                      <span style={{color: '#FF9677'}}> {file ? file : '~~~'}</span>
-                                    </p>
-                                    {/* <p><em className='results-topic-em'>Forks :</em> {forks}</p> */}
-                                    {/* <p><em className='results-topic-em'>Users who fork :</em> {}</p> */}
-                                  </li>
-                                )
-            })
-          }
-          </ol>
-        </div>
-        </>)
+  return (<section className='form-main-section'>
+            <div className='form-main-section-form'>
+                <input className='github-input'
+                    type="text" value={userName} id="username" name="username"
+                    onChange={e => setUserName(e.target.value)}
+                    required/>
+                <label className='github-input-label' for="username">GitHub Username</label>
+                <button className='github-input-button' type="button" onClick={showInfo}>Show Info</button>
+            </div>
+            <div className="results">
+                <article>
+                    {avatarToShow ? <img src={avatarToShow} alt="missing avatar..."/> : ""}
+                    {userToShow ? <p className='results-topic'><em>UserName :</em> {userToShow} </p> : ""}
+                </article>
+                <ol className='results-ol-list'>{userToShow ? <span className='ol-list-title'>List of public gists :</span> : ""}
+                {
+                gists && gists.map(gist => {
+                            const {id, created_at, url, description, files: {...others}} = gist;
+                            const files = Object.values(others);
+                            let file;
+                            for (let f of files) {
+                              file = f.language;
+                            }
+                          return (  <li key={id} className="gist-list-item">
+                                      <a href={url} target="_blank" rel="noreferrer" className='gist-link'> 
+                                          {url}
+                                      </a>
+                                      <p><em className='results-topic-em'>Description :</em> {description ? description : '~~~'} </p>
+                                      <p><em className='results-topic-em'>Date of creation :</em> {(created_at).slice(0,10)} </p>
+                                      <p>
+                                        <em className='results-topic-em'>Programming language :</em> 
+                                        <span style={{color: '#FF9677'}}> {file ? file : '~~~'}</span>
+                                      </p>
+                                      {/* <p><em className='results-topic-em'>Forks :</em> {forks}</p> */}
+                                      {/* <p><em className='results-topic-em'>Users who fork :</em> {}</p> */}
+                                    </li>
+                                  )
+                  })
+                }
+              </ol>
+            </div>
+        </section>)
 }
 
 export default Form

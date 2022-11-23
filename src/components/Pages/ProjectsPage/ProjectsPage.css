@@ -8,18 +8,16 @@
     --myGlassGrey: rgba(255, 255, 255, 0.1);
     --myHoverBlackGreen: hsl(203, 26%, 24%, 85%);
     --myGreen-hover: #C4E8C2;
-    --myGreen-2: #6BBD99;
     --myGreenTransparent-2: rgb(107, 189, 153, .7);
-    --myBlackGreen: #2E424E;
 }
 
 #false .projects {
-    background-image: linear-gradient(108.08deg, #00B4DB 0.53%, #0083B0 100%);
+    background-image: url('../../Media/projects_wall.jpg');
     border-radius: 15px;
     scroll-behavior: smooth;
 }
 #true .projects {
-    background-image: linear-gradient(108.08deg, #1488CC 0.73%, #2B32B2 100%);
+    background-image: linear-gradient(108.08deg, #41436A 0.73%, #244D61 100%);
     border-radius: 15px;
     scroll-behavior: smooth;
 }

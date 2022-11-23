@@ -6,7 +6,7 @@
     box-shadow: 3px 3px 5px var(--myBlackHeader);
     color: var(--myBlackGreen);
     top: 15.4%;
-    left: 8%;
+    left: 7%;
     border-radius: 10px;
     padding: 7px 10px;
     transition: .3s;
@@ -19,7 +19,7 @@
     box-shadow: 2px 2px 5px var(--myGreen-1);
     color: var(--myBlackGreen);
     top: 15.4%;
-    left: 8%;
+    left: 7%;
     border-radius: 10px;
     padding: 7px 10px;
     transition: .3s;

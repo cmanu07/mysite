@@ -131,7 +131,6 @@ const Calculator = () => {
   }
 
   return (<section className='calculator-main' style={{backgroundColor: `${color}`}}>
-            <CalculatorRandomBackground generateBackground={randomBG}/>
             <div>
               <h2>Calculator</h2>
               <BackButton/>
@@ -160,6 +159,7 @@ const Calculator = () => {
               <CalculatorDigit digit="0" dispach={dispach}/>
               <button className='calculator-span-two' onClick={()=> dispach({type: actions.calculate})}>=</button>
             </main>
+            <CalculatorRandomBackground generateBackground={randomBG}/>
         </section>)
 }
 

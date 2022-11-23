@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Spline from '@splinetool/react-spline';
 
 import BackButton from '../../Main/BackButton/BackButton'
 
@@ -73,14 +74,15 @@ const TicTacToe = () => {
             </p>
     }
 
-  return (
-        <main className='tictactoe'>
-            <div>
-                <h2>TicTacToe</h2>
-                <BackButton/>
-                <h3>Turn: <span>{turn}</span></h3>
-            </div>
-            <section className='tictactoe-game'>
+  return ( <section className='tictactoe'>
+        <Spline className='tictactoe-spline' scene="https://prod.spline.design/ea49VypT7Jy2Sjrk/scene.splinecode" />
+        <div className='tictactoe-title'>
+            <h4>TicTacToe</h4>
+            <BackButton/>
+        </div>
+        <main>
+            <h3 className='tictactoe-game-turn'>Turn: <span>{turn}</span></h3>
+            <div className='tictactoe-game'>
                 <Cell celNum = {0} />
                 <Cell celNum = {1} />
                 <Cell celNum = {2} />
@@ -90,15 +92,15 @@ const TicTacToe = () => {
                 <Cell celNum = {6} />
                 <Cell celNum = {7} />
                 <Cell celNum = {8} />
-            </section>
+            </div>
                 {winner && (
                     <div className='tictactoe-win-section'>
                         <p><span>{winner}</span> is the winner!!</p>
                         <button className='tictactoe-play-button' onClick={handleRestart}>Play again!</button>
                     </div>
                 )}
-
         </main>
+    </section>
   )
 }
 

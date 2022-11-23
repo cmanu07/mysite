@@ -7,11 +7,11 @@ import './GitHubAPI.css';
 
 const GitHubAPI = () => {
   return ( <>
-      <BackButton />
-      <div className='github-main-div'>
-        <h1>GitHub User Gists</h1>
-        <Form/>
-      </div>
+            <BackButton />
+            <div className='github-main-div'>
+              <h1>GitHub User Gists</h1>
+              <Form/>
+            </div>
           </> )
 }
 
