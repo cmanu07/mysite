@@ -14,14 +14,14 @@
 #false .tictactoe {
     display: flex;
     position: relative;
-    height: 100vh;
+    height: 42em;
     flex-direction: column;
     border-radius: 20px;
 }
 #true .tictactoe {
     display: flex;
     position: relative;
-    height: 100vh;
+    height: 42em;
     flex-direction: column;
     border-radius: 20px;
 }
@@ -48,7 +48,7 @@
 #false .tictactoe-game-turn {
     color: var(--tictacColor-4);
     font-size: x-large;
-    padding-bottom: 0.2em;
+    padding: 1.5 0 0.1em;
     width: 5em;
     display: flex;
     justify-content: space-around;
@@ -56,7 +56,7 @@
 #true .tictactoe-game-turn {
     color: var(--myGreen-3);
     font-size: x-large;
-    padding-bottom: 0.2em;
+    padding: 1.5 0 0.1em;
     width: 5em;
     display: flex;
     justify-content: space-around;
@@ -65,7 +65,7 @@
     font-size: 50px;
     color: var(--myBlackGreen);
     text-align: center;
-    padding: 2.2em 0 0.5em 0;
+    padding: 2em 0 0.5em 0;
     letter-spacing: 1.5px;
     pointer-events: none;
     position: absolute;
@@ -74,7 +74,7 @@
     font-size: 50px;
     color: var(--myGreen-3);
     text-align: center;
-    padding: 2.2em 0 0.5em 0;
+    padding: 2em 0 0.5em 0;
     letter-spacing: 1.5px;
     pointer-events: none;
     position: absolute;
@@ -85,8 +85,8 @@
     font-weight: 900;
 }
 #false .tictactoe-cell {
-    width: 7em;
-    height: 7em;
+    width: 6.6em;
+    height: 6.6em;
     position: relative;
     display: flex;
     /* place-items: center; */
@@ -98,8 +98,8 @@
     transition: .3s;
 }
 #true .tictactoe-cell {
-    width: 7em;
-    height: 7em;
+    width: 6.6em;
+    height: 6.6em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +126,7 @@
     gap: 0.4em;
     align-items: center;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 0.8em;
 }
 .tictactoe-win-section {
     display: flex;
@@ -135,14 +135,14 @@
     justify-content: center;
     width: 80%;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1.6em;
     height: auto;
 }
 #false .tictactoe-win-section p {
     color: var(--tictacColor-4);
     font-size: x-large;
     width: 10em;
-    padding-bottom: 1em;
+    padding-bottom: 0.8em;
     display: flex;
     justify-content: center;
 }
@@ -150,7 +150,7 @@
     color: var(--myGreen-3);
     font-size: x-large;
     width: 10em;
-    padding-bottom: 1em;
+    padding-bottom: 0.8em;
     display: flex;
     justify-content: center;
 }
@@ -168,7 +168,7 @@
     color: var(--myBlackGreen);
     border: none;
     border-radius: 10px;
-    padding: 7px 10px;
+    padding: 6px 10px;
     transition: .3s;
 }
 #true .tictactoe-play-button {
@@ -180,7 +180,7 @@
     color: var(--myBlackGreen);
     border: none;
     border-radius: 10px;
-    padding: 7px 10px;
+    padding: 6px 10px;
     transition: .3s;
 }
 #false .tictactoe-play-button:hover, #true .tictactoe-play-button:hover {

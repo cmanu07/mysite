@@ -37,7 +37,7 @@
     background-image: linear-gradient(to bottom right, var(--myBlackGreen), var(--myGreen-1));
     box-shadow: 3px 3px 3px var(--myBlackHeader);
 }
-#false .main-bg-about2 {
+#false .main-bg-about2, #false .main-bg-about2-click {
     margin: 5% 0 10% 0;
     border-radius: 15px;
     display: flex;
@@ -51,7 +51,7 @@
     background-image: linear-gradient(to top left, var(--myGreen-1), var(--myGreen-3));
     box-shadow: 3px 3px 3px var(--myBlackHeader);
 }
-#true .main-bg-about2 {
+#true .main-bg-about2, #true .main-bg-about2-click {
     margin: 5% 0 10% 0;
     border-radius: 15px;
     display: flex;

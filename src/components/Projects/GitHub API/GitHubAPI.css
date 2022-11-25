@@ -9,6 +9,9 @@
     --myGlassBlue: hsl(200, 46%, 26%, 0.6);
     --myWhite2: #EAEBED;
 }
+/* .github {
+    height: 42em;
+} */
 .github-main-div {
     background-image: linear-gradient(to top right, var(--myBlue-1), var(--myDarkBlue));
     width: 100%;

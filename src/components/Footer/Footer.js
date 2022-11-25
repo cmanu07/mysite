@@ -19,7 +19,7 @@ const Footer = () => {
                             <figure className="footer-main-card-logo-a"></figure>
                             <p className="footer-main-title">ADDRESS</p>
                             <div className="footer-main-br"></div>
-                            <span>407280 Florești, Cluj<br/> Romania</span>
+                            <span>407280 Cluj, Romania</span>
                         </div>
                         <div className="footer-main-card">
                             <figure className="footer-main-card-logo-p"></figure>

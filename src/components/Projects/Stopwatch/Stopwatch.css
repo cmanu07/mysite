@@ -10,18 +10,20 @@
 }
 
 #false .stopwatch {
-    background-color:lavender;
+    background: linear-gradient(108.08deg, #005AA7 0.53%, #FFFDE4 100%);
     display: flex;
     flex-direction: column;
     padding-bottom: 5em;
     border-radius: 20px;
+    height: 42em;
 }
 #true .stopwatch {
-    background-color: var(--myGreen-1);
+    background: var(--myGreen-1);
     display: flex;
     flex-direction: column;
     padding-bottom: 5em;
     border-radius: 20px;
+    height: 42em;
 }
 #false .stopwatch h2 {
     text-align: center;

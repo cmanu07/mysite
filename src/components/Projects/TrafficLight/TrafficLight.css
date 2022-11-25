@@ -4,30 +4,39 @@
 .semafor {
     display: flex;
     flex-direction: column;
+    height: 42em;
+}
+.semafor-lights {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin: auto;
     padding-top: 0.2em;
-    width: 13em;
-    height: 25em;
+    width: 9em;
+    height: 21em;
     border: none;
     border-radius: 1em;
     background-color: var(--myGreen-1);
 }
-.semafor p {
-    width: 7em;
-    height: 7em;
+.semafor-lights p {
+    width: 5.6em;
+    height: 5.6em;
     border: 2px solid var(--myGreen-2);
     border-radius: 3.5em;
     margin: 0.6em 0;
 }
 #true .semaf-temp-msg {
     text-align: center;
+    margin: auto;
     padding-bottom: 1em;
     color: var(--myGreen-hover);
+    width: 95%;
 }
 #false .semaf-temp-msg {
     text-align: center;
     padding-bottom: 1em;
+    width: 95%;
+    margin: auto;
 }
 .semaf-temp-msg a {
     color: var(--myGreen-2);
@@ -64,12 +73,12 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 40%;
+    height: 4%;
 }
 .modul button {
-    width: 6em;
-    height: 2em;
-    margin-top: 2em;
+    width: 5.5em;
+    height: 1.8em;
+    margin-top: 0.8em;
     border-radius: 5px;
     font-size: 25px;
     border: none;
@@ -96,7 +105,7 @@
 .stalp {
     position: relative;
     width: 0em;
-    height: 10em;
+    height: 8em;
     border: 8px solid var(--myGreen-1);
-    margin: 0 15%;
+    margin: 0 16%;
 }

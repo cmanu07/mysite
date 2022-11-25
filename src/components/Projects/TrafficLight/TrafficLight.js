@@ -32,7 +32,7 @@ const TrafficLight = () => {
   //   return () => clearInterval(interval)
   // }, [yellowLight])
 
-  return (<>
+  return (<section className='semafor'>
             <div>
               <h2>Traffic Light</h2>
               <p className='semaf-temp-msg'>This project is still under contruction in React version. On my <a 
@@ -43,7 +43,7 @@ const TrafficLight = () => {
               <BackButton/>
             </div>
             <main>
-              <div className="semafor">
+              <div className='semafor-lights'>
                   <p className={redLight ? 'red-light' : 'off-light'}></p>
                   <p className={yellowLight ? 'yellow-light' : 'off-light'}></p>
                   <p className={greenLight ? 'green-light' : 'off-light'}></p>
@@ -54,7 +54,7 @@ const TrafficLight = () => {
                   <button className="but-night" onClick={nightMode}>NIGHT</button>
               </div>
             </main>
-        </>)
+        </section>)
 }
 
 export default TrafficLight

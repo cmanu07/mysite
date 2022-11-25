@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: center;
     width: 23em;
-    height: 25vh;
+    height: 10em;
     background-color: var(--myGreen-hover);
     border-radius: 15px;
 }
@@ -52,7 +52,7 @@
     align-items: center;
     justify-content: center;
     width: 23em;
-    height: 25vh;
+    height: 10em;
     background-color: var(--myGreen-1);
     border-radius: 15px;
 }

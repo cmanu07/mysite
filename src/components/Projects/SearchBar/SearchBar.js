@@ -15,9 +15,11 @@ export default function SearchBar ({data}) {
         const cuvInput = event.target.value;
         const newFiltru = data.filter((x) => {
             let rez = x.toLowerCase().includes(cuvInput.toLowerCase());
+            console.log(rez)
             return rez;
         })
         newFiltru.sort(()=> cuvInput);
+        console.log(newFiltru)
         setCauta(newFiltru);
         (cuvInput.length > 0) ? setIcon('search-icon-off') : setIcon('search-icon');
     }
