@@ -54,7 +54,10 @@ const Form = () => {
                     {avatarToShow ? <img src={avatarToShow} alt="missing avatar..."/> : ""}
                     {userToShow ? <p className='results-topic'><em>UserName :</em> {userToShow} </p> : ""}
                 </article>
-                <ol className='results-ol-list'>{userToShow ? <span className='ol-list-title'>List of public gists :</span> : ""}
+                <div>
+                    {userToShow ? <span className='results-list-title'>List of public gists :</span> : ""}
+                </div>
+                <ol className='results-ol-list'>
                 {
                 gists && gists.map(gist => {
                             const {id, created_at, url, description, files: {...others}} = gist;

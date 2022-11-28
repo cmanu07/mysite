@@ -15,7 +15,7 @@
     flex-direction: column;
     padding-bottom: 5em;
     border-radius: 20px;
-    height: 42em;
+    height: 44em;
 }
 #true .stopwatch {
     background: var(--myGreen-1);
@@ -23,7 +23,7 @@
     flex-direction: column;
     padding-bottom: 5em;
     border-radius: 20px;
-    height: 42em;
+    height: 44em;
 }
 #false .stopwatch h2 {
     text-align: center;

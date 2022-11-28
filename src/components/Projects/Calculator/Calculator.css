@@ -2,7 +2,7 @@
 
 #true .calculator-main {
     width: 100%;
-    height: 42em;
+    height: 44em;
     border-top: solid 0.7px var(--myGreen-hover);
     border-bottom: solid 0.7px var(--myGreen-hover);
     border-radius: 20px;
@@ -10,7 +10,7 @@
 }
 #false .calculator-main {
     width: 100%;
-    height: 42em;
+    height: 44em;
     border-radius: 20px;
     background-color: var(--myGreen-3);
 }

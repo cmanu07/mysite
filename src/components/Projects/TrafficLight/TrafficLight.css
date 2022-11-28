@@ -4,7 +4,7 @@
 .semafor {
     display: flex;
     flex-direction: column;
-    height: 42em;
+    height: 44em;
 }
 .semafor-lights {
     display: flex;
@@ -13,14 +13,14 @@
     margin: auto;
     padding-top: 0.2em;
     width: 9em;
-    height: 21em;
+    height: 21.5em;
     border: none;
     border-radius: 1em;
     background-color: var(--myGreen-1);
 }
 .semafor-lights p {
-    width: 5.6em;
-    height: 5.6em;
+    width: 5.8em;
+    height: 5.8em;
     border: 2px solid var(--myGreen-2);
     border-radius: 3.5em;
     margin: 0.6em 0;

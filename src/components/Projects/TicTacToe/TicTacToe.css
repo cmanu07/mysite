@@ -14,14 +14,14 @@
 #false .tictactoe {
     display: flex;
     position: relative;
-    height: 42em;
+    height: 44em;
     flex-direction: column;
     border-radius: 20px;
 }
 #true .tictactoe {
     display: flex;
     position: relative;
-    height: 42em;
+    height: 44em;
     flex-direction: column;
     border-radius: 20px;
 }
