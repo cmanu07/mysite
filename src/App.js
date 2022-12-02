@@ -1,5 +1,5 @@
 import  React, { useState } from 'react';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // styles
 import './styles/style.css';
 
@@ -18,6 +18,7 @@ import Calculator from './components/Projects/Calculator/Calculator';
 import Stopwatch from './components/Projects/Stopwatch/Stopwatch';
 import GitHubAPI from './components/Projects/GitHub API/GitHubAPI';
 import TicTacToe from './components/Projects/TicTacToe/TicTacToe';
+import Contacts from './components/Projects/Contacts List/Contacts';
 
 import { ThemeContext } from './components/Contexts/ThemeContext';
 
@@ -40,6 +41,7 @@ const App = () => {
                   <Route path={'/projects/stopwatch'} element={<Stopwatch/>}/>
                   <Route path={'/projects/github_api'} element={<GitHubAPI/>}/>
                   <Route path={'/projects/tictactoe'} element={<TicTacToe/>}/>
+                  <Route path={'/projects/contacts'} element={<Contacts/>}/>
                 </Routes>
               <Footer/>
             </div>

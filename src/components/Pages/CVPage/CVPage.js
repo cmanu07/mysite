@@ -13,5 +13,5 @@ export default function CVPage () {
             <img src={cvItem} alt="my updated cv"/>
             <p>You can also download my CV in PDF format from <a href={cvFile} download>here</a>.</p>
         </div>
-    </>)
+        </>)
 }

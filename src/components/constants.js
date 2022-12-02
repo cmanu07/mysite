@@ -5,7 +5,7 @@ import calculator_wall from './Media/calculator_wall.jpg';
 import stopwatch_wall from './Media/stopwatch_wall.jpg';
 import github_wall from './Media/github_wall.jpg';
 import tictactoe_wall from './Media/tictactoe_wall.jpg';
-
+import contacts_wall from './Media/contacts_wall.jpg';
 
 
 export const dataSet = ['Aayla Secura', 'Adi Gallia', 'Admiral Dodd Rancit',
@@ -72,7 +72,46 @@ export const dataSet = ['Aayla Secura', 'Adi Gallia', 'Admiral Dodd Rancit',
 'Wollivan', 'Wuher', 'Wullf Yularen', 'Xamuel Lennox', 'Yaddle', 'Yarael Poof', 'Yoda', 'Zam Wesell', 'Zev Senesca',
 'Ziro the Hutt', 'Zuckuss'];
 
+export const contactsList = [
+    {
+        firstName: 'manu',
+        lastName: 'cara',
+        phoneNumber: '0744-301841',
+        email: 'manu@yahoo.com'
+    },
+    {
+        firstName: "Jessica",
+        lastName: "Warren",
+        phoneNumber: "011-211-7516",
+        email: "jessica.warren@email.com"
+      },
+      {
+        firstName: "Tony",
+        lastName: "Frank",
+        phoneNumber: "788-962-7516",
+        email: "tony.frank@email.com"
+      },
+      {
+        firstName: "Jeremy Clark",
+        lastName: "333 miltown manor",
+        phoneNumber: "011-962-111",
+        email: "jeremy.clark@email.com"
+      },
+      {
+        firstName: "Raymond Edwards",
+        lastName: "99 blue acres",
+        phoneNumber: "3231-962-7516",
+        email: "raymon.edwards@email.com"
+      }
+]
+
 export const projects = [
+    {
+        name: 'Contacts List',
+        url: '/projects/contacts',
+        imagine: contacts_wall,
+        description: 'A good learning project and posible job interview test.'
+    },
     {
         name: 'GitHub API',
         url: '/projects/github_api',
