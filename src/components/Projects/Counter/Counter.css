@@ -13,6 +13,7 @@
 }
 
 .counter {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +74,7 @@
     background-color: var(--myYellow);
 }
 .default, .danger, .middle {
+    position: relative;
     transition: .3s;
     border-radius: 20px;
     height: 44em;

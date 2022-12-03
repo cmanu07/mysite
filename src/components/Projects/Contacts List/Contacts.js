@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import BackButton from '../../Main/BackButton/BackButton'
+import Popup from './Popup/Popup'
 import ContactsForm from './ContactsForm'
 import ReadOnlyRow from './ReadOnlyRow'
 import EditRow from './EditRow'
@@ -9,6 +10,9 @@ import { contactsList } from '../../constants'
 import './Contacts.css'
 
 const Contacts = () => {
+    const [popupAddButton, setPopupAddButton] = useState(() => false)
+    const [popupSaveButton, setPopupSaveButton] = useState(() => false)
+    const [popupDeleteButton, setPopupDeleteButton] = useState(() => false)
     const [contacts, setContacts] = useState(() => contactsList)
     const [editContact, setEditContact] = useState(null)
     const [addFormData, setAddFormData] = useState({
@@ -32,7 +36,6 @@ const Contacts = () => {
         const newFormData = { ...addFormData }
         newFormData[fieldName] = fieldValue
         setAddFormData(newFormData)
-        console.log(newFormData)
     }
     const handleSubmitForm = (e) => {
         e.preventDefault()
@@ -44,7 +47,14 @@ const Contacts = () => {
         }
         const newContacts = [...contacts, newContact]
         setContacts(newContacts)
-        
+        const clearFormData = {
+            firstName: "",
+            lastName: "",
+            phoneNumber: "",
+            email: ""
+        }
+        setAddFormData(clearFormData)
+        setPopupAddButton(true)
     }
     const handleSubmitEditedForm = (e) => {
         e.preventDefault();
@@ -61,8 +71,9 @@ const Contacts = () => {
         newContacts[index] = editedContact;
         setContacts(newContacts);
         setEditContact(null);
+        setPopupSaveButton(true)
     }
-
+    
     const handleEditFunction = (e, contact) => {
         e.preventDefault()
         setEditContact(contact.email)
@@ -90,12 +101,32 @@ const Contacts = () => {
         const index = contacts.findIndex(contact => contact.email === contactEmail)
         newContactsList.splice(index, 1)
         setContacts(newContactsList)
+        setPopupDeleteButton(true)
     }
-    
+
+    const succesAnimIcon = "https://embed.lottiefiles.com/animation/96237"
+    const deleteAnimIcon = "https://embed.lottiefiles.com/animation/79053"
+    const savedAnimIcon = "https://embed.lottiefiles.com/animation/8569"
+        
   return (
     <section className='contacts-main'>
         <h2>Contacts</h2>
         <BackButton/>
+        <Popup trigger={popupAddButton}
+                setPopup={setPopupAddButton}
+                popupText={'Contact added!'}
+                popupAnimation={succesAnimIcon}
+        />
+        <Popup trigger={popupSaveButton}
+                setPopup={setPopupSaveButton}
+                popupText={'Contact saved!'}
+                popupAnimation={savedAnimIcon}
+        />
+        <Popup trigger={popupDeleteButton}
+                setPopup={setPopupDeleteButton}
+                popupText={'Contact deleted!'}
+                popupAnimation={deleteAnimIcon}
+        />
         <main>
             <div className='contacts-form'>
                 <div className='contacts-form-search-div'>
@@ -110,6 +141,7 @@ const Contacts = () => {
                 <ContactsForm
                     handleFormInput={handleFormInput}
                     handleSubmitForm={handleSubmitForm}
+                    addFormData={addFormData}
                 />
             </div>
             <div className='contacts-list'>
@@ -127,7 +159,7 @@ const Contacts = () => {
                         </thead>
                         <tbody className='contacts-list-table-body'>
                             {
-                                contacts && contacts.filter(
+                                contacts ? contacts.filter(
                                     contact => contact.firstName.toLowerCase().includes(query) ||
                                                 contact.lastName.toLowerCase().includes(query) ||
                                                 contact.email.toLowerCase().includes(query)
@@ -151,7 +183,7 @@ const Contacts = () => {
                                             }
                                         </Fragment>
                                     )
-                                })
+                                }) : null
                             }
                         </tbody>
                     </table>

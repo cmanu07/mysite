@@ -2,33 +2,35 @@
 @media ( width < 786px ) {
     .contacts-list table tr td, .contacts-list table tr th {
         text-align: center;
-        font-size: 9.5px;
+        font-size: 9px;
     }
     .contacts-list-button, .contacts-list-cancel-button, .contacts-list-save-button {
-        font-size: 9.5px;
+        font-size: 8.7px;
     }
     .edit-row-inputs {
-        font-size: 9.5px;
+        font-size: 9px;
     }
 }
 
 #false .contacts-main {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 46em;
+    height: 48em;
     background-image: linear-gradient(108.08deg, #5689C0 0.53%, #78FFD6 100%);
     border-radius: 20px;
 }
 #true .contacts-main {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 46em;
+    height: 48em;
     background-image: linear-gradient(108.08deg, #244D61 0.53%, #1A2980 100%);
     border-radius: 20px;
 }
@@ -39,7 +41,7 @@
     align-items: center;
 }
 .contacts-form {
-    width: 46em;
+    width: 42em;
     max-width: calc(100% - 1em);
     height: 17em;
     display: flex;
@@ -64,7 +66,7 @@
     position: relative;
     border-right: solid 1px var(--myWhite);
     height: 6em;
-    padding-right: 10%;
+    padding-right: 2%;
     justify-content: center;
 }
 .contacts-form-firstName-input,
@@ -72,7 +74,7 @@
 .contacts-form-phone-input,
 .contacts-form-email-input,
 .contacts-form-search-input {
-    width: 100%;
+    width: 94%;
     height: 2em;
     border-radius: 5px;
     font-size: 14px;
@@ -163,13 +165,13 @@
 .contacts-list {
     position: relative;
     width: 96vw;
-    height: 15em;
+    height: 18em;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--myWhite);
     padding: 0.8em 0 0;
-    margin-top: 0.8em;
+    margin-top: 1em;
     border-radius: 10px;
     background-color: var(--myGlassBlue);
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);

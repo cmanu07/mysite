@@ -1,6 +1,6 @@
 import {React} from 'react'
 
-const ContactsForm = ({ handleFormInput, handleSubmitForm }) => {
+const ContactsForm = ({ handleFormInput, handleSubmitForm, addFormData }) => {
     
   return (      <form onSubmit={handleSubmitForm}>
                     <div>
@@ -8,6 +8,7 @@ const ContactsForm = ({ handleFormInput, handleSubmitForm }) => {
                             className='contacts-form-firstName-input'
                             name='firstName'
                             required
+                            value={addFormData.firstName}
                             onChange={handleFormInput}
                         />
                         <label className='contacts-form-firstName-label' htmlFor='firstName'>
@@ -19,6 +20,7 @@ const ContactsForm = ({ handleFormInput, handleSubmitForm }) => {
                             className='contacts-form-lastName-input'
                             name='lastName'
                             required
+                            value={addFormData.lastName}
                             onChange={handleFormInput}
                         />
                         <label className='contacts-form-lastName-label' htmlFor='lastName'>
@@ -30,6 +32,7 @@ const ContactsForm = ({ handleFormInput, handleSubmitForm }) => {
                             className='contacts-form-phone-input'
                             name='phoneNumber'
                             required
+                            value={addFormData.phoneNumber}
                             onChange={handleFormInput}
                         />
                         <label className='contacts-form-phone-label' htmlFor='phoneNumber'>
@@ -41,13 +44,14 @@ const ContactsForm = ({ handleFormInput, handleSubmitForm }) => {
                             className='contacts-form-email-input'
                             name='email'
                             required
+                            value={addFormData.email}
                             onChange={handleFormInput}
                         />
                         <label className='contacts-form-email-label' htmlFor='email'>
                             Email
                         </label>
                     </div>
-                    <button>Add Contact</button>
+                    <button type='submit'>Add Contact</button>
                 </form>
   )
 }

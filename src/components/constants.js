@@ -92,14 +92,14 @@ export const contactsList = [
         email: "tony.frank@email.com"
       },
       {
-        firstName: "Jeremy Clark",
-        lastName: "333 miltown manor",
+        firstName: "Jeremy",
+        lastName: "Clark",
         phoneNumber: "011-962-111",
-        email: "jeremy.clark@email.com"
+        email: "jeremy.clark@yahoo.com"
       },
       {
-        firstName: "Raymond Edwards",
-        lastName: "99 blue acres",
+        firstName: "Raymond",
+        lastName: "Edwards",
         phoneNumber: "3231-962-7516",
         email: "raymon.edwards@email.com"
       }

@@ -22,14 +22,14 @@ const Form = () => {
     const response = await octokit.request('GET /users/{username}/gists', {
       username: userName,
     });
-    const { data }  = response;
+    // const { data }  = response;
     // for (let x of data) {
       // const responsePerGist = await octokit.request('GET /gists/{gist_id}/forks', {
       //       gist_id: x.id,
       // });
       // console.log()
     // }
-    console.log(data)
+    // console.log(data)
     
     // setForks(responsePerGist.data.length)
     // console.log(gistId)
@@ -59,7 +59,7 @@ const Form = () => {
                 </div>
                 <ol className='results-ol-list'>
                 {
-                gists && gists.map(gist => {
+                gists ? gists.map(gist => {
                             const {id, created_at, url, description, files: {...others}} = gist;
                             const files = Object.values(others);
                             let file;
@@ -80,7 +80,7 @@ const Form = () => {
                                       {/* <p><em className='results-topic-em'>Users who fork :</em> {}</p> */}
                                     </li>
                                   )
-                  })
+                  }) : null
                 }
               </ol>
             </div>

@@ -1,0 +1,47 @@
+@media (width < 786px) {
+    .popup-main {
+        max-width: calc(100% - 4em);
+    }
+}
+
+.popup {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.popup-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    width: 30em;
+    height: 12em;
+    border-radius: 20px;
+    background-color: var(--myDarkBlue);
+    color: var(--myWhite);
+}
+.popup-main h5 {
+    font-size: 24px;
+    margin-bottom: 1.2em;
+}
+.popup-main iframe {
+    width: 8em;
+    height: 6em;
+    border: none;
+}
+.popup-close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}

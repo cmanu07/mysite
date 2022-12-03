@@ -99,7 +99,7 @@
 }
 .results {
     width: 93vw;
-    height: 26em;
+    height: 24em;
     display: flex;
     flex-direction: column;
     align-items: center;

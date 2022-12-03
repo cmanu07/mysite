@@ -1,25 +1,25 @@
 #false .back-button {
-    position: absolute;
-    z-index: auto;
+    position: fixed;
+    z-index: 1;
     font-size: larger;
     background-color: var(--myGreen-hover);
     box-shadow: 3px 3px 5px var(--myBlackHeader);
     color: var(--myBlackGreen);
-    top: 15.4%;
-    left: 7%;
+    top: 18%;
+    left: 4%;
     border-radius: 10px;
     padding: 7px 10px;
     transition: .3s;
 }
 #true .back-button {
-    position: absolute;
-    z-index: auto;
+    position: fixed;
+    z-index: 1;
     font-size: larger;
     background-color: var(--myGreen-hover);
     box-shadow: 2px 2px 5px var(--myGreen-1);
     color: var(--myBlackGreen);
-    top: 15.4%;
-    left: 7%;
+    top: 18%;
+    left: 4%;
     border-radius: 10px;
     padding: 7px 10px;
     transition: .3s;

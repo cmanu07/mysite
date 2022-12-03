@@ -11,6 +11,7 @@
 }
 .github {
     height: 46em;
+    position: relative;
 }
 .github-main-div {
     background-image: linear-gradient(to top right, var(--myBlue-1), var(--myDarkBlue));
@@ -25,6 +26,6 @@
 .github-main-div h1 {
     text-align: center;
     font-size: 200%;
-    margin: 4em 0em 0.4em 0;
+    margin: 5em 0em 1em 0;
     color: var(--myWhite2);
 }

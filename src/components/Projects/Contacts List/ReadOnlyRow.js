@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ReadOnlyRow = ({contact, handleEditFunction, handleDeleteFunction}) => {
+const ReadOnlyRow = ({contact, handleEditFunction, handleDeleteFunction, openPopup}) => {
   return (
     <tr>
         <td>{contact.firstName}</td>
@@ -15,7 +15,7 @@ const ReadOnlyRow = ({contact, handleEditFunction, handleDeleteFunction}) => {
             </button>
             <button className='contacts-list-cancel-button'
                     type='button'
-                    onClick={() => handleDeleteFunction(contact.email)}>
+                    onClick={() => handleDeleteFunction(contact.email) & openPopup(true)}>
                 Delete
             </button>
         </td>

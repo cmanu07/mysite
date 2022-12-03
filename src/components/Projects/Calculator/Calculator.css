@@ -1,6 +1,7 @@
 /* CALCULATOR */
 
 #true .calculator-main {
+    position: relative;
     width: 100%;
     height: 44em;
     border-top: solid 0.7px var(--myGreen-hover);
@@ -9,6 +10,7 @@
     background-color: var(--myBlackGreen);
 }
 #false .calculator-main {
+    position: relative;
     width: 100%;
     height: 44em;
     border-radius: 20px;
