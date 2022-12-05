@@ -13,7 +13,7 @@ const Popup = (props) => {
     <section className='popup'>
         <div className='popup-main'>
             <h5>{ props.popupText }</h5>
-            <iframe src={props.popupAnimation} title=' '></iframe>
+            <p>{ props.popupAnimation }</p>
         </div>
     </section>
   ) : ""

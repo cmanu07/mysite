@@ -5,6 +5,11 @@ import ContactsForm from './ContactsForm'
 import ReadOnlyRow from './ReadOnlyRow'
 import EditRow from './EditRow'
 
+import Lottie from 'lottie-react'
+import saveAnimation from './Popup/save_animation.json'
+import deleteAnimation from './Popup/delete_animation.json'
+import addAnimation from './Popup/add_animation.json'
+
 import { contactsList } from '../../constants'
 
 import './Contacts.css'
@@ -104,10 +109,6 @@ const Contacts = () => {
         setPopupDeleteButton(true)
     }
 
-    const succesAnimIcon = "https://embed.lottiefiles.com/animation/96237"
-    const deleteAnimIcon = "https://embed.lottiefiles.com/animation/79053"
-    const savedAnimIcon = "https://embed.lottiefiles.com/animation/8569"
-        
   return (
     <section className='contacts-main'>
         <h2>Contacts</h2>
@@ -115,17 +116,23 @@ const Contacts = () => {
         <Popup trigger={popupAddButton}
                 setPopup={setPopupAddButton}
                 popupText={'Contact added!'}
-                popupAnimation={succesAnimIcon}
+                popupAnimation={<Lottie loop='true'
+                                        animationData={addAnimation}
+                                />}
         />
         <Popup trigger={popupSaveButton}
                 setPopup={setPopupSaveButton}
                 popupText={'Contact saved!'}
-                popupAnimation={savedAnimIcon}
+                popupAnimation={<Lottie loop='true'
+                                        animationData={saveAnimation}
+                                />}
         />
         <Popup trigger={popupDeleteButton}
                 setPopup={setPopupDeleteButton}
                 popupText={'Contact deleted!'}
-                popupAnimation={deleteAnimIcon}
+                popupAnimation={<Lottie loop='true'
+                                        animationData={deleteAnimation}
+                                />}
         />
         <main>
             <div className='contacts-form'>
@@ -134,7 +141,7 @@ const Contacts = () => {
                         className='contacts-form-search-input'
                         name='searchContact'
                         placeholder='Name or email...'
-                        onChange={(e => setQuery(e.target.value))}
+                        onChange={(e => setQuery(e.target.value.toLowerCase()))}
                         />
                     <label className='contacts-form-search-label' htmlFor='searchContact'>Search for contact</label>
                 </div>

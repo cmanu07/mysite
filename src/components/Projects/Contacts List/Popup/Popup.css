@@ -33,11 +33,10 @@
 }
 .popup-main h5 {
     font-size: 24px;
-    margin-bottom: 1.2em;
 }
-.popup-main iframe {
-    width: 8em;
-    height: 6em;
+.popup-main p {
+    width: 7em;
+    height: 7em;
     border: none;
 }
 .popup-close-button {
