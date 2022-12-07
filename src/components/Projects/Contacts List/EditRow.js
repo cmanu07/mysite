@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EditRow = ({ editFormData, handleCancelFunction, handleEditFormChange, openPopup }) => {
+const EditRow = ({ editFormData, handleCancelFunction, handleEditFormChange}) => {
   return (
     <tr>
         <td>
@@ -46,7 +46,6 @@ const EditRow = ({ editFormData, handleCancelFunction, handleEditFormChange, ope
         <td>
             <button className='contacts-list-save-button'
                     type='submit'
-                    onClick={() => openPopup(true)}
                     >
                 Save
             </button>

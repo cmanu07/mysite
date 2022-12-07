@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import BackButton from '../../Main/BackButton/BackButton'
 import Popup from './Popup/Popup'
 import ContactsForm from './ContactsForm'
@@ -108,6 +108,10 @@ const Contacts = () => {
         setContacts(newContactsList)
         setPopupDeleteButton(true)
     }
+
+    useEffect(() => {
+        localStorage.setItem('contacts', JSON.stringify(contacts));
+    },[contacts])
 
   return (
     <section className='contacts-main'>
