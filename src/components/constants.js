@@ -1,11 +1,12 @@
-import search_wall from './Media/search_wall.jpg';
-import counter_wall from './Media/counter_wall.jpg';
-import traffic_wall from './Media/traffic_wall.jpg';
-import calculator_wall from './Media/calculator_wall.jpg';
-import stopwatch_wall from './Media/stopwatch_wall.jpg';
-import github_wall from './Media/github_wall.jpg';
-import tictactoe_wall from './Media/tictactoe_wall.jpg';
-import contacts_wall from './Media/contacts_wall.jpg';
+import search_wall from './Media/search_wall.webp';
+import counter_wall from './Media/counter_wall.webp';
+import traffic_wall from './Media/traffic_wall.webp';
+import calculator_wall from './Media/calculator_wall.webp';
+import stopwatch_wall from './Media/stopwatch_wall.webp';
+import github_wall from './Media/github_wall.webp';
+import tictactoe_wall from './Media/tictactoe_wall.webp';
+import contacts_wall from './Media/contacts_wall.webp';
+import ecommerce_wall from './Media/ecommerce_wall.webp';
 
 
 export const dataSet = ['Aayla Secura', 'Adi Gallia', 'Admiral Dodd Rancit',
@@ -107,10 +108,16 @@ export const contactsList = [
 
 export const projects = [
     {
+        name: 'E-Commerce',
+        url: '/projects/e_commerce_store',
+        imagine: ecommerce_wall,
+        description: 'A modern project and a very educational one.'
+    },
+    {
         name: 'Contacts List',
         url: '/projects/contacts',
         imagine: contacts_wall,
-        description: 'A good learning project and posible job interview test.'
+        description: 'A good learning project and a posible job interview test.'
     },
     {
         name: 'GitHub API',

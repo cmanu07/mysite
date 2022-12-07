@@ -12,7 +12,7 @@
 }
 
 #false .projects {
-    background-image: url('../../Media/projects_wall.jpg');
+    background-image: url('../../Media/projects_wall.webp');
     border-radius: 15px;
     scroll-behavior: smooth;
 }

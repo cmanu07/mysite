@@ -76,13 +76,16 @@
 .contacts-form-search-input {
     width: 94%;
     height: 2em;
-    border-radius: 5px;
     font-size: 14px;
     padding: 0.5em;
-    border: var(--myWhite);
-    background-color: var(--myWhite);
+    border: none;
+    border-bottom: 1px solid var(--myWhite);
+    background-color: rgba(0, 0, 0, 0);
     margin: 0.9em 0;
     color: var(--myDarkBlue);
+}
+.contacts-form-search-input::placeholder {
+    color: var(--myWhite);
 }
 .contacts-form-search-input:focus ~ label, .contacts-form-search-input:valid ~ label,
 .contacts-form-firstName-input:focus ~ label, .contacts-form-firstName-input:valid ~ label,
@@ -114,7 +117,7 @@
 .contacts-form-search-label {
     position: absolute;
     width: 100%;
-    color: var(--myDarkBlue);
+    color: var(--myWhite);
     font-size: 16px;
     transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;

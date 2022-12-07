@@ -6,7 +6,7 @@ const Popup = (props) => {
   useEffect(() => {
     let timeout = setTimeout(() => {
       props.setPopup(false)
-    }, 2100)
+    }, 2000)
     return () => clearInterval(timeout)
   })
   return (props.trigger) ? (
