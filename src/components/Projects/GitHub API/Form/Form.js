@@ -9,19 +9,29 @@ const Form = () => {
 
   const [userName, setUserName] = useState(() => "")
   const [userToShow, setUserToShow] = useState(() => "")
-  const [avatarToShow, setAvatarToShow] = useState(() => "")
+  const [avatarToShow, setAvatarToShow] = useState(() => false)
 
   const [gists, setGists] = useState(() => null)
   // const [forks, setForks] = useState(() => '')
 
   const showInfo = async () => {
 
-    const octokit = new Octokit({
-      auth: ''    // <-- your token here
-    });
-    const response = await octokit.request('GET /users/{username}/gists', {
-      username: userName,
-    });
+    try {
+      const octokit = new Octokit({
+        auth: ''    // <-- your token here
+      });
+      const response = await octokit.request('GET /users/{username}/gists', {
+        username: userName,
+      });
+      setUserToShow(userName)
+      response.data.length !== 0 ? setAvatarToShow(response.data.at(0).owner.avatar_url) : setAvatarToShow("noGists")
+      setGists(response.data)
+      setUserName('')
+    } catch (e) {
+      setUserToShow('noGithubUser')
+      console.error(e)
+    };
+
     // const { data }  = response;
     // for (let x of data) {
       // const responsePerGist = await octokit.request('GET /gists/{gist_id}/forks', {
@@ -35,27 +45,26 @@ const Form = () => {
     // console.log(gistId)
     // console.log(responsePerGist)
     // setForks(77)
-    setUserToShow(userName)
-    setAvatarToShow(response.data.at(0).owner.avatar_url)
-    setGists(response.data)
   }
 
   return (<section className='form-main-section'>
-            <div className='form-main-section-form'>
+            <form className='form-main-section-form'>
                 <input className='github-input'
                     type="text" value={userName} id="username" name="username"
                     onChange={e => setUserName(e.target.value)}
                     required/>
-                <label className='github-input-label' for="username">GitHub Username</label>
+                <label className='github-input-label' htmlFor="username">GitHub Username</label>
                 <button className='github-input-button' type="button" onClick={showInfo}>Show Info</button>
-            </div>
+            </form>
             <div className="results">
                 <article>
-                    {avatarToShow ? <img src={avatarToShow} alt="missing avatar..."/> : ""}
-                    {userToShow ? <p className='results-topic'><em>UserName :</em> {userToShow} </p> : ""}
+                    {avatarToShow === 'noGists' ? '' : avatarToShow ? <img src={avatarToShow} alt="missing avatar..."/> : ''}
+                    {userToShow === 'noGithubUser' ? <p className='results-topic'><em>This is not a Github Username...</em></p> :
+                      userToShow ? <p className='results-topic'><em>UserName :</em> {userToShow} </p> : ""}
                 </article>
                 <div>
-                    {userToShow ? <span className='results-list-title'>List of public gists :</span> : ""}
+                    {avatarToShow === 'noGists' ? <span className='results-list-title'>This user has no public gists!</span> :
+                    avatarToShow ? <span className='results-list-title'>List of public gists :</span> : ""}
                 </div>
                 <ol className='results-ol-list'>
                 {
