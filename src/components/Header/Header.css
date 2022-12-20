@@ -186,10 +186,10 @@ h1 img {
 }
 .toggle-p {
     display: flex;
-    top: 44.2%;
+    top: 44.1%;
     position: absolute;
     width: 65%;
-    height: 5px;
+    height: 4.5px;
     border-radius: 30%;
     background-color: var(--myBlackGreen);
 }

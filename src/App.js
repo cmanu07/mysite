@@ -43,7 +43,7 @@ const App = () => {
                   <Route path={'/projects/github_api'} element={<GitHubAPI/>}/>
                   <Route path={'/projects/tictactoe'} element={<TicTacToe/>}/>
                   <Route path={'/projects/contacts'} element={<Contacts/>}/>
-                  <Route path={'/projects/e_commerce_store'} element={<ECommerce/>}/>
+                  <Route path={'/projects/e_commerce_store/*'} element={<ECommerce/>}/>
                 </Routes>
               <Footer/>
             </div>
