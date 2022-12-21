@@ -1,8 +1,10 @@
 import { React, useContext } from 'react'
 import { Badge } from '@mui/material';
+import { ECommShopContext } from '../../../Contexts/ECommShopContext'
 
 import styled from 'styled-components'
-import { ECommShopContext } from '../../../Contexts/ECommShopContext'
+
+// import ECommPopup from './ECommPopup/ECommPopup'
 
 import companyLogo from '../Media/ecomm_company_logo.webp';
 import searchIcon from '../../../Media/icons8-search-50.png';
@@ -24,10 +26,16 @@ const Wrapper = styled.div`
     justify-content: space-between;
 `
 
-const Left = styled.div`
+const Left = styled.a`
     flex: 1;
     display: flex;
     align-items: center;
+    color: #2E424E;
+    transition: .3s;
+    &:hover {
+        leter-spacing: 1px;
+        color: teal;
+    }
 `
 const Logo = styled.div`
     cursor: pointer;
@@ -67,16 +75,18 @@ const Right = styled.div`
 `
 
 const Header = () => {
-    // const [query, setQuery] = useState('')
-    const { cartItems } = useContext(ECommShopContext)
+    const { cartItems, setSearchQuery } = useContext(ECommShopContext)
     const items = Object.values(cartItems).reduce((a,b) => a + b)
-    console.log(items)
-
 
   return (
-    <Container>
+      <Container>
         <Wrapper>
-            <Left>
+            {/* <ECommPopup trigger = {cartPopupButton}
+            time={30000}
+            setPopup={setCartPopupButton}
+            popupText={'cart'}
+            /> */}
+            <Left href='/projects/e_commerce_store'>
                 <Logo>
                     <img src={companyLogo} alt='company logo...' height={55} width={55} style={{borderRadius:'50%'}}/>
                     <CompanyName>E-Comm Company</CompanyName>
@@ -86,12 +96,12 @@ const Header = () => {
                 <SearchContainer>
                     <input type='search' placeholder='Search products...'
                         className='e-comm-search-input'
-                        // onChange={e => setQuery(e.target.value.toLowerCase())}
+                        onChange={e => setSearchQuery(e.target.value.toLowerCase())}
                     />
                     <img src={searchIcon} alt='search icon...' height={25}/>
                 </SearchContainer>
             </Center>
-            <Right>
+            <Right onClick={() => console.log('tare')}>
                 <Badge badgeContent = {items} color = {items > 0 ? 'secondary' : 'primary'} style={{zIndex: '0', cursor: 'pointer'}}>
                     <img src={shopCart} alt='shopCart icon...' height={25}/>
                 </Badge>

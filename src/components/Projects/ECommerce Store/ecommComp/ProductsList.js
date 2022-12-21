@@ -1,7 +1,9 @@
-import React from 'react'
+import { React, useContext} from 'react'
 import styled from 'styled-components'
 
 import { TVProductsList } from '../../../constants'
+import { ECommShopContext } from '../../../Contexts/ECommShopContext'
+
 import Product from './Product'
 
 const Container = styled.div`
@@ -17,10 +19,16 @@ const Container = styled.div`
 `
 
 const ProductsList = () => {
+  const { searchQuery } = useContext(ECommShopContext)
+
   return (
     <Container>
         {
-            TVProductsList ? TVProductsList.map(tvProduct => {
+            TVProductsList ? TVProductsList.filter(
+              tvProduct => tvProduct.brand.toLowerCase().includes(searchQuery) ||
+                            tvProduct.model.toLowerCase().includes(searchQuery)
+            )
+            .map(tvProduct => {
                 return <Product key={tvProduct.model} item={tvProduct}/>
             })              : ''
         }

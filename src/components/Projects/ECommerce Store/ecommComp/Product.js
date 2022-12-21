@@ -19,7 +19,8 @@ const Container = styled.div`
 `
 
 const Product = ({item}) => {
-  const { addToCart } = useContext(ECommShopContext)
+  const { addToCart, cartItems } = useContext(ECommShopContext)
+  const itemsNr = cartItems[item.id]
 
   return (
     <Container>
@@ -29,7 +30,7 @@ const Product = ({item}) => {
         <p className='e-comm-product-price'>{item.price} EUR</p>
         <div className='e-comm-product-buy-button'>
           <button><a href='/projects/e_commerce_store/product_page'>BUY NOW</a></button>
-          <span onClick={() => addToCart(item.id)}><ShoppingCartOutlined/></span>
+          <span onClick={() => addToCart(item.id)}><ShoppingCartOutlined/>{itemsNr > 0 ? <>({itemsNr})</> : ''}</span>
         </div>
     </Container>
   )

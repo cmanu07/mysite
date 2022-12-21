@@ -207,7 +207,8 @@ export const TVProductsList = [
         model: '43pj3450',
         description: 'Full Hd WebOS Tv - Smart Screen Watch TV - Images are clear and full of fine detail.',
         price: 286.49
-    },{
+    },
+    {
         id: 8,
         img: 'https://cdn1.avstore.ro/qube/get/90w600h600/41db89e4746b7b4e2aa7de10d6d2bc35',
         brand: "LG",

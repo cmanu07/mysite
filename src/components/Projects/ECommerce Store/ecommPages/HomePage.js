@@ -6,9 +6,9 @@ import Slider from '../ecommComp/Slider'
 const HomePage = () => {
   return (
         <section className='home-page-main-section'>
-            <Slider/>
             <Categories/>
             <ProductsList/>
+            <Slider/>
         </section>
   )
 }

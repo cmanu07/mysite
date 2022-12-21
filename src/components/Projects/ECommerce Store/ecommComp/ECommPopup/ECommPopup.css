@@ -1,0 +1,43 @@
+@media (width < 998px) {
+    .ecomm-popup-main {
+        max-width: calc(100% - 4em);
+    }
+}
+
+.ecomm-popup {
+    position: fixed;
+    z-index: 9;
+    top: 18%;
+    left: calc(100vw - 33vw);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.ecomm-popup-main {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    width: 30em;
+    height: 12em;
+    border-radius: 20px;
+    background-color: var(--myDarkBlue);
+    color: var(--myWhite);
+}
+.ecomm-popup-main h5 {
+    font-size: 24px;
+}
+.ecomm-popup-main div {
+    width: 7em;
+    height: 7em;
+    border: none;
+}
+.ecomm-popup-close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}

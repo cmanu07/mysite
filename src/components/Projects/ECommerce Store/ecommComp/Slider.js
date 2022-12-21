@@ -49,7 +49,9 @@ const Slider = () => {
                             <div className='e-comm-slider-figure-info'>
                                 <h5 style={{color:'#FFFFFF', fontSize: '2em', marginBottom: '0.5%'}}>{slide.title}</h5>
                                 <p style={{color:'#FFFFFF', fontSize: '1.2em'}}>{slide.description}</p>
-                                <button className='e-comm-slider-button'>Buy now</button>
+                                <button className='e-comm-slider-button'>
+                                    <a href='/projects/e_commerce_store/product_page'>BUY NOW</a>
+                                </button>
                             </div>
                         </figure>
                     )
