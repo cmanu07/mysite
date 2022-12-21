@@ -1,7 +1,8 @@
-import { React } from 'react'
+import { React, useContext } from 'react'
 import { Badge } from '@mui/material';
 
 import styled from 'styled-components'
+import { ECommShopContext } from '../../../Contexts/ECommShopContext'
 
 import companyLogo from '../Media/ecomm_company_logo.webp';
 import searchIcon from '../../../Media/icons8-search-50.png';
@@ -10,6 +11,9 @@ import shopCart from '../Media/icons8-basket-64.png';
 const Container = styled.section`
     width: 100%;
     height: 4.5em;
+    background: #E3E4E6;
+    position: sticky;
+    top: 4em;
 `
     
 const Wrapper = styled.div`
@@ -64,6 +68,10 @@ const Right = styled.div`
 
 const Header = () => {
     // const [query, setQuery] = useState('')
+    const { cartItems } = useContext(ECommShopContext)
+    const items = Object.values(cartItems).reduce((a,b) => a + b)
+    console.log(items)
+
 
   return (
     <Container>
@@ -84,7 +92,7 @@ const Header = () => {
                 </SearchContainer>
             </Center>
             <Right>
-                <Badge badgeContent={4} color = 'secondary' style={{zIndex: '0', cursor: 'pointer'}}>
+                <Badge badgeContent = {items} color = {items > 0 ? 'secondary' : 'primary'} style={{zIndex: '0', cursor: 'pointer'}}>
                     <img src={shopCart} alt='shopCart icon...' height={25}/>
                 </Badge>
             </Right>

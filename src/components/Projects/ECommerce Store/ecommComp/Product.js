@@ -1,6 +1,7 @@
 import { ShoppingCartOutlined } from '@mui/icons-material'
-import React from 'react'
+import { React, useContext } from 'react'
 import styled from 'styled-components'
+import { ECommShopContext } from '../../../Contexts/ECommShopContext'
 
 const Container = styled.div`
     display: flex;
@@ -18,6 +19,8 @@ const Container = styled.div`
 `
 
 const Product = ({item}) => {
+  const { addToCart } = useContext(ECommShopContext)
+
   return (
     <Container>
         <img src={item.img} alt='product figure...' className='e-comm-product-image'/>
@@ -25,8 +28,8 @@ const Product = ({item}) => {
         <p className='e-comm-product-description'>{item.description}</p>
         <p className='e-comm-product-price'>{item.price} EUR</p>
         <div className='e-comm-product-buy-button'>
-          <button>BUY NOW</button>
-          <span onClick={() => console.log('tare')}><ShoppingCartOutlined/></span>
+          <button><a href='/projects/e_commerce_store/product_page'>BUY NOW</a></button>
+          <span onClick={() => addToCart(item.id)}><ShoppingCartOutlined/></span>
         </div>
     </Container>
   )

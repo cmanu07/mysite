@@ -28,7 +28,7 @@ const App = () => {
   const [themeMode, setThemeMode] = useState(() => JSON.parse(localStorage.getItem('theme')) || false);
 
   return (<ThemeContext.Provider value={{themeMode, setThemeMode}}>
-            <div id={themeMode.toString()}>
+            <main id={themeMode.toString()}>
               <Header/>
                 <Routes>
                   <Route path={'/'} element={<Home/>}/>
@@ -46,7 +46,7 @@ const App = () => {
                   <Route path={'/projects/e_commerce_store/*'} element={<ECommerce/>}/>
                 </Routes>
               <Footer/>
-            </div>
+            </main>
           </ThemeContext.Provider>
   );
 }

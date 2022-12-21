@@ -187,7 +187,15 @@
     width: 70%;
     height: 100%;
     border: none;
+}
+.e-comm-product-buy-button button a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0 0.5em;
+    font-size: 1.2em;
     transition: .3s ease;
 }
 .e-comm-product-buy-button span {
@@ -198,7 +206,7 @@
     align-items: center;
     transition: .3s ease;
 }
-.e-comm-product-buy-button button:hover {
+.e-comm-product-buy-button button a:hover{
     cursor: pointer;
     background-color: #8957FF;
     box-shadow: 3px 3px 20px #8957FF;
