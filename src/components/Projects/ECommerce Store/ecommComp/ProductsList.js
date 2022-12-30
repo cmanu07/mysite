@@ -1,7 +1,7 @@
 import { React, useContext} from 'react'
 import styled from 'styled-components'
 
-import { TVProductsList } from '../../../constants'
+import { ListOfProducts} from '../../../constants'
 import { ECommShopContext } from '../../../Contexts/ECommShopContext'
 
 import Product from './Product'
@@ -12,9 +12,9 @@ const Container = styled.div`
     justify-content: center;
     gap: 1.5em;
     width: 100%;
-    padding: 2% 4%;
+    padding: 4%;
     @media (max-width: 998px) {
-        gap: 1.3em;
+        gap: 0.8em;
       }
 `
 
@@ -24,13 +24,14 @@ const ProductsList = () => {
   return (
     <Container>
         {
-            TVProductsList ? TVProductsList.filter(
-              tvProduct => tvProduct.brand.toLowerCase().includes(searchQuery) ||
-                            tvProduct.model.toLowerCase().includes(searchQuery)
+            ListOfProducts ? ListOfProducts.filter(
+              product => product.brand.toLowerCase().includes(searchQuery) ||
+                        product.model.toLowerCase().includes(searchQuery)  ||
+                        product.category.toLowerCase().includes(searchQuery)
             )
-            .map(tvProduct => {
-                return <Product key={tvProduct.model} item={tvProduct}/>
-            })              : ''
+            .map(product => {
+                return <Product key={product.model} item={product}/>
+            })              : <h5>There are no such products...:</h5>
         }
     </Container>
   )

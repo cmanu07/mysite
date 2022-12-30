@@ -4,7 +4,7 @@ import './BackButton.css'
 
 const BackButton = () => {
   return (
-    <a className='back-button' href='./'>Back</a>
+    <a className='back-button' href='.'>Back</a>
   )
 }
 

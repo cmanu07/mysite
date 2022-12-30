@@ -152,9 +152,10 @@ export const categories = [
         title: "Accessories",
     }
 ]
-export const TVProductsList = [
+export const ListOfProducts = [
     {
         id: 1,
+        category: 'TV - Television',
         img: 'https://www.lg.com/uk/images/tvs/md05601092/gallery/medium01_LH590U_20160810_XL.jpg',
         brand: "LG",
         model: '32LH590U',
@@ -163,6 +164,7 @@ export const TVProductsList = [
     },
     {
         id: 2,
+        category: 'TV - Television',
         img: 'https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/T/E/168958_1598204281.jpg',
         brand: "HISENSE",
         model: '42HJ10',
@@ -171,6 +173,7 @@ export const TVProductsList = [
     },
     {
         id: 3,
+        category: 'TV - Television',
         img: 'https://kweli.shop/wp-content/uploads/2021/02/Samsung-43-inch-Full-HD-Smart-TV-UA43T5300.png',
         brand: "SAMSUNG",
         model: 'UA43T5300',
@@ -178,6 +181,7 @@ export const TVProductsList = [
         price: 569.89
     },{
         id: 4,
+        category: 'TV - Television',
         img: 'https://res.cloudinary.com/cenergy-innovation-limited-head-office/image/fetch/c_scale,q_70,f_auto,h_740/https://d1dtruvuor2iuy.cloudfront.net/media/catalog/product/2/4/242319_y.jpg',
         brand: "PANASONIC",
         model: '50FS500T',
@@ -186,6 +190,7 @@ export const TVProductsList = [
     },
     {
         id: 5,
+        category: 'TV - Television',
         img: 'https://d2xamzlzrdbdbn.cloudfront.net/products/5def9b15-02d2-4a30-872d-c1aecc17115e22011049_416x416.jpg',
         brand: 'OnePlus',
         model: '55U1S',
@@ -194,6 +199,7 @@ export const TVProductsList = [
     },
     {
         id: 6,
+        category: 'TV - Television',
         img: 'https://www.nicepng.com/png/detail/363-3637276_lg-49lj5500-49-inch-full-hd-1080p-smart.png',
         brand: "LG",
         model: '49lj5500',
@@ -202,6 +208,7 @@ export const TVProductsList = [
     },
     {
         id: 7,
+        category: 'TV - Television',
         img: 'https://kweli.shop/wp-content/uploads/2021/01/LG-43-inch-Smart-TV-Full-HD-webOS-Smart-TV-Built-in-WiFi-Free-to-air-Receiver-43LM6300_2.png',
         brand: "LG",
         model: '43pj3450',
@@ -210,12 +217,31 @@ export const TVProductsList = [
     },
     {
         id: 8,
+        category: 'TV - Television',
         img: 'https://cdn1.avstore.ro/qube/get/90w600h600/41db89e4746b7b4e2aa7de10d6d2bc35',
         brand: "LG",
         model: '52lj6500',
         description: 'Full Hd 1080p Smart Led Tv - PNG picture material - Modify the image size according to your needs',
         price: 567.49
-    }
+    },
+    {
+        id: 9,
+        category: 'Phones - Mobile',
+        img: 'https://cdn1.avstore.ro/qube/get/90w600h600/41db89e4746b7b4e2aa7de10d6d2bc35',
+        brand: "I-Phone",
+        model: '14',
+        description: 'Full Hd 1080p Smart Led Tv - PNG picture material - Modify the image size according to your needs',
+        price: 1299.49
+    },
+    {
+        id: 10,
+        category: 'Phones - Mobile',
+        img: 'https://www.howtoreset.org/wp-content/uploads/2022/09/samsung-galaxy-s20-fe-2022.jpg',
+        brand: "Samsung",
+        model: 'S20',
+        description: 'Full Hd 1080p Smart Led Tv - PNG picture material',
+        price: 1099.49
+    },
 ]
 
 

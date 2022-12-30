@@ -10,6 +10,8 @@ import companyLogo from '../Media/ecomm_company_logo.webp';
 import searchIcon from '../../../Media/icons8-search-50.png';
 import shopCart from '../Media/icons8-basket-64.png';
 
+import Categories from './Categories';
+
 const Container = styled.section`
     width: 100%;
     height: 4.5em;
@@ -107,6 +109,7 @@ const Header = () => {
                 </Badge>
             </Right>
         </Wrapper>
+        <Categories/>
     </Container>
   )
 }
