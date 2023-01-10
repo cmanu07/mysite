@@ -17,6 +17,7 @@ export const ECommShopContextProvider = (props) => {
     const [cartPopupButton, setCartPopupButton] = useState(() => false)
     const [cartItems, setCartItems] = useState(() => getDefaultCart())
     const [activeCategoryPage, setActiveCategoryPage] = useState(() => '')
+    const [filteredList, setFilteredList] = useState(() => ListOfProducts)
 
     
     const addToCart = (itemId) => {
@@ -29,7 +30,8 @@ export const ECommShopContextProvider = (props) => {
     const contextValue = { cartItems, addToCart, removeFromCart,
         cartPopupButton, setCartPopupButton,
         searchQuery ,setSearchQuery,
-        activeCategoryPage, setActiveCategoryPage
+        activeCategoryPage, setActiveCategoryPage,
+        filteredList, setFilteredList
     }
 
     return  <ECommShopContext.Provider value = {contextValue}>

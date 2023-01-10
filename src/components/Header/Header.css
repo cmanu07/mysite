@@ -122,7 +122,8 @@ h1 img {
     right: -1em;
     top: 4.3em;
     width: 55%;
-    height: 18em;
+    height: 15em;
+    padding-top: 3em;
     align-items: center;
     justify-content: center;
     transition: .4s;
@@ -136,7 +137,8 @@ h1 img {
     right: -1em;
     top: 4.3em;
     width: 55%;
-    height: 18em;
+    height: 15em;
+    padding-top: 3em;
     align-items: center;
     justify-content: center;
     transition: .4s;
@@ -150,8 +152,11 @@ h1 img {
 }
 .navbar h3 {
     text-align: center;
-    height: 3em;
-    padding: 1.8em 0;
+    height: 3.5em;
+    padding: 1.5% 0;
+}
+.navbar h3 a {
+    font-size: larger;
 }
 
 /* TOOGLE MENU BUTTON */
@@ -256,8 +261,8 @@ h1 img {
     width: 4em;
     height: 2em;
     border-radius: 50px;
-    background: var(--myGreen-hover);
-    box-shadow: 3px 3px 3px var(--myBlackHeader);
+    background: transparent;
+    box-shadow: 6px 8px 8px -4px var(--myBlackHeader);
     cursor: pointer;
 }
 #true .toggle-theme {
@@ -270,8 +275,8 @@ h1 img {
     width: 4em;
     height: 2em;
     border-radius: 50px;
-    background: linear-gradient(145deg, var(--myGreen-1), var(--myGreen-2));
-    box-shadow: 2px 2px 3px var(--myGreen-hover);
+    background: transparent;
+    box-shadow: 6px 8px 8px -6px var(--myGreen-2);
     cursor: pointer;
 }
 .toggle-theme input {
@@ -289,7 +294,7 @@ h1 img {
 }
 #true .slider {
     position: absolute;
-    background-color: var(--myGreen-hover);
+    background-color: var(--myGreen-2);
     width: 28px;
     height: 28px;
     border-radius: 50%;

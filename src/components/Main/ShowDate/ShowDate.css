@@ -1,5 +1,5 @@
 #false .show-date {
-    width: 43%;
+    width: 48%;
     display: flex;
     position: absolute;
     top: 0.5em;
@@ -8,7 +8,7 @@
 }
 #true .show-date {
     color: var(--myGreen-2);
-    width: 43%;
+    width: 48%;
     display: flex;
     position: absolute;
     top: 0.5em;

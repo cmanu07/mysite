@@ -7,10 +7,10 @@ import github_wall from './Media/github_wall.webp';
 import tictactoe_wall from './Media/tictactoe_wall.webp';
 import contacts_wall from './Media/contacts_wall.webp';
 import ecommerce_wall from './Media/ecommerce_wall.webp';
+import scorekepper_wall from './Media/scorekepper_wall.webp';
+
+
 // e-comm project
-import pozaSlider1 from './Projects/ECommerce Store/Media/poza_slider_1.webp'
-import pozaSlider2 from './Projects/ECommerce Store/Media/poza_slider_2.webp'
-import pozaSlider3 from './Projects/ECommerce Store/Media/poza_slider_3.webp'
 
 
 
@@ -104,149 +104,29 @@ export const contactsList = [
         email: "jeremy.clark@yahoo.com"
       },
       {
-        firstName: "Raymond",
-        lastName: "Edwards",
+        firstName: "Petru",
+        lastName: "Chirila",
         phoneNumber: "3231-962-7516",
-        email: "raymon.edwards@email.com"
+        email: "rain89@email.com"
+      },
+      {
+        firstName: "Pavel",
+        lastName: "Muntean",
+        phoneNumber: "3231-456-888",
+        email: "muntica77@gmail.ro"
       }
 ]
 // E-COMMERCE PROJECT
-export const sliderItems = [
-    {
-        id: 1,
-        image: pozaSlider1,
-        title: 'Winter Sale',
-        description: 'sdlkcsdlckslkdcnlskdlcksdcs',
-        bg: '#236AD6'
-    },
-    {
-        id: 2,
-        image: pozaSlider2,
-        title: 'Customers choice',
-        description: 'lorem upsum. lorems saslkl asa sa sa kdkkjskds',
-        bg: '#D7415D'
-    },
-    {
-        id: 3,
-        image: pozaSlider3,
-        title: 'Popular Sale',
-        description: 'ahbamz,mamn askdas asxa lorem ipsum',
-        bg: '#016170'
-    }
-]
-export const categories = [
-    {
-        id: 1,
-        title: "TV's",
-    },
-    {
-        id: 2,
-        title: "Phones",
-    },
-    {
-        id: 3,
-        title: "Laptops",
-    },
-    {
-        id: 4,
-        title: "Accessories",
-    }
-]
-export const ListOfProducts = [
-    {
-        id: 1,
-        category: 'TV - Television',
-        img: 'https://www.lg.com/uk/images/tvs/md05601092/gallery/medium01_LH590U_20160810_XL.jpg',
-        brand: "LG",
-        model: '32LH590U',
-        description: 'Smart TV with webOS - Metallic Design - Virtual Surround',
-        price: 249.99
-    },
-    {
-        id: 2,
-        category: 'TV - Television',
-        img: 'https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/T/E/168958_1598204281.jpg',
-        brand: "HISENSE",
-        model: '42HJ10',
-        description: 'Resolution: 1366 X 768 - High Contrast Ratio - MAX Sound Output: 2 X 7W',
-        price: 489.49
-    },
-    {
-        id: 3,
-        category: 'TV - Television',
-        img: 'https://kweli.shop/wp-content/uploads/2021/02/Samsung-43-inch-Full-HD-Smart-TV-UA43T5300.png',
-        brand: "SAMSUNG",
-        model: 'UA43T5300',
-        description: 'Full HD Smart TV - Mobile-to-TV Mirror - Bluetooth - Free-to-air',
-        price: 569.89
-    },{
-        id: 4,
-        category: 'TV - Television',
-        img: 'https://res.cloudinary.com/cenergy-innovation-limited-head-office/image/fetch/c_scale,q_70,f_auto,h_740/https://d1dtruvuor2iuy.cloudfront.net/media/catalog/product/2/4/242319_y.jpg',
-        brand: "PANASONIC",
-        model: '50FS500T',
-        description: 'Super Bright Panel - 800 Hz BMR - Dynamic/Normal/True Cinema/Custom',
-        price: 789.89
-    },
-    {
-        id: 5,
-        category: 'TV - Television',
-        img: 'https://d2xamzlzrdbdbn.cloudfront.net/products/5def9b15-02d2-4a30-872d-c1aecc17115e22011049_416x416.jpg',
-        brand: 'OnePlus',
-        model: '55U1S',
-        description: '4K Ultra HD Smart Android LED TV - Hands-free voice control - Operating System Android',
-        price: 409.99
-    },
-    {
-        id: 6,
-        category: 'TV - Television',
-        img: 'https://www.nicepng.com/png/detail/363-3637276_lg-49lj5500-49-inch-full-hd-1080p-smart.png',
-        brand: "LG",
-        model: '49lj5500',
-        description: 'Full Hd 1080p Smart Led Tv - PNG picture material - Modify the image size according to your needs.',
-        price: 345.89
-    },
-    {
-        id: 7,
-        category: 'TV - Television',
-        img: 'https://kweli.shop/wp-content/uploads/2021/01/LG-43-inch-Smart-TV-Full-HD-webOS-Smart-TV-Built-in-WiFi-Free-to-air-Receiver-43LM6300_2.png',
-        brand: "LG",
-        model: '43pj3450',
-        description: 'Full Hd WebOS Tv - Smart Screen Watch TV - Images are clear and full of fine detail.',
-        price: 286.49
-    },
-    {
-        id: 8,
-        category: 'TV - Television',
-        img: 'https://cdn1.avstore.ro/qube/get/90w600h600/41db89e4746b7b4e2aa7de10d6d2bc35',
-        brand: "LG",
-        model: '52lj6500',
-        description: 'Full Hd 1080p Smart Led Tv - PNG picture material - Modify the image size according to your needs',
-        price: 567.49
-    },
-    {
-        id: 9,
-        category: 'Phones - Mobile',
-        img: 'https://cdn1.avstore.ro/qube/get/90w600h600/41db89e4746b7b4e2aa7de10d6d2bc35',
-        brand: "I-Phone",
-        model: '14',
-        description: 'Full Hd 1080p Smart Led Tv - PNG picture material - Modify the image size according to your needs',
-        price: 1299.49
-    },
-    {
-        id: 10,
-        category: 'Phones - Mobile',
-        img: 'https://www.howtoreset.org/wp-content/uploads/2022/09/samsung-galaxy-s20-fe-2022.jpg',
-        brand: "Samsung",
-        model: 'S20',
-        description: 'Full Hd 1080p Smart Led Tv - PNG picture material',
-        price: 1099.49
-    },
-]
 
 
 // PROJECTS
 export const projects = [
+    {
+        name: 'ScoreKeeper',
+        url: '/projects/scorekepper',
+        imagine: scorekepper_wall,
+        description: 'One practical, fun and educational project.'
+    },
     {
         name: 'E-Commerce',
         url: '/projects/e_commerce_store',

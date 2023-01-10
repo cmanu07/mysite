@@ -19,12 +19,12 @@
 
 #false .projects {
     background-image: url('../../Media/projects_wall.webp');
-    border-radius: 15px;
+    border-radius: 20px;
     scroll-behavior: smooth;
 }
 #true .projects {
     background-image: linear-gradient(108.08deg, #41436A 0.73%, #244D61 100%);
-    border-radius: 15px;
+    border-radius: 20px;
     scroll-behavior: smooth;
 }
 
@@ -70,7 +70,7 @@ a {
     align-items: center;
     padding: 1.4em 0.6em 0 0.6em;
     margin-bottom: 4%;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: var(--myGlassGrey);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
     overflow: hidden;

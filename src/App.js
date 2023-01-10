@@ -20,6 +20,7 @@ import GitHubAPI from './components/Projects/GitHub API/GitHubAPI';
 import TicTacToe from './components/Projects/TicTacToe/TicTacToe';
 import Contacts from './components/Projects/Contacts List/Contacts';
 import ECommerce from './components/Projects/ECommerce Store/ECommerce';
+import ScoreKepper from './components/Projects/ScoreKepper/ScoreKepper';
 
 import { ThemeContext } from './components/Contexts/ThemeContext';
 
@@ -43,7 +44,9 @@ const App = () => {
                   <Route path={'/projects/github_api'} element={<GitHubAPI/>}/>
                   <Route path={'/projects/tictactoe'} element={<TicTacToe/>}/>
                   <Route path={'/projects/contacts'} element={<Contacts/>}/>
-                  <Route path={'/projects/e_commerce_store/*'} element={<ECommerce/>}/>
+                  <Route path={'/projects/e_commerce_store'} element={<ECommerce/>}/>
+                  <Route path={'/projects/scorekepper'} element={<ScoreKepper
+                  />}/>
                 </Routes>
               <Footer/>
             </main>

@@ -1,25 +1,32 @@
+@media (width < 768px) {
+    /* #false .back-button, #true .back-button {
+        top: 1vh;
+        left: 3vw;
+    } */
+}
+
 #false .back-button {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     font-size: larger;
     background-color: var(--myGreen-hover);
     box-shadow: 3px 3px 5px var(--myBlackHeader);
     color: var(--myBlackGreen);
-    top: 18%;
-    left: 4%;
+    top: 14.8vh;
+    left: 3vw;
     border-radius: 10px;
     padding: 7px 10px;
     transition: .3s;
 }
 #true .back-button {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     font-size: larger;
     background-color: var(--myGreen-hover);
     box-shadow: 2px 2px 5px var(--myGreen-1);
     color: var(--myBlackGreen);
-    top: 18%;
-    left: 4%;
+    top: 14.8vh;
+    left: 3vw;
     border-radius: 10px;
     padding: 7px 10px;
     transition: .3s;

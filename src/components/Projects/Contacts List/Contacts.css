@@ -101,14 +101,14 @@
 .contacts-form-phone-input:focus,
 .contacts-form-email-input:focus {
     outline: none;
-    background-color: #75E2FF;
+    background-color: transparent;
 }
 .contacts-form-search-input, select, textarea,
 .contacts-form-firstName-input, select, textarea,
 .contacts-form-lastName-input, select, textarea,
 .contacts-form-phone-input, select, textarea,
 .contacts-form-email-input, select, textarea {
-    color: var(--myBlackGreen);
+    color: var(--myWhite);
 }
 .contacts-form-firstName-label,
 .contacts-form-lastName-label,
