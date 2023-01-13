@@ -1,4 +1,5 @@
 #false .show-date {
+    color: var(--myBlackGreen);
     width: 48%;
     display: flex;
     position: absolute;

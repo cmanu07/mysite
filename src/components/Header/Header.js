@@ -30,11 +30,12 @@ const Header = () => {
 
     
     useEffect(() => {
-        const closeMenu = (e) => {
-            if(e.path[0] !== toggleMenuButton.current)
-            setToggleMenu(toggleMenu);
-        }
-        document.body.addEventListener('click', closeMenu)
+        // const closeMenu = (e) => {
+        //     console.log(e.path[0])
+        //     if(e.path[0] !== toggleMenuButton.current)
+        //     setToggleMenu(toggleMenu);
+        // }
+        // document.body.addEventListener('click', closeMenu)
         
         const onScroll = () => {
             if (window.scrollY >= 15) {
@@ -44,7 +45,7 @@ const Header = () => {
         window.addEventListener('scroll', onScroll)
 
         return (
-            () => document.body.removeEventListener('click', closeMenu),
+            // () => document.body.removeEventListener('click', closeMenu),
             () => window.removeEventListener('scroll', onScroll)
         )
     })

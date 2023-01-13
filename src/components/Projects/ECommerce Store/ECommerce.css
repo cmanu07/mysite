@@ -5,12 +5,11 @@
 
 
 #false .e-commerce {
-    background-image: linear-gradient(108.08deg, #E55D87 0.53%, #5FC3E4 100%);
+    background-image: linear-gradient(108.08deg, #E55D87 0.53%, #5fc3e4 100%);
     width: 100%;
     height: 48em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     position: relative;
     border-radius: 20px;
@@ -21,16 +20,28 @@
     height: 48em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     position: relative;
+    border-radius: 20px;
+}
+.e-commerce div {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.e-commerce-spline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
 }
 #false .e-commerce-main {
     position: relative;
     background-color: rgb(227, 228, 230, 0.3);
     color: var(--myBlackGreen);
-    height: 33em;
+    height: 27em;
     width: 98%;
     display: flex;
     flex-direction: column;
@@ -39,8 +50,20 @@
     position: relative;
     background-color: rgb(46, 66, 78, 0.3);
     color: var(--myWhite);
-    height: 33em;
+    height: 27em;
     width: 98%;
     display: flex;
     flex-direction: column;
+}
+#false .e-commerce p {
+    text-align: center;
+    color: var(--myBlackGreen)
+}
+#true .e-commerce p {
+    text-align: center;
+    color: var(--myWhite)
+}
+.e-commerce p a {
+    color: var(--myGreen-3);
+    font-size: x-large;
 }

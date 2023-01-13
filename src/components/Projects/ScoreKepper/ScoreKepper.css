@@ -11,3 +11,11 @@
     border-radius: 20px;
     background-color: var(--myGreen-3);
 }
+#false .scorekepper-main p {
+    text-align: center;
+    color: var(--myBlackGreen)
+}
+#true .scorekepper-main p {
+    text-align: center;
+    color: var(--myWhite)
+}
