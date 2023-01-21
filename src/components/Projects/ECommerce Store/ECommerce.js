@@ -24,7 +24,7 @@ const E_Commerce = () => {
           loading ? <PropagateLoader 
                       style={{marginTop: '5em'}}
                       color={'#AECFA4'}
-                      // loading={loading}
+                      loading={loading}
                       size={20}
                     />
                   : ''

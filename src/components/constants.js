@@ -116,8 +116,21 @@ export const contactsList = [
         email: "muntica77@gmail.ro"
       }
 ]
-// E-COMMERCE PROJECT
 
+export const playersList = [
+    {
+        id: 1,
+        playerName: 'Player1',
+        rowColor: '#F8BC9A',
+        totalPointsNr: 0
+    },
+    {
+        id: 2,
+        playerName: 'Player2',
+        rowColor: '#F8D49A',
+        totalPointsNr: 0
+    }
+]
 
 // PROJECTS
 export const projects = [

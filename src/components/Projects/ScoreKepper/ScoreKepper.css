@@ -2,14 +2,20 @@
 #true .scorekepper-main {
     width: 100%;
     height: 44em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 20px;
     background-color: var(--myBlackGreen);
 }
 #false .scorekepper-main {
     width: 100%;
     height: 44em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 20px;
-    background-color: var(--myGreen-3);
+    background: #F4A261;
 }
 #false .scorekepper-main p {
     text-align: center;
@@ -18,4 +24,134 @@
 #true .scorekepper-main p {
     text-align: center;
     color: var(--myWhite)
+}
+
+.scorekepper-main main {
+    display: flex;
+    width: calc(100% - 2vw);
+    height: 30em;
+    overflow: scroll;
+    overflow: auto;
+}
+#false .scorekepper-main main table {
+    margin-top: 1.5em;
+    height: 90%;
+    color: var(--myBlackGreen);
+}
+#true .scorekepper-main main table {
+    margin-top: 1.5em;
+    height: 24em;
+    color: var(--myGreen-3);
+}
+#false .scorekepper-main main table p, #true .scorekepper-main main table p {
+    color: var(--myBlackGreen)
+}
+
+#false .scorekepper-main table tbody {
+    height: 2.8em;
+    width: 100%;
+    border-right: solid 2px var(--myBlackGreen);
+    border-bottom: solid 2px var(--myBlackGreen);
+}
+#true .scorekepper-main table tbody {
+    height: 2.8em;
+    width: 100%;
+    border-right: solid 2px var(--myGreen-3);
+    border-bottom: solid 2px var(--myGreen-3);
+}
+#false .scorekepper-main table thead {
+    height: 3em;
+    width: 100%;
+    background: #E76F51;
+}
+#true .scorekepper-main table thead {
+    height: 3em;
+    width: 100%;
+    background: #2A9D8F;
+}
+.scorekepper-main table thead tr {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 0.2em;
+}
+
+.table-head-row {
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(12px + 0.2vw);
+    padding: 0 0.3em;
+}
+.table-head-row-div, .table-head-row-p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.table-head-row-p {
+    justify-content: space-around;
+}
+.table-body-row {
+    width: 100%;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    font-size: calc(12px + 0.2vw);
+    padding: 0;
+    gap: 0.2em;
+}
+.table-body-row-header {
+    background: var(--myGreen-3);
+}
+.table-body-row td {
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.table-head-row form {
+    display: flex;
+}
+.table-head-row-add {
+    width: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.3em;
+}
+.table-head-row input {
+    width: 70%;
+    background: transparent;
+    border: none;
+    color: var(--myBlackGreen);
+    font-size: large;
+}
+.table-head-row div {
+    display: flex;
+}
+.table-head-row button {
+    background: transparent;
+    width: 1.9rem;
+    margin-left: 0.5em;
+    border: none;
+    transition: all ease .3s;
+}
+.table-head-row button:hover {
+    cursor: pointer;
+    background: #E76F51;
+}
+.table-head-row-add-button {
+    height: 3em;
+    width: 100%;
+    background: var(--myGreen-3);
+    border: none;
+    transition: all ease .3s;
+}
+.table-head-row-add-button:hover {
+    cursor: pointer;
+    background: var(--myGreen-2);
 }

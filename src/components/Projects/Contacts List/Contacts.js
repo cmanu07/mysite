@@ -18,7 +18,10 @@ const Contacts = () => {
     const [popupAddButton, setPopupAddButton] = useState(() => false)
     const [popupSaveButton, setPopupSaveButton] = useState(() => false)
     const [popupDeleteButton, setPopupDeleteButton] = useState(() => false)
-    const [contacts, setContacts] = useState(() => contactsList)
+    const [contacts, setContacts] = useState(() => {
+        const initValue = JSON.parse(localStorage.getItem('contacts'))
+        return initValue || contactsList
+    })
     const [editContact, setEditContact] = useState(null)
     const [addFormData, setAddFormData] = useState({
         firstName: "",

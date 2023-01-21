@@ -67,7 +67,7 @@ h1 img {
     position: sticky;
     top: 0;
     transition: 0.4s;
-    z-index: 1;
+    z-index: 4;
 }
 #false .header-on {
     background-color: var(--myHeaderGreen);
@@ -81,7 +81,7 @@ h1 img {
     position: sticky;
     top: 0;
     transition: 0.4s;
-    z-index: 1;
+    z-index: 4;
 }
 #true .header {
     background-color: var(--myBlackGreen);
@@ -95,7 +95,7 @@ h1 img {
     position: sticky;
     top: 0;
     transition: 0.4s;
-    z-index: 1;
+    z-index: 4;
 }
 #true .header-on {
     background-color: var(--myBlackHeader);
@@ -110,7 +110,7 @@ h1 img {
     position: sticky;
     top: 0;
     transition: 0.4s;
-    z-index: 1;
+    z-index: 4;
 }
 
 #false .navbar {
