@@ -119,16 +119,16 @@ export const contactsList = [
 
 export const playersList = [
     {
-        id: 1,
-        playerName: 'Player1',
-        rowColor: '#F8BC9A',
-        totalPointsNr: 0
+        playerName: 'Player 1',
+        rowColor: '#BDC65B',
+        playerRoundScore: '',
+        totalScore: 0
     },
     {
-        id: 2,
-        playerName: 'Player2',
+        playerName: 'Player 2',
         rowColor: '#F8D49A',
-        totalPointsNr: 0
+        playerRoundScore: '',
+        totalScore: 0
     }
 ]
 

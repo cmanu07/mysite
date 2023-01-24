@@ -1,12 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import BackButton from '../../Main/BackButton/BackButton'
+import PlayerCol from './PlayerCol';
 
 import EditIcon from '@mui/icons-material/Edit';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
+import { motion } from 'framer-motion'
+
 import './ScoreKepper.css'
 
 import { playersList } from '../../constants'
@@ -15,37 +18,44 @@ const ScoreKepper = () => {
 
   const [players, setPlayers] = useState(() => {
     const initValue = JSON.parse(localStorage.getItem('players-list'))
-    return initValue || playersList
+    return initValue || playersList.map((player, index) => ({...player, id: index + 1, rowColor: index % 2 !== 0 ? '#F8D49A' : '#BDC65B'}))
   })
-  const [nrOfPlayers, setNrOfPlayers] = useState(() => 2)
+  const [nrOfPlayers, setNrOfPlayers] = useState(() => players.length)
+  // const [playerRoundScore, setPlayerRoundScore] = useState(() => 0)
   const [idPlayerToEdit, setIdPlayerToEdit] = useState(() => null)
-  const [addPlayer, setAddPlayer] = useState({
-        id: '',
-        playerName: '',
-        rowColor: '',
-        totalPointsNr: ''
-  })
   const [editPlayerName, setEditPlayerName] = useState({
         id: '',
         playerName: '',
         rowColor: '',
-        totalPointsNr: ''
+        playerRoundScore: '',
+        totalScore: ''
   })
-  const playerNameInputRef = useRef(null)
+  const [idPlayerScoreToEdit, setIdPlayerScoreToEdit] = useState(() => null)
+  const [editPlayerScore, setEditPlayerScore] = useState({
+      id: '',
+      playerName: '',
+      rowColor: '',
+      playerRoundScore: '',
+      totalScore: ''
+  })
+
+  const [rounds, setRounds] = useState(() => [{roundId: 1, roundName: 'Round 1', playerRoundScore: ''}, {roundId: 2, roundName: 'Round 2', playerRoundScore: ''}])
+  const [roundToEdit, setRoundToEdit] = useState(() => null)
+
 
   const handleAddPlayer = (e) => {
     e.preventDefault()
     if (players.length === 10) return
-    const newPlayer = {
-        id: players.length + 1,
-        playerName: addPlayer.playerName,
-        rowColor: players.length % 2 !== 0 ? '#F8D49A' : '#F8BC9A',
-        totalPointsNr: 0
+    let newPlayer = {
+      playerName: `Player ${nrOfPlayers + 1}`,
+      rowColor: '',
+      playerRoundScore: '',
+      totalScore: 0,
+      id: nrOfPlayers + 1
     }
     const newPlayersList = [...players, newPlayer]
-    setPlayers(newPlayersList)
+    setPlayers(newPlayersList.map((player, index) => ({...player, rowColor: index % 2 !== 0 ? '#F8D49A' : '#BDC65B',id: index + 1})))
   }
-
   const handleEditFunction = (e, player) => {
     e.preventDefault()
     setIdPlayerToEdit(player.id)
@@ -65,10 +75,11 @@ const ScoreKepper = () => {
   const saveEditedPlayerName = (e) => {
     e.preventDefault()
     const editedPN = {
-      id: idPlayerToEdit,
       playerName: editPlayerName.playerName,
-      rowColor: idPlayerToEdit % 2 === 0 ? '#F8D49A' : '#F8BC9A',
-      totalPointsNr: 0
+      rowColor: idPlayerToEdit % 2 === 0 ? '#F8D49A' : '#BDC65B',
+      playerRoundScore: '',
+      totalScore: 0,
+      id: idPlayerToEdit
     }
     const newPlayerList = [...players]
     const index = players.findIndex(player => player.id === idPlayerToEdit)
@@ -83,10 +94,61 @@ const ScoreKepper = () => {
     const newPlayerList = [...players]
     const index = players.findIndex(player => player.id === playerID)
     newPlayerList.splice(index, 1)
-    setPlayers(newPlayerList)
+    setPlayers(newPlayerList.map((player, index) => ({...player, rowColor: index % 2 !== 0 ? '#F8D49A' : '#BDC65B',id: index + 1})))
+  }
+
+  const handleEditRowScore = (e, round) => {
+    e.preventDefault()
+    setRoundToEdit(round.roundId)
+  }
+  const handleEditedPlayerScore = (e, player) => {
+    e.preventDefault()
+    setIdPlayerScoreToEdit(player.id)
+    const fieldName = e.target.getAttribute('name')
+    const fieldValue = e.target.value
+    const newScore = {...editPlayerScore}
+    newScore[fieldName] = +fieldValue
+    setEditPlayerScore(newScore)
+  }
+  const handleSavePlayerScore = (e, player, round) => {
+    e.preventDefault()
+    const editedPS = {
+      playerName: player.playerName,
+      rowColor: player.rowColor,
+      playerRoundScore: editPlayerScore.playerRoundScore,
+      totalScore: player.totalScore + editPlayerScore.playerRoundScore,
+      id: idPlayerScoreToEdit
+    }
+    const newPlayerList = [...players]
+    const index = players.findIndex(player => player.id === idPlayerScoreToEdit)
+    newPlayerList[index] = editedPS
+    if (round.roundId === roundToEdit) {
+      setPlayers(newPlayerList)
+      const editedRound = {
+        roundId: roundToEdit,
+        roundName: `Round ${roundToEdit}`,
+        playerRoundScore: editPlayerScore.playerRoundScore
+      }
+      const newRoundsList = [...rounds]
+      const index = rounds.findIndex(round => round.roundId === roundToEdit)
+      newRoundsList[index] = editedRound
+      setRounds(newRoundsList)
+    }
+    if (newPlayerList.every(({playerRoundScore}) => typeof playerRoundScore === 'number')) {
+      const newRound = {
+        roundId: rounds.length + 1,
+        roundName: `Round ${rounds.length + 1}`,
+        playerRoundScore: ''
+      }
+      const newRoundsList = [...rounds, newRound]
+      setRounds(newRoundsList)
+      setRoundToEdit(null)
+      setPlayers(newPlayerList.map(player => ({...player, playerRoundScore: ''})))
+    }
   }
 
   useEffect(() => {
+    setNrOfPlayers(players.length)
     localStorage.setItem('players-list', JSON.stringify(players))
   }, [players])
 
@@ -99,13 +161,15 @@ const ScoreKepper = () => {
           <table>
             <thead>
               <tr>
-                <th className='table-head-row'>Round / Players</th>
+                <th className='table-head-row'>Rounds / Players</th>
                 {
                   players ? players.sort((a,b) => {
-                    return b.totalPointsNr - a.totalPointsNr
+                    return b.totalScore - a.totalScore
                   })
                   .map(player => {
-                    return  <th className='table-head-row' style={{backgroundColor: `${player.rowColor}`}} key={player.id}>
+                    return  <motion.th className='table-head-row' style={{backgroundColor: `${player.rowColor}`}} key={player.id}
+                                        initial={{x:'-200px'}} animate={{x: 0}} transition={{type: 'spring', duration: 0.5}}
+                            >
                                 {
                                   idPlayerToEdit !== player.id ?
                                   <>
@@ -116,15 +180,12 @@ const ScoreKepper = () => {
                                         <button type='button' onClick={() => handleDeleteFunction(player.id)}><DeleteIcon style={{color: '#FE8C8C'}}/></button>
                                       </div>
                                     </div>
-                                    <p className='table-head-row-p'>Total: <span>{player.totalPointsNr} pts</span></p>
+                                    <p className='table-head-row-p'>Total: <span>{player.totalScore} pts</span></p>
                                   </>                          :
                                   <form onSubmit={saveEditedPlayerName}>
-                                    <input type='text'
-                                          value={editPlayerName.playerName}
-                                          name='playerName'
-                                          onChange={handleEditedPlayerName}
-                                          required='required'
-                                          ref={playerNameInputRef}
+                                    <PlayerCol
+                                      editPlayerName={editPlayerName}
+                                      handleEditedPlayerName={handleEditedPlayerName}
                                     />
                                     <div>
                                       <button type='submit'><CheckIcon/></button>
@@ -132,27 +193,51 @@ const ScoreKepper = () => {
                                     </div>
                                   </form>
                                 }
-                            </th>
+                            </motion.th>
                   })      : ''
                 }
-                <th className='table-head-row-add'>
-                  <button className='table-head-row-add-button' onClick={handleAddPlayer}><AddIcon/></button>
-                </th>
+                {
+                  players.length === 10 ? '' :
+                                    <th className='table-head-row-add'>
+                                        <button className='table-head-row-add-button' onClick={handleAddPlayer}><AddIcon/></button>
+                                    </th>
+                }
               </tr>
             </thead>
+
+
             <tbody>
-              {/* {
-                
-              }
-              <tr className='table-body-row'>
-                <td>
-                  <button className='table-body-row-add-button'><AddIcon/></button>
-                </td>
-              </tr> */}
-              <tr className='table-body-row'>
-                <td className='table-body-row-header'>Round 1</td>
-                <td>43</td>
-              </tr>
+                    {
+                      rounds ? rounds.map((round) => {
+                        return <tr className='table-body-row' key={round.roundId}>
+                                <td className='table-body-row-header'>
+                                    {round.roundName}
+                                    {
+                                      round.roundId === rounds.length ? 
+                                                <button type='button' onClick={e => handleEditRowScore(e,round)}><EditIcon/></button>
+                                                                    : ''
+                                    }
+                                </td>
+                                {
+                                  nrOfPlayers ? players.map(scoreInput => {
+                                    return <td key={scoreInput.id}>
+                                              {
+                                                typeof scoreInput.playerRoundScore === 'string' && roundToEdit === round.roundId ? 
+                                                    <form onSubmit={(e) => handleSavePlayerScore(e, scoreInput, round)}>
+                                                      <input type='number'
+                                                              name='playerRoundScore'
+                                                              value={editPlayerScore.rScore}
+                                                              onChange={e => handleEditedPlayerScore(e, scoreInput)}
+                                                      />
+                                                    </form>                        :
+                                                        <p>{round.playerRoundScore}</p>
+                                              }
+                                            </td>
+                                  })          : ''
+                                }
+                              </tr>
+                      })      : ''
+                    }                
             </tbody>
           </table>
         </main>
