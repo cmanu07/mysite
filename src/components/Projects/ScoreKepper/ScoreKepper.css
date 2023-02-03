@@ -191,11 +191,17 @@
     padding: 0;
     gap: 0.2em;
 }
-.table-body-row-round {
-    width: 10.2rem;
+#false .table-body-row-round {
+    width: 10rem;
     height: 2.8rem;
     margin-top: 0.2em;
     border-bottom: 2px solid var(--myBlackGreen);
+}
+#true .table-body-row-round {
+    width: 10rem;
+    height: 2.8rem;
+    margin-top: 0.2em;
+    border-bottom: 2px solid var(--myGreen-2);
 }
 #false .table-body-row-round p {
     background: var(--myHeaderGreen2);
@@ -229,6 +235,7 @@
 #false .table-body-row td {
     width: 10rem;
     height: 100%;
+    margin-top: 0.2em;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -237,6 +244,7 @@
 #true .table-body-row td {
     width: 10rem;
     height: 100%;
+    margin-top: 0.2em;
     display: flex;
     align-items: center;
     justify-content: space-around;

@@ -57,7 +57,7 @@ const ScoreKepper = () => {
     let newPlayer = {
       playerName: `Player ${nrOfPlayers + 1}`,
       rowColor: '',
-      playerRoundScore: players.length === 1 ? [''] : Array.from(Array(players.length).keys()).fill('', 0, players.length),
+      playerRoundScore: players.length === 1 ? [''] : Array.from(Array(rounds.length).keys()).fill('', 0, rounds.length),
       totalScore: 0,
       id: nrOfPlayers + 1
     }
@@ -110,6 +110,13 @@ const ScoreKepper = () => {
   const handleClearRounds = (e) => {
     e.preventDefault()
     setClearRoundsPopup(true)
+    setEditPlayerScore({
+      id: '',
+      playerName: '',
+      rowColor: '',
+      playerRoundScore: [''],
+      totalScore: ''
+    })
   }
   const handleEditRowScore = (e, round) => {
     e.preventDefault()
