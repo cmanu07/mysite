@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    background: #F4A261;
+    background: linear-gradient(108.08deg, #654EA3 0.53%, #EAAFC8 100%);;
 }
 #false .scorekepper-main p {
     text-align: center;
@@ -48,24 +48,24 @@
 }
 
 #false .scorekepper-main table tbody {
-    height: 2.8em;
+    height: 2em;
     width: 100%;
     border-right: solid 2px var(--myBlackGreen);
     border-bottom: solid 2px var(--myBlackGreen);
 }
 #true .scorekepper-main table tbody {
-    height: 2.8em;
+    height: 2em;
     width: 100%;
     border-right: solid 2px var(--myGreen-3);
     border-bottom: solid 2px var(--myGreen-3);
 }
 #false .scorekepper-main table thead {
-    height: 3.2em;
+    height: 3.6em;
     width: 100%;
-    background: #E76F51;
+    background: #F4A261;
 }
 #true .scorekepper-main table thead {
-    height: 3.2em;
+    height: 3.6em;
     width: 100%;
     background: #2A9D8F;
 }
@@ -94,24 +94,124 @@
 .table-head-row-p {
     justify-content: space-around;
 }
+.table-head-row form {
+    display: flex;
+}
+.table-head-row-add {
+    width: 4.4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.3em;
+}
+.table-head-row input {
+    width: 70%;
+    background: transparent;
+    border: none;
+    color: var(--myBlackGreen);
+    font-size: large;
+}
+.table-head-row div {
+    display: flex;
+}
+.table-head-row button {
+    background: transparent;
+    width: 1.9rem;
+    height: 1.8rem;
+    margin-left: 0.5em;
+    color: var(--myBlackGreen);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .3s;
+}
+.table-head-row button:hover {
+    cursor: pointer;
+    background: #E76F51;
+}
+.table-head-row-add-button {
+    height: 3em;
+    width: 100%;
+    background: var(--myGreen-3);
+    border: none;
+    color: var(--myBlackGreen);
+    transition: all ease .3s;
+}
+.table-head-row-add-button:hover {
+    cursor: pointer;
+    background: var(--myGreen-2);
+}
+.table-head-row-div-button {
+    color: #D7415D;
+    transition: all ease .3s;
+}
+.table-head-row-div-button:hover {
+    color: var(--myBlackGreen);
+}
+.table-head-row-header {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table-head-row-header div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.table-head-row-header button {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #D7415D;
+    background: transparent;
+    transition: all ease .3s;
+}
+.table-head-row-header button:hover {
+    cursor: pointer;
+    background: #E76F51;
+    color: var(--myBlackGreen);
+}
+.table-head-row-header-p {
+    font-size: smaller;
+}
 .table-body-row {
     width: 100%;
-    height: 2.5em;
+    height: 2.8rem;
     display: flex;
     align-items: center;
     font-size: calc(12px + 0.4vw);
     padding: 0;
     gap: 0.2em;
 }
-#false .table-body-row-header {
-    background: var(--myHeaderGreen2);
+.table-body-row-round {
+    width: 10.2rem;
+    height: 2.8rem;
+    margin-top: 0.2em;
     border-bottom: 2px solid var(--myBlackGreen);
 }
-#true .table-body-row-header {
+#false .table-body-row-round p {
     background: var(--myHeaderGreen2);
-    border-bottom: 2px solid var(--myGreen-2);
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.table-body-row-header button {
+#true .table-body-row-round p {
+    background: var(--myHeaderGreen2);
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.table-body-row-round p button {
     border: none;
     background: transparent;
     width: 1.9rem;
@@ -121,10 +221,11 @@
     align-items: center;
     justify-content: center;
 }
-.table-body-row-header button:hover {
+.table-body-row-round p button:hover {
     cursor: pointer;
     background: #E76F51;
 }
+
 #false .table-body-row td {
     width: 10rem;
     height: 100%;
@@ -155,50 +256,4 @@
 }
 .table-body-row input:focus {
     text-align: center;
-}
-.table-head-row form {
-    display: flex;
-}
-.table-head-row-add {
-    width: 4.4em;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 0.3em;
-}
-.table-head-row input {
-    width: 70%;
-    background: transparent;
-    border: none;
-    color: var(--myBlackGreen);
-    font-size: large;
-}
-.table-head-row div {
-    display: flex;
-}
-.table-head-row button {
-    background: transparent;
-    width: 1.9rem;
-    height: 1.8rem;
-    margin-left: 0.5em;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all ease .3s;
-}
-.table-head-row button:hover {
-    cursor: pointer;
-    background: #E76F51;
-}
-.table-head-row-add-button {
-    height: 3em;
-    width: 100%;
-    background: var(--myGreen-3);
-    border: none;
-    transition: all ease .3s;
-}
-.table-head-row-add-button:hover {
-    cursor: pointer;
-    background: var(--myGreen-2);
 }

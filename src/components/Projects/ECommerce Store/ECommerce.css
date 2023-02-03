@@ -31,6 +31,18 @@
     align-items: center;
     justify-content: center;
 }
+#false .e-commerce-3d-icon {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: var(--myBlackGreen);
+}
+#true .e-commerce-3d-icon {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: var(--myGreen-2);
+}
 .e-commerce-spline {
     position: absolute;
     width: 100%;

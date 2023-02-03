@@ -121,13 +121,13 @@ export const playersList = [
     {
         playerName: 'Player 1',
         rowColor: '#BDC65B',
-        playerRoundScore: '',
+        playerRoundScore: [''],
         totalScore: 0
     },
     {
         playerName: 'Player 2',
         rowColor: '#F8D49A',
-        playerRoundScore: '',
+        playerRoundScore: [''],
         totalScore: 0
     }
 ]

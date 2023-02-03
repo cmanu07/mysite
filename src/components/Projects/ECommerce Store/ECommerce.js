@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ThreeDRotationIcon from '@mui/icons-material/ThreeDRotation';
 import Spline from '@splinetool/react-spline';
 import PropagateLoader from 'react-spinners/PropagateLoader';
 
@@ -16,6 +17,7 @@ const E_Commerce = () => {
               scene="https://prod.spline.design/rFOCt4DBPNRtzXLq/scene.splinecode"
       />
       <div>
+        <ThreeDRotationIcon className='e-commerce-3d-icon' sx={{fontSize: 46}}/>
         <h2>E-Commerce Store</h2>
         <BackButton/>
         <p>This project is under construction at this time...</p>
