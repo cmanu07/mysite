@@ -189,7 +189,7 @@ const ScoreKepper = () => {
       emptyCacheStorage()
     }
     setClearRoundsPopupResponse(0)
-  }, [players, rounds, clearRoundsPopupResponse])
+  }, [players, rounds, clearRoundsPopupResponse, emptyCacheStorage])
 
   return (
     <section className='scorekepper-main'>
