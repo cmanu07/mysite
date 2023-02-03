@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useClearCache } from 'react-clear-cache';
 
 import BackButton from '../../Main/BackButton/BackButton'
 import PlayerCol from './PlayerCol';
@@ -49,6 +50,7 @@ const ScoreKepper = () => {
       totalScore: ''
   })
   const [roundToEdit, setRoundToEdit] = useState(() => null)
+  const { emptyCacheStorage } = useClearCache()
 
 // edit, delete and add players functions
   const handleAddPlayer = (e) => {
@@ -184,6 +186,7 @@ const ScoreKepper = () => {
     if (clearRoundsPopupResponse === 1) {
       setRounds([{roundId: 1, roundName: 'Round 1'}])
       setPlayers(players.map(player => ({...player, playerRoundScore: [''], totalScore: 0})))
+      emptyCacheStorage()
     }
     setClearRoundsPopupResponse(0)
   }, [players, rounds, clearRoundsPopupResponse])
