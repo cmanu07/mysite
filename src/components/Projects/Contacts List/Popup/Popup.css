@@ -34,9 +34,10 @@
 .popup-main h5 {
     font-size: 24px;
 }
-.popup-main div {
-    width: 7em;
-    height: 7em;
+.popup-main-animation {
+    margin-top: 1rem;
+    width: 5rem;
+    height: 5rem;
     border: none;
 }
 .popup-close-button {

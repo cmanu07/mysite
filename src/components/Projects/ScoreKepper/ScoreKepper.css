@@ -60,12 +60,12 @@
     border-bottom: solid 2px var(--myGreen-3);
 }
 #false .scorekepper-main table thead {
-    height: 3.6em;
+    height: 3.8em;
     width: 100%;
     background: #F4A261;
 }
 #true .scorekepper-main table thead {
-    height: 3.6em;
+    height: 3.8em;
     width: 100%;
     background: #2A9D8F;
 }
@@ -81,8 +81,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: calc(12px + 0.35vw);
+    justify-content: space-around;
+    font-size: calc(12px + 0.36vw);
     padding: 0 0.3em;
 }
 .table-head-row-div, .table-head-row-p {
@@ -151,9 +151,13 @@
 }
 .table-head-row-header {
     width: 10rem;
+    position: sticky;
+    left: -1.5%;
+    background: #F4A261;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .3s ease;
 }
 .table-head-row-header div {
     width: 50%;
@@ -192,16 +196,24 @@
     gap: 0.2em;
 }
 #false .table-body-row-round {
+    position: sticky;
+    left: -2%;
+    z-index: 1;
     width: 10rem;
     height: 2.8rem;
     margin-top: 0.2em;
     border-bottom: 2px solid var(--myBlackGreen);
+    transition: all .3s ease;
 }
 #true .table-body-row-round {
+    position: sticky;
+    left: -2%;
+    z-index: 1;
     width: 10rem;
     height: 2.8rem;
     margin-top: 0.2em;
     border-bottom: 2px solid var(--myGreen-2);
+    transition: all .3s ease;
 }
 #false .table-body-row-round p {
     background: var(--myHeaderGreen2);

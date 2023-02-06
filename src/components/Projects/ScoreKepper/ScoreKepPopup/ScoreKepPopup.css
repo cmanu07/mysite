@@ -1,10 +1,10 @@
 @media (width < 786px) {
-    .popup-main {
+    .score-keep-popup-main {
         max-width: calc(100% - 4em);
     }
 }
 
-.popup {
+.score-keep-popup {
     position: fixed;
     z-index: 3;
     top: 0;
@@ -18,7 +18,7 @@
     align-items: center;
     transition: 0.3s;
 }
-.popup-main {
+.score-keep-popup-main {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -31,12 +31,12 @@
     background-color: var(--myDarkBlue);
     color: var(--myWhite);
 }
-.popup-main h5 {
+.score-keep-popup-main h5 {
     height: 2em;
     font-size: 24px;
     text-align: center;
 }
-.popup-main div {
+.score-keep-popup-main div {
     width: 18em;
     height: 3em;
     border: none;
@@ -44,7 +44,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.popup-main-yes-button, .popup-main-no-button {
+.score-keep-popup-main-yes-button, .score-keep-popup-main-no-button {
     border: none;
     height: 70%;
     width: 6rem;
@@ -54,18 +54,13 @@
     border-radius: 20px;
     transition: all ease .3s;
 }
-.popup-main-yes-button {
+.score-keep-popup-main-yes-button {
     background: #D7415D;
 }
-.popup-main-no-button {
+.score-keep-popup-main-no-button {
     background: var(--myGreen-1);
 }
-.popup-main-yes-button:hover, .popup-main-no-button:hover {
+.score-keep-popup-main-yes-button:hover, .score-keep-popup-main-no-button:hover {
     cursor: pointer;
     opacity: 0.7;
-}
-.popup-close-button {
-    position: absolute;
-    top: 1em;
-    right: 1em;
 }

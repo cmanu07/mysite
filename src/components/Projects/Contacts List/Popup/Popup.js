@@ -13,7 +13,7 @@ const Popup = (props) => {
     <section className='popup'>
         <div className='popup-main'>
             <h5>{ props.popupText }</h5>
-            <div>{ props.popupAnimation }</div>
+            <div className='popup-main-animation'>{ props.popupAnimation }</div>
         </div>
     </section>
   ) : ""
