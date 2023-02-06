@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useClearCache } from 'react-clear-cache';
 
 import BackButton from '../../Main/BackButton/BackButton'
 import PlayerCol from './PlayerCol';
@@ -15,7 +14,7 @@ import { motion } from 'framer-motion'
 
 import './ScoreKepper.css'
 
-import { playersList } from '../../constants'
+import { playersList } from '../../scoreKeeper'
 
 const ScoreKepper = () => {
 
@@ -50,7 +49,6 @@ const ScoreKepper = () => {
       totalScore: ''
   })
   const [roundToEdit, setRoundToEdit] = useState(() => null)
-  const { emptyCacheStorage } = useClearCache()
 
 // edit, delete and add players functions
   const handleAddPlayer = (e) => {
@@ -186,10 +184,9 @@ const ScoreKepper = () => {
     if (clearRoundsPopupResponse === 1) {
       setRounds([{roundId: 1, roundName: 'Round 1'}])
       setPlayers(players.map(player => ({...player, playerRoundScore: [''], totalScore: 0})))
-      emptyCacheStorage()
     }
     setClearRoundsPopupResponse(0)
-  }, [players, rounds, clearRoundsPopupResponse, emptyCacheStorage])
+  }, [players, rounds, clearRoundsPopupResponse])
 
   return (
     <section className='scorekepper-main'>
