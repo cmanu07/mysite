@@ -10,6 +10,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
+
 import { motion } from 'framer-motion'
 
 import './ScoreKepper.css'
@@ -20,6 +22,7 @@ const ScoreKepper = () => {
 
   const [clearRoundsPopup, setClearRoundsPopup] = useState(false)
   const [clearRoundsPopupResponse, setClearRoundsPopupResponse] = useState('')
+  const [sortScore, setSortScore] = useState(() => false)
   const [players, setPlayers] = useState(() => {
     const initValue = JSON.parse(localStorage.getItem('players-list'))
     return initValue || playersList.map((player, index) => ({...player,
@@ -176,6 +179,7 @@ const ScoreKepper = () => {
     }
   }
 
+
   
   useEffect(() => {
     setNrOfPlayers(players.length)
@@ -202,18 +206,21 @@ const ScoreKepper = () => {
             <thead>
               <tr>
                 <th className='table-head-row-header'>
-                  <div>
+                  <div className='table-head-row-header-div'>
                     <p>Rounds</p>
-                    <button onClick={handleClearRounds}><CleaningServicesIcon/></button>
+                    <div className='table-head-row-header-rounds-but'>
+                      <button onClick={handleClearRounds} title="Clear rounds"><CleaningServicesIcon/></button>
+                      <button onClick={() => setSortScore(!sortScore)} title="Sort score"><SwapHorizIcon/></button>
+                    </div>
                   </div>
-                  <div>
+                  <div className='table-head-row-header-div'>
                     <p>Players</p>
                     <p className='table-head-row-header-p'>(Max 10 players)</p>
                   </div>
                 </th>
                 {
                   players ? players.sort((a,b) => {
-                    return b.totalScore - a.totalScore
+                    return sortScore ? b.totalScore - a.totalScore : a.totalScore - b.totalScore
                   })
                   .map(player => {
                     return  <motion.th className='table-head-row' scope='col' style={{backgroundColor: `${player.rowColor}`}} key={player.id}

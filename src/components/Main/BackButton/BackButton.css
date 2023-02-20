@@ -7,7 +7,7 @@
 
 #false .back-button {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     font-size: larger;
     background-color: var(--myGreen-hover);
     box-shadow: 3px 3px 5px var(--myBlackHeader);
@@ -20,7 +20,7 @@
 }
 #true .back-button {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     font-size: larger;
     background-color: var(--myGreen-hover);
     box-shadow: 2px 2px 5px var(--myGreen-1);
