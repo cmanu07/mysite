@@ -61,5 +61,5 @@
 }
 .cv img {
     height: 72%;
-    aspect-ratio: 1 / 1.4;
+    width: calc(100% - 32px);
 }
