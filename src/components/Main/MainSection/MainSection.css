@@ -98,18 +98,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: clamp(94vw, 20rem, 100%);
 }
 .main-bg-2 img {
-    width: 40%;
+    width: clamp(180px, 40%, 600px);
     padding-left: 6%;
 }
 .main-bg-3 img {
-    width: 20%;
+    width: clamp(140px, 18%, 460px);
     padding-right: 6%;
 }
 #false .main-bg-3 {
     width: 100%;
-    height: 35em;
+    height: 40em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,7 +119,7 @@
 }
 #true .main-bg-3 {
     width: 100%;
-    height: 35em;
+    height: 40em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,12 +131,12 @@
     width: 85%;
     font-size: 1.47em;
     font-weight: lighter;
-    margin: 0.5em 2em;
+    margin: 1em;
 }
 #true .main-bg-2 h5, #true .main-bg-3 h5 {
     color: var(--myGreen-hover);
     width: 85%;
     font-size: 1.47em;
     font-weight: lighter;
-    margin: 0.5em 2em;
+    margin: 1em;
 }

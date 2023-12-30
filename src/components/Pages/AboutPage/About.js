@@ -44,7 +44,7 @@ export default function About () {
             <div className="about-main-3">
                 <div>
                     <p>
-                        I'm skilled in HTML, CSS, JavaScript, also BootStrap and React libraries. I also have knowledge in backend with PHP and MySQL.
+                        I'm skilled in HTML, CSS, JavaScript, also BootStrap and React libraries. I also have knowledge in backend with PHP and SQL.
                     </p>
                 </div>
                 <div>

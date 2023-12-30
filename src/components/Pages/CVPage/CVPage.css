@@ -61,5 +61,5 @@
 }
 .cv img {
     height: 72%;
-    width: calc(100% - 32px);
+    width: clamp(60px, 94%, 60rem);
 }
