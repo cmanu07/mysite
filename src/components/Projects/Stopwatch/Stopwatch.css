@@ -1,8 +1,7 @@
 
 /* STOPWATCH */
 
-@media (max-width: 768px) {
-    
+@media (max-width: 768px) {   
     .minutes, .seconds, .tens {
        width: 180em;
     }
@@ -17,6 +16,7 @@
     padding-bottom: 5em;
     border-radius: 20px;
     height: 44em;
+    min-height: 65vh;
 }
 #true .stopwatch {
     position: relative;
@@ -26,6 +26,7 @@
     padding-bottom: 5em;
     border-radius: 20px;
     height: 44em;
+    min-height: 65vh;
 }
 #false .stopwatch h2 {
     text-align: center;

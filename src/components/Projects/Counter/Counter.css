@@ -63,21 +63,26 @@
 }
 .danger {
     background-color: var(--myRed);
+    min-height: 65vh;
 }
 #false .default {
     background-color: var(--myGreen-3);
+    min-height: 65vh;
 }
 #true .default {
     background-color: var(--myBlackGreen);
+    min-height: 65vh;
 }
 .middle {
     background-color: var(--myYellow);
+    min-height: 65vh;
 }
 .default, .danger, .middle {
     position: relative;
     transition: .3s;
     border-radius: 20px;
     height: 44em;
+    min-height: 65vh;
 }
 #false .counter-title {
     color: var(--myBlackGreen);

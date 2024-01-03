@@ -17,11 +17,7 @@
     transition: .3s;
     background-image: linear-gradient(to bottom right, var(--myGreen-1), var(--myGreen-3));
     box-shadow: 3px 3px 3px var(--myBlackHeader);
-}
-#false .main-bg-about-click, #true .main-bg-about-click {
-    color: var(--myBlackGreen);
-    box-shadow: none;
-    transition: .3s;
+    z-index: 1;
 }
 #true .main-bg-about, #true .main-bg-about-click {
     margin: 5% 0 2% 0;
@@ -36,6 +32,13 @@
     transition: .3s;
     background-image: linear-gradient(to bottom right, var(--myBlackGreen), var(--myGreen-1));
     box-shadow: 3px 3px 3px var(--myBlackHeader);
+    z-index: 1;
+}
+#false .main-bg-about-click, #true .main-bg-about-click {
+    color: var(--myBlackGreen);
+    box-shadow: none;
+    transition: .3s;
+    z-index: 1;
 }
 #false .main-bg-about2, #false .main-bg-about2-click {
     margin: 5% 0 10% 0;

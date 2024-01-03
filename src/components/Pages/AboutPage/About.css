@@ -69,8 +69,12 @@
 .about-main-1, .about-main-2 {
     display: flex;
     height: 20%;
+    justify-content: center;
     align-items: center;
     margin: 2em 0;
+}
+.about-main-1 img, .about-main-2 img {
+    width: clamp(6em, 58%, 16em);
 }
 .about-main-3 {
     display: flex;

@@ -1,13 +1,9 @@
 
-@media (width < 768px) {
-    
-}
-
-
 #false .e-commerce {
     background-image: linear-gradient(108.08deg, #E55D87 0.53%, #5fc3e4 100%);
     width: 100%;
     height: 48em;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,6 +14,7 @@
     background-image: linear-gradient(108.08deg, var(--myBlackGreen) 0.53%, var(--myGreen-1) 100%);
     width: 100%;
     height: 48em;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;

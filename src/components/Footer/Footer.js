@@ -39,7 +39,7 @@ const Footer = () => {
                             <img src={linkedIn} alt="logo LinkedIn"/>
                         </a>
                     </div>
-                    <h4>Copyright © Emanuel Caradan 2023</h4>
+                    <h4>Copyright © Emanuel Caradan - 2024</h4>
                 </article>
     }
 
