@@ -32,8 +32,7 @@ export default function SearchBar ({data}) {
                             <img className={icon} src={searchIcon} alt="..."/>
                         </label>
                     </div>
-                </div>
-                    
+                </div>   
                     {
                         (cauta.length !== 0) ? 
                             <div className='main-div-2'>{cauta.map((inreg, index) => {

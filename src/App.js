@@ -3,7 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 // styles
 import './styles/style.css';
 
+// data
 import { dataSet } from './components/constants';
+
 // pages
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
