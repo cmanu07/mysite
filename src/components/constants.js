@@ -8,6 +8,7 @@ import tictactoe_wall from './Media/tictactoe_wall.webp';
 import contacts_wall from './Media/contacts_wall.webp';
 import ecommerce_wall from './Media/ecommerce_wall.webp';
 import scorekepper_wall from './Media/scorekepper_wall.webp';
+import exercises_wall from './Media/exercisesphotos_17876.webp';
 
 
 // e-comm project
@@ -179,5 +180,11 @@ export const projects = [
         url: '/projects/counter',
         imagine: counter_wall,
         description: 'A simple but very educational React project.'
+    },
+    {
+        name: 'Exercises',
+        url: '/projects/exercises',
+        imagine: exercises_wall,
+        description: 'A React place with some practice and exercises. :)'
     }
 ]

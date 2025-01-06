@@ -25,7 +25,7 @@ const Footer = () => {
                             <figure className="footer-main-card-logo-p"></figure>
                             <p className="footer-main-title">PHONE</p>
                             <div className="footer-main-br"></div>
-                            <span>(+40) 744 301841</span>
+                            <span>(+40) 744 xxxxxx</span>
                         </div>
                     </div>
                     <div className="footer-social">
@@ -39,7 +39,7 @@ const Footer = () => {
                             <img src={linkedIn} alt="logo LinkedIn"/>
                         </a>
                     </div>
-                    <h4>Copyright © Emanuel Caradan - 2024</h4>
+                    <h4>Copyright © Emanuel Caradan - 2025</h4>
                 </article>
     }
 

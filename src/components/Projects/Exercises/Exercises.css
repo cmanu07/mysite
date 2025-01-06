@@ -1,0 +1,46 @@
+#true .exercises-main {
+    width: 100%;
+    height: 44em;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--myBlackGreen);
+}
+#false .exercises-main {
+    width: 100%;
+    height: 44em;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(108.08deg, #9884d0 0.53%, #EAAFC8 100%);;
+}
+
+.exercises-main main {
+    display: flex;
+    width: calc(100% - 2vw);
+    height: 30em;
+    overflow: scroll;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#false .exercises-main main p {
+    text-align: center;
+    color: var(--myBlackGreen)
+}
+#true .exercises-main main p {
+    text-align: center;
+    color: var(--myWhite)
+}
+
+.exercises-main div {
+    flex: 1;
+    width: 99%;
+    border: red solid 1px;
+}

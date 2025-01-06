@@ -192,6 +192,11 @@
     display: flex;
     flex-direction: column;
 }
+.contacts-list form table thead tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 .contacts-list-table-body {
     position: absolute;
     width: 98.5%;
@@ -209,7 +214,8 @@
 }
 .contacts-list-button, .contacts-list-cancel-button, .contacts-list-save-button {
     width: 44%;
-    min-width: calc(100% - 65%);
+    /* min-width: calc(100% - 85%); */
+    max-width: 7em;
     height: 1.8em;
     color: var(--myBlue-1);
     padding: 0.2em;
